@@ -287,6 +287,7 @@ All colors MUST be HSL.
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: filter 0.3s ease, opacity 0.3s ease;
   }
 
   /* Protection spéciale pour les images */
@@ -303,6 +304,18 @@ All colors MUST be HSL.
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    /* Empêche le clic droit sur les images */
+    -webkit-context-menu: none;
+    -moz-context-menu: none;
+    -o-context-menu: none;
+    context-menu: none;
+  }
+
+  /* Protection contre l'impression */
+  @media print {
+    body {
+      display: none !important;
+    }
   }
 
   /* Empêche la sélection de texte sur mobile */
@@ -311,5 +324,24 @@ All colors MUST be HSL.
     -moz-user-select: text !important;
     -ms-user-select: text !important;
     user-select: text !important;
+  }
+
+  /* Masque le contenu lors de captures d'écran potentielles */
+  .screenshot-protection::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .screenshot-protection.blur::before {
+    opacity: 1;
   }
 }

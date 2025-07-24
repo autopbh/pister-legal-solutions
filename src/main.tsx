@@ -23,10 +23,37 @@ document.addEventListener('DOMContentLoaded', () => {
       return false;
     }
     
-    // Print Screen
-    if (e.key === 'PrintScreen') {
+    // Print Screen et autres touches de capture
+    if (e.key === 'PrintScreen' || e.key === 'F13' || e.key === 'F14' || e.key === 'F15') {
       e.preventDefault();
+      // Obscurcit temporairement le contenu
+      document.body.style.filter = 'blur(20px)';
+      setTimeout(() => {
+        document.body.style.filter = 'none';
+      }, 2000);
       return false;
+    }
+  });
+  
+  // Détection de perte de focus (possiblement capture d'écran)
+  window.addEventListener('blur', () => {
+    document.body.style.filter = 'blur(20px)';
+    document.body.style.opacity = '0.1';
+  });
+  
+  window.addEventListener('focus', () => {
+    document.body.style.filter = 'none';
+    document.body.style.opacity = '1';
+  });
+  
+  // Détection de changement de visibilité
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      document.body.style.filter = 'blur(20px)';
+      document.body.style.opacity = '0.1';
+    } else {
+      document.body.style.filter = 'none';
+      document.body.style.opacity = '1';
     }
   });
   
@@ -40,6 +67,30 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
     }
   });
+  
+  // Protection contre les outils de développement
+  setInterval(() => {
+    const devtools = {
+      open: false,
+      orientation: null
+    };
+    
+    const threshold = 160;
+    
+    setInterval(() => {
+      if (window.outerHeight - window.innerHeight > threshold || 
+          window.outerWidth - window.innerWidth > threshold) {
+        if (!devtools.open) {
+          devtools.open = true;
+          document.body.style.display = 'none';
+          alert('Accès non autorisé détecté');
+        }
+      } else {
+        devtools.open = false;
+        document.body.style.display = 'block';
+      }
+    }, 500);
+  }, 100);
 });
 
 createRoot(document.getElementById("root")!).render(<App />);
