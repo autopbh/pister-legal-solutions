@@ -99,7 +99,8 @@ const ServicesSection = () => {
                 <Button 
                   variant="ghost" 
                   className="w-full text-primary hover:bg-primary/10"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     const contactSection = document.getElementById('contact');
                     contactSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
@@ -199,7 +200,8 @@ const ServicesSection = () => {
                 <Button 
                   size="lg"
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     const contactSection = document.getElementById('contact');
                     contactSection?.scrollIntoView({ behavior: 'smooth' });
                   }}

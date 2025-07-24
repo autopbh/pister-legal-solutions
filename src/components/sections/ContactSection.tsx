@@ -123,10 +123,14 @@ const ContactSection = () => {
                   <p className="text-sm opacity-90 mb-6">
                     Bei dringenden rechtlichen Angelegenheiten erreichen Sie uns auch außerhalb der Geschäftszeiten.
                   </p>
-                  <Button className="w-full bg-accent-gold text-accent-foreground hover:bg-accent-gold/90 font-bold">
-                    <Phone className="h-4 w-4 mr-2" />
-                    +49 (0) 30 123 456 700
-                  </Button>
+                   <Button 
+                     type="button"
+                     className="w-full bg-accent-gold text-accent-foreground hover:bg-accent-gold/90 font-bold"
+                     onClick={(e) => e.preventDefault()}
+                   >
+                     <Phone className="h-4 w-4 mr-2" />
+                     +49 (0) 30 123 456 700
+                   </Button>
                 </CardContent>
                </Card>
 
