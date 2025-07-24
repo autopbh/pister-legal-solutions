@@ -99,6 +99,10 @@ const ServicesSection = () => {
                 <Button 
                   variant="ghost" 
                   className="w-full text-primary hover:bg-primary/10"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Mehr erfahren
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -195,6 +199,10 @@ const ServicesSection = () => {
                 <Button 
                   size="lg"
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Jetzt Termin vereinbaren
                   <ArrowRight className="ml-2 h-4 w-4" />
