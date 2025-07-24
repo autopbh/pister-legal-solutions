@@ -34,19 +34,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-muted/10 via-background to-accent-light/5 relative overflow-hidden">
+    <section id="contact" className="py-16 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10 relative overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-primary/5 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-accent/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-accent/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-primary/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Enhanced Header */}
-        <div className="text-center space-y-6 mb-20 animate-fade-in">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3">
+        <div className="text-center space-y-6 mb-16">
+          <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3">
             <Star className="h-5 w-5 text-accent" />
             <span className="font-medium text-primary">Kontakt & Beratung</span>
           </div>
-          <h2 className="font-playfair text-5xl lg:text-6xl font-bold text-primary leading-tight">
+          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary leading-tight">
             {t.contact.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">

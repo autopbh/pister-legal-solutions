@@ -6,10 +6,10 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-background to-secondary">
+    <section id="home" className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
       {/* Subtle decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-accent/5 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-primary/3 rounded-full blur-2xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-accent/10 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-primary/5 rounded-full blur-2xl"></div>
       
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
