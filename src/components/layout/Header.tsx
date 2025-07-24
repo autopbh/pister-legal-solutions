@@ -59,7 +59,10 @@ const Header = () => {
           {/* Logo épuré */}
           <div 
             className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => scrollToSection('home')}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('home');
+            }}
           >
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">JP</span>
@@ -84,7 +87,10 @@ const Header = () => {
             ].map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
                 className={`font-medium py-2 transition-colors ${
                   activeSection === item.id 
                     ? 'text-primary border-b-2 border-primary' 
@@ -126,7 +132,10 @@ const Header = () => {
               ].map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.id);
+                  }}
                   className={`text-left py-2 px-4 rounded ${
                     activeSection === item.id 
                       ? 'text-primary bg-primary/10' 
