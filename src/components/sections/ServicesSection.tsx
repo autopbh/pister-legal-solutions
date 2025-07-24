@@ -97,6 +97,7 @@ const ServicesSection = () => {
                 </div>
 
                 <Button 
+                  type="button"
                   variant="ghost" 
                   className="w-full text-primary hover:bg-primary/10"
                   onClick={(e) => {
@@ -198,6 +199,7 @@ const ServicesSection = () => {
                 </div>
 
                 <Button 
+                  type="button"
                   size="lg"
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                   onClick={(e) => {
