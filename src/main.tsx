@@ -4,8 +4,36 @@ import './index.css'
 
 // Protection contre les captures d'écran et interactions
 document.addEventListener('DOMContentLoaded', () => {
-  // Désactive le clic droit
-  document.addEventListener('contextmenu', (e) => e.preventDefault());
+  // Désactive le clic droit avec message
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    // Créer un toast de dissuasion
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+      position: fixed; top: 20px; right: 20px; 
+      background: linear-gradient(135deg, #dc2626, #ef4444);
+      color: white; padding: 16px 20px; border-radius: 12px;
+      font-family: system-ui; font-size: 14px; font-weight: 600;
+      box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+      z-index: 99999; transform: translateX(400px);
+      transition: transform 0.3s ease;
+    `;
+    toast.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 8px;">
+        🔒 <span>Contenu protégé juridiquement</span>
+      </div>
+      <div style="font-size: 12px; opacity: 0.9; margin-top: 4px;">
+        Reproduction interdite • Cabinet surveillé
+      </div>
+    `;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => toast.style.transform = 'translateX(0)', 100);
+    setTimeout(() => {
+      toast.style.transform = 'translateX(400px)';
+      setTimeout(() => document.body.removeChild(toast), 300);
+    }, 3000);
+  });
   
   // Désactive les raccourcis clavier dangereux
   document.addEventListener('keydown', (e) => {
@@ -20,6 +48,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ctrl+S (sauvegarde), Ctrl+A (tout sélectionner), Ctrl+P (imprimer)
     if (e.ctrlKey && (e.key === 's' || e.key === 'a' || e.key === 'p')) {
       e.preventDefault();
+      
+      // Message de dissuasion spécifique
+      const action = e.key === 's' ? 'sauvegarde' : e.key === 'a' ? 'sélection' : 'impression';
+      const toast = document.createElement('div');
+      toast.style.cssText = `
+        position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #dc2626, #ef4444);
+        color: white; padding: 24px; border-radius: 16px;
+        font-family: system-ui; text-align: center;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        z-index: 99999; max-width: 400px;
+      `;
+      toast.innerHTML = `
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 8px;">
+          🚫 Action interdite
+        </div>
+        <div style="font-size: 14px; margin-bottom: 16px;">
+          La ${action} de ce contenu juridique est strictement interdite.
+        </div>
+        <div style="font-size: 12px; opacity: 0.9;">
+          Cabinet d'avocat surveillé • Violations signalées
+        </div>
+      `;
+      document.body.appendChild(toast);
+      
+      setTimeout(() => document.body.removeChild(toast), 4000);
       return false;
     }
     

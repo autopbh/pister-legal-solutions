@@ -1,5 +1,7 @@
-import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award, Clock, Shield, AlertTriangle } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import SecurityBadge from '@/components/security/SecurityBadge';
+import ProtectedContact from '@/components/security/ProtectedContact';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -108,13 +110,13 @@ const Footer = () => {
                   <p>10115 Berlin, Deutschland</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 group hover:text-accent-gold transition-colors duration-300">
-                <Phone className="h-5 w-5 opacity-75" />
-                <p className="font-medium">+49 (0) 30 123 456 789</p>
+              <div className="group hover:text-accent-gold transition-colors duration-300">
+                <Phone className="h-5 w-5 opacity-75 mb-2" />
+                <ProtectedContact type="phone" variant="split" />
               </div>
-              <div className="flex items-center space-x-3 group hover:text-accent-gold transition-colors duration-300">
-                <Mail className="h-5 w-5 opacity-75" />
-                <p className="font-medium">kontakt@pister-law.de</p>
+              <div className="group hover:text-accent-gold transition-colors duration-300">
+                <Mail className="h-5 w-5 opacity-75 mb-2" />
+                <ProtectedContact type="email" variant="split" />
               </div>
             </div>
 
@@ -140,15 +142,41 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {/* Security and Legal Section */}
+        <div className="mt-16 grid lg:grid-cols-2 gap-8">
+          <SecurityBadge variant="compact" />
+          
+          <div className="bg-destructive/10 border border-destructive/20 rounded-3xl p-6">
+            <div className="flex items-center space-x-3 mb-4">
+              <AlertTriangle className="h-6 w-6 text-destructive" />
+              <h4 className="font-playfair font-bold text-lg text-destructive">Mentions Légales Importantes</h4>
+            </div>
+            <p className="text-sm text-destructive-foreground leading-relaxed">
+              ⚠️ <strong>Tous les contenus de ce site sont protégés.</strong> La reproduction, la copie ou l'extraction non autorisée d'informations juridiques ou de coordonnées professionnelles est strictement interdite selon le droit allemand (TMG & DSGVO).
+            </p>
+            <div className="mt-4 flex items-center space-x-4 text-xs text-destructive">
+              <span>🔒 Site protégé SSL</span>
+              <span>🛡️ Données sécurisées</span>
+              <span>✅ Conformité RGPD</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Enhanced Bottom bar */}
       <div className="border-t border-primary-light/20 bg-primary/20 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm opacity-90 flex items-center space-x-2">
-              <Star className="h-4 w-4 text-accent-gold" />
-              <span>{t.footer.copyright}</span>
+            <div className="text-sm opacity-90 flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Star className="h-4 w-4 text-accent-gold" />
+                <span>{t.footer.copyright}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Shield className="h-4 w-4 text-accent animate-pulse" />
+                <span>Surveillance technique active</span>
+              </div>
             </div>
             <div className="flex space-x-8 text-sm">
               {[
@@ -164,6 +192,20 @@ const Footer = () => {
                   {item.label}
                 </a>
               ))}
+            </div>
+          </div>
+          
+          {/* Security status bar */}
+          <div className="mt-6 pt-6 border-t border-primary-light/10">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+              <div className="flex items-center space-x-4 text-xs text-accent-gold">
+                <span>✅ Dernière vérification de sécurité : juillet 2025</span>
+                <span>🔐 Certificat SSL 256-bit</span>
+                <span>🛡️ Fichiers protégés</span>
+              </div>
+              <div className="text-xs opacity-75">
+                Ce site est conforme aux obligations légales allemandes (TMG & DSGVO)
+              </div>
             </div>
           </div>
         </div>

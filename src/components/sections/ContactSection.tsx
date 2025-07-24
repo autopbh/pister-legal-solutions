@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, Star, Shield, Zap } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Star, Shield, Zap, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/hooks/useLanguage';
+import SecurityBadge from '@/components/security/SecurityBadge';
+import ProtectedContact from '@/components/security/ProtectedContact';
 
 const ContactSection = () => {
   const { t } = useLanguage();
@@ -65,22 +67,45 @@ const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {[
-                  { icon: MapPin, label: "Anschrift", value: "Musterstraße 123\n10115 Berlin\nDeutschland" },
-                  { icon: Phone, label: "Telefon", value: "+49 (0) 30 123 456 789" },
-                  { icon: Mail, label: "E-Mail", value: "kontakt@pister-law.de" },
-                  { icon: Clock, label: "Bürozeiten", value: "Mo-Fr: 09:00 - 18:00\nSa: 10:00 - 14:00\nSo: Nach Vereinbarung" }
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
-                      <item.icon className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{item.label}</p>
-                      <p className="text-muted-foreground whitespace-pre-line">{item.value}</p>
-                    </div>
-                  </div>
-                ))}
+                 <div className="flex items-start space-x-4 group">
+                   <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
+                     <MapPin className="h-6 w-6 text-primary-foreground" />
+                   </div>
+                   <div>
+                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">Anschrift</p>
+                     <p className="text-muted-foreground whitespace-pre-line">Musterstraße 123<br/>10115 Berlin<br/>Deutschland</p>
+                   </div>
+                 </div>
+
+                 <div className="flex items-start space-x-4 group">
+                   <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
+                     <Phone className="h-6 w-6 text-primary-foreground" />
+                   </div>
+                   <div className="flex-1">
+                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">Telefon</p>
+                     <ProtectedContact type="phone" variant="protected" className="mt-2" />
+                   </div>
+                 </div>
+
+                 <div className="flex items-start space-x-4 group">
+                   <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
+                     <Mail className="h-6 w-6 text-primary-foreground" />
+                   </div>
+                   <div className="flex-1">
+                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">E-Mail</p>
+                     <ProtectedContact type="email" variant="reveal" className="mt-2" />
+                   </div>
+                 </div>
+
+                 <div className="flex items-start space-x-4 group">
+                   <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
+                     <Clock className="h-6 w-6 text-primary-foreground" />
+                   </div>
+                   <div>
+                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">Bürozeiten</p>
+                     <p className="text-muted-foreground whitespace-pre-line">Mo-Fr: 09:00 - 18:00<br/>Sa: 10:00 - 14:00<br/>So: Nach Vereinbarung</p>
+                   </div>
+                 </div>
               </CardContent>
             </Card>
 
@@ -103,18 +128,25 @@ const ContactSection = () => {
                     +49 (0) 30 123 456 700
                   </Button>
                 </CardContent>
-              </Card>
-            </div>
-          </div>
+               </Card>
 
-          {/* Enhanced Contact Form */}
+               {/* Security Badge */}
+               <SecurityBadge variant="compact" className="mt-6" />
+             </div>
+           </div>
+
+           {/* Enhanced Contact Form */}
           <Card className="card-premium shadow-elegant border-0 animate-slide-in-right">
-            <CardHeader>
-              <CardTitle className="text-2xl font-playfair text-primary flex items-center">
-                <Send className="h-6 w-6 mr-3 text-accent" />
-                Nachricht senden
-              </CardTitle>
-            </CardHeader>
+             <CardHeader>
+               <CardTitle className="text-2xl font-playfair text-primary flex items-center">
+                 <Send className="h-6 w-6 mr-3 text-accent" />
+                 Nachricht senden
+               </CardTitle>
+               <div className="flex items-center space-x-2 mt-2">
+                 <Lock className="h-4 w-4 text-accent animate-pulse" />
+                 <span className="text-sm text-muted-foreground">Formulaire sécurisé et chiffré</span>
+               </div>
+             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
