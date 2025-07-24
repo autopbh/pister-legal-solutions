@@ -51,7 +51,7 @@ const HeroSection = () => {
                   <Scale className="h-8 w-8 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
                 </div>
-                <div className="font-bold text-3xl text-primary-foreground">15+</div>
+                <div className="font-bold text-3xl text-primary-foreground">25+</div>
                 <div className="text-sm text-primary-foreground/70 mt-1">{t.about.experience}</div>
               </div>
               
