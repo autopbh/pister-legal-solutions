@@ -1,97 +1,140 @@
-import { Mail, Phone, MapPin, Linkedin, Scale } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 
 const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-gradient-hero text-primary-foreground relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-accent/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-accent/5 rounded-full blur-3xl"></div>
+
       {/* Main footer content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-4 gap-8">
-          {/* Logo and description */}
-          <div className="lg:col-span-1 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <Scale className="h-5 w-5 text-accent-foreground" />
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="grid lg:grid-cols-4 gap-12">
+          {/* Enhanced Logo and description */}
+          <div className="lg:col-span-1 space-y-6">
+            <div className="flex items-center space-x-4">
+              <div className="w-14 h-14 bg-gradient-accent rounded-2xl flex items-center justify-center shadow-glow">
+                <Scale className="h-7 w-7 text-accent-foreground" />
               </div>
               <div>
-                <h3 className="font-playfair font-bold text-xl">Me Jozef Pister</h3>
-                <p className="text-sm opacity-90">Rechtsanwalt</p>
+                <h3 className="font-playfair font-bold text-2xl text-accent-gold">Me Jozef Pister</h3>
+                <p className="text-sm opacity-90 font-medium">Rechtsanwalt • International Law</p>
               </div>
             </div>
             <p className="text-sm opacity-90 leading-relaxed">
               Ihr Spezialist für Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung.
             </p>
-            <div className="flex space-x-3">
+            
+            {/* Trust badges */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Award className="h-4 w-4 text-accent-gold" />
+                <span className="text-xs opacity-80">DAV Mitglied</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Star className="h-4 w-4 text-accent-gold" />
+                <span className="text-xs opacity-80">Top Anwalt 2024</span>
+              </div>
+            </div>
+
+            <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="w-8 h-8 bg-primary-light rounded-full flex items-center justify-center hover:bg-accent transition-colors"
+                className="w-10 h-10 bg-primary-light/30 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-accent-gold hover:text-accent-foreground transition-all duration-300 group"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Navigation</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Startseite</a></li>
-              <li><a href="#about" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Über die Kanzlei</a></li>
-              <li><a href="#services" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Rechtsgebiete</a></li>
-              <li><a href="#practice" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Mandantenservice</a></li>
-              <li><a href="#contact" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Kontakt</a></li>
+          {/* Navigation */}
+          <div className="space-y-6">
+            <h4 className="font-playfair font-bold text-xl text-accent-gold">Navigation</h4>
+            <ul className="space-y-3 text-sm">
+              {[
+                { label: "Startseite", href: "#home" },
+                { label: "Über die Kanzlei", href: "#about" },
+                { label: "Rechtsgebiete", href: "#services" },
+                { label: "Kontakt", href: "#contact" }
+              ].map((item, index) => (
+                <li key={index}>
+                  <a 
+                    href={item.href} 
+                    className="opacity-90 hover:opacity-100 hover:text-accent-gold transition-all duration-300 flex items-center group"
+                  >
+                    <div className="w-1 h-1 bg-accent-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Rechtsgebiete</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Internationales Recht</a></li>
-              <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Handelsrecht</a></li>
-              <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">EU-Wirtschaftsrecht</a></li>
-              <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Vertragsrecht</a></li>
-              <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">Schiedsgerichtsbarkeit</a></li>
+          <div className="space-y-6">
+            <h4 className="font-playfair font-bold text-xl text-accent-gold">Rechtsgebiete</h4>
+            <ul className="space-y-3 text-sm">
+              {[
+                "Internationales Recht",
+                "Handelsrecht", 
+                "EU-Wirtschaftsrecht",
+                "Vertragsrecht",
+                "Schiedsgerichtsbarkeit"
+              ].map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href="#" 
+                    className="opacity-90 hover:opacity-100 hover:text-accent-gold transition-all duration-300 flex items-center group"
+                  >
+                    <div className="w-1 h-1 bg-accent-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    {service}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Kontakt</h4>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 opacity-75" />
+          {/* Enhanced Contact Info */}
+          <div className="space-y-6">
+            <h4 className="font-playfair font-bold text-xl text-accent-gold">Kontakt</h4>
+            <div className="space-y-4 text-sm">
+              <div className="flex items-start space-x-3 group">
+                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-75 group-hover:text-accent-gold transition-colors duration-300" />
                 <div>
-                  <p>Musterstraße 123</p>
+                  <p className="font-medium">Musterstraße 123</p>
                   <p>10115 Berlin, Deutschland</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 opacity-75" />
-                <p>+49 (0) 30 123 456 789</p>
+              <div className="flex items-center space-x-3 group hover:text-accent-gold transition-colors duration-300">
+                <Phone className="h-5 w-5 opacity-75" />
+                <p className="font-medium">+49 (0) 30 123 456 789</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 opacity-75" />
-                <p>kontakt@pister-law.de</p>
+              <div className="flex items-center space-x-3 group hover:text-accent-gold transition-colors duration-300">
+                <Mail className="h-5 w-5 opacity-75" />
+                <p className="font-medium">kontakt@pister-law.de</p>
               </div>
             </div>
 
-            <div className="bg-primary-light rounded-lg p-4 mt-6">
-              <h5 className="font-semibold text-sm mb-2">Öffnungszeiten</h5>
-              <div className="space-y-1 text-xs">
+            <div className="bg-primary-light/20 backdrop-blur-sm rounded-2xl p-6 border border-primary-light/20">
+              <div className="flex items-center space-x-3 mb-4">
+                <Clock className="h-5 w-5 text-accent-gold" />
+                <h5 className="font-bold text-sm text-accent-gold">Öffnungszeiten</h5>
+              </div>
+              <div className="space-y-2 text-xs">
                 <div className="flex justify-between">
                   <span>Mo-Fr:</span>
-                  <span>09:00 - 18:00</span>
+                  <span className="font-medium">09:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Samstag:</span>
-                  <span>10:00 - 14:00</span>
+                  <span className="font-medium">10:00 - 14:00</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sonntag:</span>
-                  <span>Nach Vereinbarung</span>
+                  <span className="font-medium">Nach Vereinbarung</span>
                 </div>
               </div>
             </div>
@@ -99,23 +142,28 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-primary-light">
-        <div className="container mx-auto px-4 py-6">
+      {/* Enhanced Bottom bar */}
+      <div className="border-t border-primary-light/20 bg-primary/20 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm opacity-90">
-              {t.footer.copyright}
+            <div className="text-sm opacity-90 flex items-center space-x-2">
+              <Star className="h-4 w-4 text-accent-gold" />
+              <span>{t.footer.copyright}</span>
             </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">
-                {t.footer.impressum}
-              </a>
-              <a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">
-                {t.footer.privacy}
-              </a>
-              <a href="#" className="opacity-90 hover:opacity-100 hover:text-accent transition-colors">
-                {t.footer.disclaimer}
-              </a>
+            <div className="flex space-x-8 text-sm">
+              {[
+                { label: t.footer.impressum, href: "#" },
+                { label: t.footer.privacy, href: "#" },
+                { label: t.footer.disclaimer, href: "#" }
+              ].map((item, index) => (
+                <a 
+                  key={index}
+                  href={item.href} 
+                  className="opacity-90 hover:opacity-100 hover:text-accent-gold transition-all duration-300"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

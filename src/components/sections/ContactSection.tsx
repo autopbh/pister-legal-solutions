@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Star, Shield, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -12,19 +12,13 @@ const ContactSection = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    privacy: false
+    name: '', email: '', subject: '', message: '', privacy: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Nachricht gesendet",
@@ -40,113 +34,92 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary">
+    <section id="contact" className="py-24 bg-gradient-to-br from-muted/10 via-background to-accent-light/5 relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-primary/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-accent/5 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Enhanced Header */}
+        <div className="text-center space-y-6 mb-20 animate-fade-in">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3">
+            <Star className="h-5 w-5 text-accent" />
+            <span className="font-medium text-primary">Kontakt & Beratung</span>
+          </div>
+          <h2 className="font-playfair text-5xl lg:text-6xl font-bold text-primary leading-tight">
             {t.contact.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t.contact.subtitle}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card className="shadow-card">
+          <div className="space-y-8 animate-slide-up">
+            <Card className="card-premium shadow-elegant border-0">
               <CardHeader>
-                <CardTitle className="text-xl text-primary">Kanzlei Kontakt</CardTitle>
+                <CardTitle className="text-2xl font-playfair text-primary flex items-center">
+                  <MapPin className="h-6 w-6 mr-3 text-accent" />
+                  Kanzlei Kontakt
+                </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Anschrift</p>
-                    <p className="text-muted-foreground">
-                      Musterstraße 123<br />
-                      10115 Berlin<br />
-                      Deutschland
-                    </p>
+              <CardContent className="space-y-6">
+                {[
+                  { icon: MapPin, label: "Anschrift", value: "Musterstraße 123\n10115 Berlin\nDeutschland" },
+                  { icon: Phone, label: "Telefon", value: "+49 (0) 30 123 456 789" },
+                  { icon: Mail, label: "E-Mail", value: "kontakt@pister-law.de" },
+                  { icon: Clock, label: "Bürozeiten", value: "Mo-Fr: 09:00 - 18:00\nSa: 10:00 - 14:00\nSo: Nach Vereinbarung" }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4 group">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
+                      <item.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{item.label}</p>
+                      <p className="text-muted-foreground whitespace-pre-line">{item.value}</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Phone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Telefon</p>
-                    <p className="text-muted-foreground">+49 (0) 30 123 456 789</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Mail className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">E-Mail</p>
-                    <p className="text-muted-foreground">kontakt@pister-law.de</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Bürozeiten</p>
-                    <p className="text-muted-foreground">
-                      Mo-Fr: 09:00 - 18:00<br />
-                      Sa: 10:00 - 14:00<br />
-                      So: Nach Vereinbarung
-                    </p>
-                  </div>
-                </div>
+                ))}
               </CardContent>
             </Card>
 
             {/* Quick Actions */}
-            <div className="space-y-4">
-              <Card className="bg-primary text-primary-foreground shadow-card">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-2">Notfall-Hotline</h3>
-                  <p className="text-sm opacity-90 mb-4">
+            <div className="grid gap-6">
+              <Card className="card-premium bg-gradient-primary text-primary-foreground shadow-elegant border-0">
+                <CardContent className="p-8">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <Zap className="h-8 w-8 text-accent-gold" />
+                    <div>
+                      <h3 className="text-xl font-playfair font-bold">Notfall-Hotline</h3>
+                      <p className="text-accent-gold">24/7 Erreichbarkeit</p>
+                    </div>
+                  </div>
+                  <p className="text-sm opacity-90 mb-6">
                     Bei dringenden rechtlichen Angelegenheiten erreichen Sie uns auch außerhalb der Geschäftszeiten.
                   </p>
-                  <Button 
-                    variant="secondary" 
-                    className="w-full bg-primary-foreground text-primary hover:bg-accent-light"
-                  >
+                  <Button className="w-full bg-accent-gold text-accent-foreground hover:bg-accent-gold/90 font-bold">
                     <Phone className="h-4 w-4 mr-2" />
                     +49 (0) 30 123 456 700
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-accent text-accent-foreground shadow-card">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-2">Terminvereinbarung</h3>
-                  <p className="text-sm opacity-90 mb-4">
-                    Vereinbaren Sie online einen Termin für Ihre kostenlose Erstberatung.
-                  </p>
-                  <Button 
-                    variant="secondary" 
-                    className="w-full bg-accent-foreground text-accent hover:bg-background"
-                  >
-                    Online Termin buchen
                   </Button>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <Card className="shadow-card">
+          {/* Enhanced Contact Form */}
+          <Card className="card-premium shadow-elegant border-0 animate-slide-in-right">
             <CardHeader>
-              <CardTitle className="text-xl text-primary">Nachricht senden</CardTitle>
+              <CardTitle className="text-2xl font-playfair text-primary flex items-center">
+                <Send className="h-6 w-6 mr-3 text-accent" />
+                Nachricht senden
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-bold text-foreground mb-3">
                       {t.contact.form.name} *
                     </label>
                     <Input
@@ -154,11 +127,11 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
                       required
-                      className="border-border focus:border-primary"
+                      className="border-2 border-border/50 focus:border-primary transition-all duration-300 rounded-xl"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-bold text-foreground mb-3">
                       {t.contact.form.email} *
                     </label>
                     <Input
@@ -166,13 +139,13 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
                       required
-                      className="border-border focus:border-primary"
+                      className="border-2 border-border/50 focus:border-primary transition-all duration-300 rounded-xl"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label className="block text-sm font-bold text-foreground mb-3">
                     {t.contact.form.subject} *
                   </label>
                   <Input
@@ -180,12 +153,12 @@ const ContactSection = () => {
                     value={formData.subject}
                     onChange={(e) => handleInputChange('subject', e.target.value)}
                     required
-                    className="border-border focus:border-primary"
+                    className="border-2 border-border/50 focus:border-primary transition-all duration-300 rounded-xl"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label className="block text-sm font-bold text-foreground mb-3">
                     {t.contact.form.message} *
                   </label>
                   <Textarea
@@ -193,52 +166,38 @@ const ContactSection = () => {
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     required
                     rows={6}
-                    className="border-border focus:border-primary resize-none"
+                    className="border-2 border-border/50 focus:border-primary transition-all duration-300 rounded-xl resize-none"
                     placeholder="Beschreiben Sie bitte Ihr rechtliches Anliegen..."
                   />
                 </div>
 
-                <div className="flex items-start space-x-2">
+                <div className="flex items-start space-x-3">
                   <Checkbox
                     id="privacy"
                     checked={formData.privacy}
                     onCheckedChange={(checked) => handleInputChange('privacy', checked as boolean)}
                     required
+                    className="mt-1"
                   />
-                  <label htmlFor="privacy" className="text-sm text-muted-foreground leading-5">
-                    {t.contact.form.privacy} <a href="#" className="text-primary hover:underline">Datenschutzerklärung</a>
+                  <label htmlFor="privacy" className="text-sm text-muted-foreground leading-6">
+                    {t.contact.form.privacy} <a href="#" className="text-primary hover:underline font-medium">Datenschutzerklärung</a>
                   </label>
                 </div>
 
                 <Button 
                   type="submit" 
                   disabled={isSubmitting || !formData.privacy}
-                  className="w-full bg-gradient-primary hover:opacity-90 transition-smooth"
+                  className="w-full btn-premium py-4 text-lg font-bold"
                 >
-                  {isSubmitting ? (
-                    "Wird gesendet..."
-                  ) : (
+                  {isSubmitting ? "Wird gesendet..." : (
                     <>
-                      <Send className="h-4 w-4 mr-2" />
+                      <Send className="h-5 w-5 mr-2" />
                       {t.contact.form.submit}
                     </>
                   )}
                 </Button>
               </form>
             </CardContent>
-          </Card>
-        </div>
-
-        {/* Map placeholder */}
-        <div className="mt-16">
-          <Card className="shadow-card overflow-hidden">
-            <div className="h-64 bg-muted flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <MapPin className="h-8 w-8 text-accent mx-auto" />
-                <p className="text-muted-foreground">Interaktive Karte</p>
-                <p className="text-sm text-muted-foreground">Musterstraße 123, 10115 Berlin</p>
-              </div>
-            </div>
           </Card>
         </div>
       </div>
