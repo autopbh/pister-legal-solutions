@@ -6,31 +6,31 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background to-secondary">
+    <section id="home" className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-background to-secondary">
       {/* Subtle decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-accent/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-primary/3 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-accent/5 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-primary/3 rounded-full blur-2xl"></div>
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 py-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Content */}
-          <div className="space-y-10 animate-fade-in">
+          <div className="space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 animate-scale-in">
               <Sparkles className="h-4 w-4 text-accent" />
               <span className="text-sm font-medium text-primary">Seit 1999 • Internationale Rechtspraxis</span>
             </div>
 
-            <div className="space-y-6">
-              <h1 className="font-playfair text-5xl lg:text-6xl font-bold text-primary leading-tight">
+            <div className="space-y-4">
+              <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
                 {t.hero.title}
               </h1>
-              <h2 className="font-playfair text-2xl lg:text-3xl text-accent font-medium">
+              <h2 className="font-playfair text-lg md:text-xl lg:text-2xl text-accent font-medium">
                 {t.hero.subtitle}
               </h2>
             </div>
             
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               {t.hero.description}
             </p>
 
@@ -97,11 +97,11 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative">
               {/* Professional image */}
-              <div className="relative overflow-hidden rounded-2xl shadow-card">
+              <div className="relative overflow-hidden rounded-xl shadow-card">
                 <img
                   src="/lovable-uploads/446f15db-e216-43d2-a71b-ceb15c99eee9.png"
                   alt="Me Jozef Pister - Rechtsanwalt"
-                  className="w-full h-[600px] object-cover object-center"
+                  className="w-full h-[400px] md:h-[500px] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
               </div>

@@ -26,8 +26,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-secondary">
-      {/* Clean background */}
+    <section id="about" className="py-16 bg-secondary">
 
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
