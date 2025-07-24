@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award, Clock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 
 const Footer = () => {
