@@ -40,7 +40,7 @@ const HeroSection = () => {
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Scale className="h-6 w-6 text-primary-foreground" />
                 </div>
-                <div className="font-bold text-2xl text-primary">25+</div>
+                <div className="font-bold text-2xl text-primary">15+</div>
                 <div className="text-sm text-muted-foreground">{t.about.experience}</div>
               </div>
               
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Users className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <div className="font-bold text-2xl text-primary">500+</div>
+                <div className="font-bold text-2xl text-primary">150+</div>
                 <div className="text-sm text-muted-foreground">Erfolgreiche Fälle</div>
               </div>
 
