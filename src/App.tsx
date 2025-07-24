@@ -15,14 +15,6 @@ const App = () => (
       <div className="watermark">
         <Toaster />
         <Sonner />
-        
-        {/* Indicateur de surveillance */}
-        <div className="surveillance-indicator">
-          <div className="flex items-center space-x-2">
-            <Eye className="h-3 w-3" />
-            <span>Site surveillé</span>
-          </div>
-        </div>
 
         <BrowserRouter>
           <Routes>
