@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     toast.innerHTML = `
       <div style="display: flex; align-items: center; gap: 8px;">
-        🔒 <span>Contenu protégé juridiquement</span>
+        <span>Contenu protégé juridiquement</span>
       </div>
       <div style="font-size: 12px; opacity: 0.9; margin-top: 4px;">
         Reproduction interdite • Cabinet surveillé

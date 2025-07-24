@@ -31,7 +31,7 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
             <Shield className="h-5 w-5 text-accent" />
           </div>
           <div className="flex-1">
-            <h4 className="font-bold text-sm text-foreground">🔒 Site sécurisé</h4>
+            <h4 className="font-bold text-sm text-foreground">Site sécurisé</h4>
             <p className="text-xs text-muted-foreground">Données protégées RGPD</p>
           </div>
         </div>
@@ -54,7 +54,7 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
           <Shield className="h-6 w-6 text-accent-foreground animate-pulse" />
         </div>
         <div>
-          <h3 className="font-playfair font-bold text-xl text-primary">🛡️ Cabinet Surveillé & Protégé</h3>
+          <h3 className="font-playfair font-bold text-xl text-primary">Cabinet Surveillé & Protégé</h3>
           <p className="text-sm text-muted-foreground">Sécurité juridique renforcée</p>
         </div>
       </div>
@@ -87,14 +87,14 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
           <span className="text-sm text-accent font-bold">{currentDate}</span>
         </div>
         <div className="mt-2 text-xs text-muted-foreground">
-          ✅ Fichiers protégés • 🔐 Données sécurisées • 🛡️ Accès surveillé
+          Fichiers protégés • Données sécurisées • Accès surveillé
         </div>
       </div>
 
       {/* Legal notice */}
       <div className="mt-4 p-3 bg-destructive/5 border border-destructive/20 rounded-xl">
         <p className="text-xs text-destructive-foreground leading-relaxed">
-          ⚠️ <strong>Notice légale :</strong> La reproduction, copie ou extraction non autorisée d'informations est strictement interdite selon le droit allemand.
+          <strong>Notice légale :</strong> La reproduction, copie ou extraction non autorisée d'informations est strictement interdite selon le droit allemand.
         </p>
       </div>
     </div>

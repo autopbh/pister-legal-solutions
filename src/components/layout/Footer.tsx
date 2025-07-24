@@ -153,12 +153,12 @@ const Footer = () => {
               <h4 className="font-playfair font-bold text-lg text-destructive">Mentions Légales Importantes</h4>
             </div>
             <p className="text-sm text-destructive-foreground leading-relaxed">
-              ⚠️ <strong>Tous les contenus de ce site sont protégés.</strong> La reproduction, la copie ou l'extraction non autorisée d'informations juridiques ou de coordonnées professionnelles est strictement interdite selon le droit allemand (TMG & DSGVO).
+              <strong>Tous les contenus de ce site sont protégés.</strong> La reproduction, la copie ou l'extraction non autorisée d'informations juridiques ou de coordonnées professionnelles est strictement interdite selon le droit allemand (TMG & DSGVO).
             </p>
             <div className="mt-4 flex items-center space-x-4 text-xs text-destructive">
-              <span>🔒 Site protégé SSL</span>
-              <span>🛡️ Données sécurisées</span>
-              <span>✅ Conformité RGPD</span>
+              <span>Site protégé SSL</span>
+              <span>Données sécurisées</span>
+              <span>Conformité RGPD</span>
             </div>
           </div>
         </div>
@@ -199,9 +199,9 @@ const Footer = () => {
           <div className="mt-6 pt-6 border-t border-primary-light/10">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
               <div className="flex items-center space-x-4 text-xs text-accent-gold">
-                <span>✅ Dernière vérification de sécurité : juillet 2025</span>
-                <span>🔐 Certificat SSL 256-bit</span>
-                <span>🛡️ Fichiers protégés</span>
+                <span>Dernière vérification de sécurité : juillet 2025</span>
+                <span>Certificat SSL 256-bit</span>
+                <span>Fichiers protégés</span>
               </div>
               <div className="text-xs opacity-75">
                 Ce site est conforme aux obligations légales allemandes (TMG & DSGVO)

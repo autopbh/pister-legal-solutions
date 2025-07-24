@@ -23,7 +23,7 @@ const ProtectedContact = ({
 
   const handleCopyAttempt = () => {
     toast({
-      title: "🔒 Contenu protégé",
+      title: "Contenu protégé",
       description: "Les coordonnées sont protégées contre la copie automatisée. Veuillez utiliser le bouton d'affichage.",
       variant: "destructive"
     });
@@ -95,7 +95,7 @@ const ProtectedContact = ({
           </div>
         </div>
         <p className="text-xs text-muted-foreground mt-2">
-          🔒 Coordonnées protégées contre le scraping automatisé
+          Coordonnées protégées contre le scraping automatisé
         </p>
       </div>
     );

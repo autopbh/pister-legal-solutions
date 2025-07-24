@@ -20,12 +20,12 @@ export const useLanguage = create<LanguageState>()(
           t: translations[language] || translations.de 
         }),
       availableLanguages: [
-        { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-        { code: 'en', name: 'English', flag: '🇬🇧' },
-        { code: 'fr', name: 'Français', flag: '🇫🇷' },
-        { code: 'es', name: 'Español', flag: '🇪🇸' },
-        { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-        { code: 'pt', name: 'Português', flag: '🇵🇹' }
+        { code: 'de', name: 'Deutsch', flag: 'DE' },
+        { code: 'en', name: 'English', flag: 'EN' },
+        { code: 'fr', name: 'Français', flag: 'FR' },
+        { code: 'es', name: 'Español', flag: 'ES' },
+        { code: 'it', name: 'Italiano', flag: 'IT' },
+        { code: 'pt', name: 'Português', flag: 'PT' }
       ]
     }),
     {

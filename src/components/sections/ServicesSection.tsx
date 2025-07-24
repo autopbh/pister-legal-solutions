@@ -209,7 +209,7 @@ const ServicesSection = () => {
                 </Button>
 
                 <div className="text-center text-xs opacity-75 pt-2">
-                  📞 Mo-Fr 9:00-18:00 • Sa 10:00-14:00
+                  Mo-Fr 9:00-18:00 • Sa 10:00-14:00
                 </div>
               </div>
             </div>
