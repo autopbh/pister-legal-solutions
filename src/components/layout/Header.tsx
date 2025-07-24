@@ -108,7 +108,7 @@ const Header = () => {
           {/* Menu mobile */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-primary hover:text-primary/80 transition-colors"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
