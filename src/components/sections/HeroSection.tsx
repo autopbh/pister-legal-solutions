@@ -40,7 +40,7 @@ const HeroSection = () => {
               </h2>
             </div>
             
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl animate-fade-in" style={{animationDelay: '0.4s'}}>
+            <p className="text-lg md:text-xl text-primary-foreground/95 leading-relaxed max-w-2xl animate-fade-in" style={{animationDelay: '0.4s'}}>
               {t.hero.description}
             </p>
 
@@ -79,7 +79,7 @@ const HeroSection = () => {
             </div>
 
             {/* Premium trust indicators */}
-            <div className="flex items-center space-x-8 pt-8 text-primary-foreground/70 animate-fade-in" style={{animationDelay: '1s'}}>
+            <div className="flex items-center space-x-8 pt-8 text-primary-foreground/90 animate-fade-in" style={{animationDelay: '1s'}}>
               <div className="flex items-center space-x-3 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Award className="h-5 w-5 text-accent" />
@@ -128,7 +128,7 @@ const HeroSection = () => {
               {/* Floating quote */}
               <div className="absolute bottom-8 left-8 right-8 bg-primary-foreground/10 backdrop-blur-md rounded-xl p-6 border border-primary-foreground/20 shadow-card">
                 <p className="text-primary-foreground text-sm italic mb-2">"{t.hero.quote}"</p>
-                <p className="text-primary-foreground/80 text-xs font-medium">- Me Jozef Pister</p>
+                <p className="text-primary-foreground/90 text-xs font-medium">- Me Jozef Pister</p>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ const HeroSection = () => {
 
       {/* Enhanced scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-8 h-12 border-2 border-primary-foreground/30 rounded-full flex justify-center backdrop-blur-sm bg-primary-foreground/5">
+        <div className="w-8 h-12 border-2 border-primary-foreground/60 rounded-full flex justify-center backdrop-blur-sm bg-primary-foreground/10">
           <div className="w-1.5 h-4 bg-accent rounded-full mt-3 animate-pulse"></div>
         </div>
       </div>
