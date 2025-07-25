@@ -87,7 +87,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                <span>Kostenlose Erstberatung anfragen</span>
+                <span>{t.hero.cta}</span>
                 <ArrowRight className="h-5 w-5" />
               </Button>
               
@@ -103,7 +103,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                Kanzlei entdecken
+                {t.hero.secondaryCta}
               </Button>
             </div>
 

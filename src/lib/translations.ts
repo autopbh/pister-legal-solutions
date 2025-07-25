@@ -9,12 +9,13 @@ export interface Translation {
   };
   
   // Hero Section
-  hero: {
-    title: string;
-    subtitle: string;
-    cta: string;
-    description: string;
-  };
+    hero: {
+      title: string;
+      subtitle: string;
+      cta: string;
+      secondaryCta: string;
+      description: string;
+    };
   
   // Services
   services: {
@@ -92,6 +93,7 @@ export const translations: Record<string, Translation> = {
       title: "Grenzüberschreitende Lösungen.",
       subtitle: "Juristische Exzellenz.",
       cta: "Kostenlose Erstberatung anfragen",
+      secondaryCta: "Kanzlei entdecken",
       description: "Spezialisiert auf Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung."
     },
     services: {
@@ -162,6 +164,7 @@ export const translations: Record<string, Translation> = {
       title: "Solutions transfrontalières.",
       subtitle: "Excellence juridique.",
       cta: "Demander une consultation gratuite",
+      secondaryCta: "Découvrir le cabinet",
       description: "Spécialisé en droit international et commercial avec plus de 25 ans d'expérience en conseil juridique transfrontalier."
     },
     services: {
@@ -232,6 +235,7 @@ export const translations: Record<string, Translation> = {
       title: "Cross-border Solutions.",
       subtitle: "Legal Excellence.",
       cta: "Request Free Consultation",
+      secondaryCta: "Discover Firm",
       description: "Specialized in International and Commercial Law with over 25 years of experience in cross-border legal advice."
     },
     services: {
@@ -302,6 +306,7 @@ export const translations: Record<string, Translation> = {
       title: "Soluciones transfronterizas.",
       subtitle: "Excelencia jurídica.",
       cta: "Solicitar consulta gratuita",
+      secondaryCta: "Descubrir despacho",
       description: "Especializado en Derecho Internacional y Comercial con más de 25 años de experiencia en asesoramiento jurídico transfronterizo."
     },
     services: {
@@ -372,6 +377,7 @@ export const translations: Record<string, Translation> = {
       title: "Soluzioni transfrontaliere.",
       subtitle: "Eccellenza legale.",
       cta: "Richiedi consultazione gratuita",
+      secondaryCta: "Scopri studio",
       description: "Specializzato in Diritto Internazionale e Commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera."
     },
     services: {
@@ -442,6 +448,7 @@ export const translations: Record<string, Translation> = {
       title: "Soluções transfronteiriças.",
       subtitle: "Excelência jurídica.",
       cta: "Solicitar consulta gratuita",
+      secondaryCta: "Descobrir escritório",
       description: "Especializado em Direito Internacional e Comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça."
     },
     services: {
