@@ -16,12 +16,12 @@ interface TranslationProviderProps {
 }
 
 export const TranslationProvider: React.FC<TranslationProviderProps> = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState('fr');
+  const [currentLanguage, setCurrentLanguage] = useState('de');
   
   console.log('TranslationProvider - currentLanguage:', currentLanguage);
   console.log('TranslationProvider - available translations:', Object.keys(translations));
   
-  const t = translations[currentLanguage] || translations.fr;
+  const t = translations[currentLanguage] || translations.de;
   
   const setLanguage = (language: string) => {
     console.log('TranslationProvider - setLanguage called with:', language);
@@ -34,6 +34,7 @@ export const TranslationProvider: React.FC<TranslationProviderProps> = ({ childr
   };
 
   const availableLanguages = [
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'it', name: 'Italiano', flag: '🇮🇹' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },

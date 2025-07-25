@@ -1,6 +1,343 @@
 import { Translations } from '../types/translations';
 
 export const translations: Record<string, Translations> = {
+  de: {
+    nav: {
+      home: "Startseite",
+      about: "Über uns",
+      services: "Bereiche",
+      contact: "Kontakt"
+    },
+    hero: {
+      title: "Grenzüberschreitende Lösungen.",
+      subtitle: "Juristische Exzellenz.",
+      cta: "Kostenlose Beratung anfordern",
+      secondaryCta: "Kanzlei entdecken",
+      description: "Spezialisiert auf internationales und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender Rechtsberatung.",
+      badge: "Seit 1999 • Internationale Rechtspraxis",
+      davMember: "DAV Mitglied",
+      certified: "Zertifiziert",
+      topLawyer: "Top Anwalt 2024",
+      quote: "Exzellenz im Recht, persönlicher Service"
+    },
+    about: {
+      title: "RA Jozef Pister",
+      subtitle: "Ihr Spezialist für internationales Recht",
+      description: "Mit über 25 Jahren Erfahrung im internationalen Recht biete ich maßgeschneiderte Rechtslösungen für komplexe grenzüberschreitende Rechtsfragen.",
+      experience: "25+ Jahre Erfahrung",
+      philosophy: "Vertrauen, Kompetenz und diskrete Beratung stehen im Mittelpunkt meiner Mandantenbeziehung.",
+      aboutLawyer: "Über den Anwalt",
+      qualifications: "Qualifikationen & Zertifizierungen",
+      specialties: "Spezialisierungen",
+      founderTitle: "Gründer & Hauptanwalt",
+      personalService: "Persönlicher Service",
+      bridgeQuote: "Das Recht verbindet Nationen. Meine Mission ist es, Brücken zu bauen, wo andere Hindernisse sehen."
+    },
+    services: {
+      title: "Unsere Fachbereiche",
+      subtitle: "Umfassende Rechtsberatung in allen Bereichen des internationalen und Handelsrechts mit Expertise und persönlichem Service",
+      international: {
+        title: "Internationales Recht",
+        description: "Umfassende Beratung zu grenzüberschreitenden Rechtsfragen und internationalen Verträgen."
+      },
+      commercial: {
+        title: "Handelsrecht",
+        description: "Rechtliche Unterstützung für Unternehmen bei Handelsgeschäften und Gesellschaftsrecht."
+      },
+      european: {
+        title: "Europäisches Wirtschaftsrecht",
+        description: "Expertise im europäischen Wirtschaftsrecht und EU-weiten Geschäftstätigkeiten."
+      },
+      contracts: {
+        title: "Vertragsrecht",
+        description: "Internationale Vertragsgestaltung und -verhandlung."
+      },
+      arbitration: {
+        title: "Schiedsverfahren",
+        description: "Alternative Streitbeilegung in internationalen Konflikten."
+      },
+      whyUs: "Warum uns wählen",
+      benefits: {
+        expertise: {
+          title: "Fachkompetenz",
+          description: "25+ Jahre Erfahrung im internationalen Recht"
+        },
+        multilingual: {
+          title: "Mehrsprachig",
+          description: "Beratung in 4 Sprachen"
+        },
+        experience: {
+          title: "Bewährt",
+          description: "Über 1000 erfolgreiche Fälle"
+        },
+        personal: {
+          title: "Persönlich",
+          description: "Individuelle Betreuung durch den Kanzleiinhaber"
+        }
+      },
+      consultation: {
+        title: "Kostenlose Erstberatung",
+        subtitle: "30 Minuten persönliche Beratung",
+        description: "Vereinbaren Sie noch heute Ihre kostenlose Erstberatung",
+        duration: "30 Min",
+        response: "24h",
+        cta: "Termin vereinbaren",
+        hours: "Mo-Fr 9-18 Uhr"
+      }
+    },
+    stats: {
+      experience: "Jahre Erfahrung",
+      clients: "Zufriedene Mandanten",
+      domains: "Rechtsbereiche",
+      awards: "Auszeichnungen"
+    },
+    header: {
+      profession: "Rechtsanwalt für Internationales Recht",
+      phone: "+49 89 123 456 78"
+    },
+    process: {
+      title: "Unser Beratungsprozess",
+      subtitle: "Von der ersten Beratung bis zur erfolgreichen Umsetzung - wir begleiten Sie Schritt für Schritt",
+      step1: {
+        title: "Erstberatung",
+        description: "Kostenlose 30-minütige Beratung zur Bewertung Ihres Falls",
+        duration: "30 Minuten",
+        features: ["Kostenlos", "Vertraulich", "Kompetent"]
+      },
+      step2: {
+        title: "Rechtliche Analyse",
+        description: "Detaillierte Prüfung aller rechtlichen Aspekte und Optionen",
+        duration: "1-2 Wochen",
+        features: ["Umfassend", "Gründlich", "Strukturiert"]
+      },
+      step3: {
+        title: "Strategieentwicklung",
+        description: "Entwicklung einer maßgeschneiderten Rechtsstrategie",
+        duration: "3-5 Tage",
+        features: ["Maßgeschneidert", "Zielorientiert", "Effizient"]
+      },
+      step4: {
+        title: "Umsetzung",
+        description: "Professionelle Durchführung aller rechtlichen Schritte",
+        duration: "Variabel",
+        features: ["Professionell", "Transparent", "Erfolgreich"]
+      },
+      cta: {
+        title: "Bereit zu starten?",
+        subtitle: "Vereinbaren Sie noch heute Ihre kostenlose Erstberatung",
+        button: "Jetzt Beratung vereinbaren"
+      }
+    },
+    team: {
+      title: "Ihr Anwalt",
+      subtitle: "Persönliche Betreuung durch einen erfahrenen Spezialisten für internationales Recht",
+      lawyer: {
+        name: "RA Jozef Pister",
+        role: "Gründer & Hauptanwalt",
+        description: "Spezialist für internationales Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitenden Rechtsfragen.",
+        specialties: ["Internationales Recht", "Handelsrecht", "EU-Recht", "Vertragsrecht"],
+        languages: ["Deutsch", "Englisch", "Französisch", "Italienisch"],
+        location: "München, Deutschland",
+        qualifications: [
+          "Rechtsanwalt bei der Rechtsanwaltskammer Deutschland",
+          "Mitglied des Deutschen Anwaltvereins (DAV)",
+          "Spezialisierung Internationales Handelsrecht",
+          "Zertifiziert für EU-Rechtsfragen"
+        ]
+      },
+      labels: {
+        founder: "Gründer",
+        specializations: "Spezialisierungen",
+        qualifications: "Qualifikationen",
+        contact: "Kontakt aufnehmen",
+        call: "Anrufen"
+      }
+    },
+    testimonials: {
+      title: "Was unsere Mandanten sagen",
+      subtitle: "Echte Erfahrungen von Mandanten, die auf unsere Expertise vertrauen",
+      testimonial1: {
+        name: "Maria Rossi",
+        role: "Geschäftsführerin",
+        company: "Import/Export GmbH",
+        content: "Hervorragende Beratung bei komplexen internationalen Verträgen. Die Expertise von RA Pister war entscheidend für unseren Erfolg."
+      },
+      testimonial2: {
+        name: "Jean Dubois",
+        role: "Direktor",
+        company: "International Trading SA",
+        content: "Professionelle und diskrete Abwicklung unserer grenzüberschreitenden Transaktion. Sehr empfehlenswert."
+      },
+      testimonial3: {
+        name: "Antonio García",
+        role: "Rechtsberater",
+        company: "Tech Solutions SL",
+        content: "Schnelle und kompetente Hilfe bei EU-Compliance-Fragen. Die Beratung war präzise und lösungsorientiert."
+      },
+      cta: "Werden Sie unser nächster zufriedener Mandant"
+    },
+    faq: {
+      title: "Häufig gestellte Fragen",
+      subtitle: "Antworten auf die wichtigsten Fragen zu unserer Rechtsberatung",
+      questions: {
+        q1: {
+          question: "Welche Arten von internationalen Rechtsfällen behandeln Sie?",
+          answer: "Wir spezialisieren uns auf grenzüberschreitende Handelsverträge, internationale Streitigkeiten, EU-Compliance, Unternehmensgründungen im Ausland und komplexe internationale Transaktionen."
+        },
+        q2: {
+          question: "Wie läuft eine Erstberatung ab?",
+          answer: "Die Erstberatung ist kostenlos und dauert 30 Minuten. Wir besprechen Ihren Fall, bewerten die rechtlichen Optionen und entwickeln einen ersten Lösungsansatz."
+        },
+        q3: {
+          question: "In welchen Sprachen bieten Sie Beratung an?",
+          answer: "Wir beraten in Deutsch, Englisch, Französisch und Italienisch, um internationale Mandanten optimal zu betreuen."
+        },
+        q4: {
+          question: "Wie werden die Kosten berechnet?",
+          answer: "Unsere Honorare richten sich nach dem Rechtsanwaltsvergütungsgesetz (RVG) und der Komplexität des Falls. Wir bieten transparente Kostenvoranschläge."
+        },
+        q5: {
+          question: "Arbeiten Sie mit internationalen Partnerkanzleien zusammen?",
+          answer: "Ja, wir haben ein Netzwerk von Partnerkanzleien in Europa und weltweit, um Ihnen auch vor Ort optimale Betreuung zu gewährleisten."
+        },
+        q6: {
+          question: "Wie schnell kann ich eine Antwort erwarten?",
+          answer: "Wir antworten innerhalb von 24 Stunden auf alle Anfragen und bieten bei dringenden Fällen auch eine Express-Beratung an."
+        }
+      },
+      contact: {
+        title: "Weitere Fragen?",
+        subtitle: "Kontaktieren Sie uns für eine persönliche Beratung",
+        button: "Kontakt aufnehmen"
+      }
+    },
+    contact: {
+      badge: "Kostenlose Erstberatung",
+      title: "Kontakt aufnehmen",
+      subtitle: "Vereinbaren Sie Ihre kostenlose Erstberatung",
+      office: {
+        title: "Büro",
+        address: {
+          label: "Adresse",
+          value: "Maximilianstrasse 1\n80539 München\nDeutschland"
+        },
+        phone: {
+          label: "Telefon"
+        },
+        email: {
+          label: "E-Mail"
+        },
+        hours: {
+          label: "Öffnungszeiten",
+          value: "Mo-Fr: 9:00-18:00"
+        }
+      },
+      emergency: {
+        title: "Schnelle Aktionen",
+        subtitle: "Notfall? Rufen Sie uns an:",
+        description: "Bei dringenden rechtlichen Angelegenheiten sind wir auch außerhalb der Geschäftszeiten erreichbar",
+        phone: "+49 89 123 456 78"
+      },
+      form: {
+        title: "Nachricht senden",
+        security: "Ihre Daten sind sicher geschützt",
+        name: "Vollständiger Name",
+        email: "E-Mail-Adresse",
+        subject: "Betreff",
+        message: "Ihre Nachricht",
+        messagePlaceholder: "Beschreiben Sie Ihr rechtliches Anliegen...",
+        privacy: "Ich stimme der Datenschutzerklärung zu",
+        privacyLink: "Datenschutzerklärung",
+        submit: "Nachricht senden",
+        sending: "Wird gesendet...",
+        success: {
+          title: "Nachricht erfolgreich gesendet!",
+          description: "Wir werden uns innerhalb von 24 Stunden bei Ihnen melden."
+        }
+      }
+    },
+    footer: {
+      description: "Spezialisierte Kanzlei für internationales Recht mit über 25 Jahren Erfahrung in grenzüberschreitender Rechtsberatung.",
+      badges: {
+        member: "DAV Mitglied",
+        top: "Top Anwalt 2024"
+      },
+      navigation: {
+        title: "Navigation",
+        home: "Startseite",
+        about: "Über uns",
+        services: "Leistungen",
+        contact: "Kontakt"
+      },
+      services: {
+        title: "Leistungen",
+        list: ["Internationales Recht", "Handelsrecht", "EU-Recht", "Vertragsrecht"]
+      },
+      contact: {
+        title: "Kontakt",
+        address: "Maximilianstrasse 1, 80539 München, Deutschland",
+        hours: {
+          title: "Geschäftszeiten",
+          weekdays: "Mo-Fr: 9:00-18:00",
+          saturday: "Sa: Nach Vereinbarung",
+          sunday: "So: Geschlossen"
+        }
+      },
+      legal: {
+        title: "Rechtliches & Sicherheit",
+        description: "Alle Kommunikationen sind durch fortschrittliche Verschlüsselung geschützt und entsprechen den höchsten Datenschutzstandards gemäß DSGVO.",
+        features: ["SSL-Verschlüsselung", "DSGVO-konform", "Anwaltliches Berufsgeheimnis"],
+        bottom: {
+          rights: "© 2024 Kanzlei Pister. Alle Rechte vorbehalten.",
+          security: "Sicher & DSGVO-konform",
+          links: ["Impressum", "Datenschutz", "AGB"],
+          securityStatus: "Sicher",
+          compliance: "DSGVO-konform"
+        }
+      }
+    },
+    security: {
+      minimal: "Sicher",
+      compact: {
+        title: "Sicherheit & Datenschutz",
+        subtitle: "Höchste Standards zum Schutz Ihrer sensiblen Informationen",
+        ssl: "256-Bit SSL-Verschlüsselung",
+        verified: "DSGVO-konform"
+      },
+      full: {
+        title: "Sicherheit & Datenschutz",
+        subtitle: "Höchste Standards zum Schutz Ihrer sensiblen Informationen",
+        features: {
+          ssl: { label: "SSL-Verschlüsselung", status: "Aktiv" },
+          monitoring: { label: "Überwachung", status: "24/7" },
+          gdpr: { label: "DSGVO-Konformität", status: "Zertifiziert" },
+          legal: { label: "Berufsgeheimnis", status: "Garantiert" }
+        },
+        status: {
+          title: "Sicherheitsstatus",
+          lastCheck: "Letzte Prüfung: Heute",
+          info: "Alle Systeme funktionieren normal"
+        },
+        notice: {
+          title: "Datenschutzhinweis",
+          description: "Ihre Daten werden nach höchsten Standards geschützt und niemals an Dritte weitergegeben."
+        }
+      }
+    },
+    protectedContact: {
+      protected: "Geschützt",
+      emailProtected: "E-Mail geschützt",
+      phoneProtected: "Telefon geschützt",
+      show: "Anzeigen",
+      hide: "Verbergen",
+      protectedTitle: "Geschützter Inhalt",
+      protectedDescription: "Klicken Sie auf 'Anzeigen', um die Kontaktdaten zu sehen.",
+      toast: {
+        title: "Geschützter Inhalt",
+        description: "Die Daten sind vor automatischem Kopieren geschützt. Verwenden Sie die Anzeigen-Schaltfläche."
+      }
+    }
+  },
   fr: {
     nav: {
       home: "Accueil",
