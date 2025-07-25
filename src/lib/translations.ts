@@ -78,6 +78,26 @@ export interface Translation {
     privacy: string;
     disclaimer: string;
   };
+
+  // Hero additional elements
+  heroElements: {
+    establishedBadge: string;
+    davMember: string;
+    certified: string;
+    topLawyer: string;
+    excellenceQuote: string;
+  };
+
+  // About additional elements
+  aboutElements: {
+    aboutLawyer: string;
+    qualifications: string;
+    philosophy: string;
+    specialties: string;
+    founderTitle: string;
+    personalService: string;
+    bridgeQuote: string;
+  };
 }
 
 export const translations: Record<string, Translation> = {
@@ -149,6 +169,22 @@ export const translations: Record<string, Translation> = {
       impressum: "Impressum",
       privacy: "Datenschutz",
       disclaimer: "Haftungsausschluss"
+    },
+    heroElements: {
+      establishedBadge: "Seit 1999 • Internationale Rechtspraxis",
+      davMember: "DAV Mitglied",
+      certified: "Zertifiziert",
+      topLawyer: "Top Anwalt 2024",
+      excellenceQuote: "Excellence en droit, service personnalisé"
+    },
+    aboutElements: {
+      aboutLawyer: "Über den Anwalt",
+      qualifications: "Qualifikationen & Zertifizierungen",
+      philosophy: "Meine Philosophie",
+      specialties: "Schwerpunkte",
+      founderTitle: "Gründer & Hauptanwalt",
+      personalService: "Persönliche Betreuung",
+      bridgeQuote: "Das Recht verbindet Nationen. Meine Aufgabe ist es, Brücken zu bauen, wo andere Hindernisse sehen."
     }
   },
   
@@ -220,6 +256,22 @@ export const translations: Record<string, Translation> = {
       impressum: "Mentions légales",
       privacy: "Confidentialité",
       disclaimer: "Avertissement"
+    },
+    heroElements: {
+      establishedBadge: "Depuis 1999 • Pratique juridique internationale",
+      davMember: "Membre DAV",
+      certified: "Certifié",
+      topLawyer: "Top Avocat 2024",
+      excellenceQuote: "Excellence en droit, service personnalisé"
+    },
+    aboutElements: {
+      aboutLawyer: "À propos de l'avocat",
+      qualifications: "Qualifications & Certifications",
+      philosophy: "Ma philosophie",
+      specialties: "Spécialités",
+      founderTitle: "Fondateur & Avocat principal",
+      personalService: "Service personnalisé",
+      bridgeQuote: "Le droit unit les nations. Ma mission est de construire des ponts là où d'autres voient des obstacles."
     }
   },
   
@@ -291,6 +343,22 @@ export const translations: Record<string, Translation> = {
       impressum: "Legal Notice",
       privacy: "Privacy",
       disclaimer: "Disclaimer"
+    },
+    heroElements: {
+      establishedBadge: "Since 1999 • International Legal Practice",
+      davMember: "DAV Member",
+      certified: "Certified",
+      topLawyer: "Top Lawyer 2024",
+      excellenceQuote: "Excellence in law, personalized service"
+    },
+    aboutElements: {
+      aboutLawyer: "About the Lawyer",
+      qualifications: "Qualifications & Certifications",
+      philosophy: "My Philosophy",
+      specialties: "Specialties",
+      founderTitle: "Founder & Principal Lawyer",
+      personalService: "Personal Service",
+      bridgeQuote: "Law connects nations. My task is to build bridges where others see obstacles."
     }
   },
   
@@ -362,6 +430,22 @@ export const translations: Record<string, Translation> = {
       impressum: "Aviso legal",
       privacy: "Privacidad",
       disclaimer: "Descargo de responsabilidad"
+    },
+    heroElements: {
+      establishedBadge: "Desde 1999 • Práctica jurídica internacional",
+      davMember: "Miembro DAV",
+      certified: "Certificado",
+      topLawyer: "Top Abogado 2024",
+      excellenceQuote: "Excelencia en derecho, servicio personalizado"
+    },
+    aboutElements: {
+      aboutLawyer: "Sobre el abogado",
+      qualifications: "Calificaciones y Certificaciones",
+      philosophy: "Mi filosofía",
+      specialties: "Especialidades",
+      founderTitle: "Fundador y Abogado principal",
+      personalService: "Servicio personal",
+      bridgeQuote: "El derecho conecta naciones. Mi tarea es construir puentes donde otros ven obstáculos."
     }
   },
   
@@ -433,6 +517,22 @@ export const translations: Record<string, Translation> = {
       impressum: "Note legali",
       privacy: "Privacy",
       disclaimer: "Disclaimer"
+    },
+    heroElements: {
+      establishedBadge: "Dal 1999 • Pratica legale internazionale",
+      davMember: "Membro DAV",
+      certified: "Certificato",
+      topLawyer: "Top Avvocato 2024",
+      excellenceQuote: "Eccellenza nel diritto, servizio personalizzato"
+    },
+    aboutElements: {
+      aboutLawyer: "Riguardo l'avvocato",
+      qualifications: "Qualifiche e Certificazioni",
+      philosophy: "La mia filosofia",
+      specialties: "Specialità",
+      founderTitle: "Fondatore e Avvocato principale",
+      personalService: "Servizio personale",
+      bridgeQuote: "Il diritto unisce le nazioni. Il mio compito è costruire ponti dove altri vedono ostacoli."
     }
   },
   
@@ -504,6 +604,22 @@ export const translations: Record<string, Translation> = {
       impressum: "Aviso legal",
       privacy: "Privacidade",
       disclaimer: "Isenção de responsabilidade"
+    },
+    heroElements: {
+      establishedBadge: "Desde 1999 • Prática jurídica internacional",
+      davMember: "Membro DAV",
+      certified: "Certificado",
+      topLawyer: "Top Advogado 2024",
+      excellenceQuote: "Excelência em direito, serviço personalizado"
+    },
+    aboutElements: {
+      aboutLawyer: "Sobre o advogado",
+      qualifications: "Qualificações e Certificações",
+      philosophy: "Minha filosofia",
+      specialties: "Especialidades",
+      founderTitle: "Fundador e Advogado principal",
+      personalService: "Serviço pessoal",
+      bridgeQuote: "O direito conecta nações. Minha tarefa é construir pontes onde outros veem obstáculos."
     }
   }
 };
