@@ -429,8 +429,8 @@ export const translations: Record<string, Translations> = {
       awards: "Récompenses juridiques"
     },
     header: {
-      profession: "Rechtsanwalt",
-      phone: "+49 89 123 456 78"
+      profession: "Avocat",
+      phone: "+33 (0) 1 23 45 67 89"
     },
     process: {
       title: "Notre Processus d'Excellence",
@@ -1355,7 +1355,7 @@ export const translations: Record<string, Translations> = {
   pt: {
     nav: {
       home: "Início",
-      about: "Sobre",
+      about: "Sobre nós",
       services: "Áreas",
       contact: "Contato"
     },
@@ -1364,11 +1364,11 @@ export const translations: Record<string, Translations> = {
       subtitle: "Excelência jurídica.",
       cta: "Solicitar consulta gratuita",
       secondaryCta: "Conhecer o escritório",
-      description: "Especializado em direito internacional e comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça.",
+      description: "Especializado em direito internacional e comercial com mais de 25 anos de experiência em assessoria jurídica transfronteiriça.",
       badge: "Desde 1999 • Prática jurídica internacional",
       davMember: "Membro DAV",
       certified: "Certificado",
-      topLawyer: "Top Advogado 2024",
+      topLawyer: "Melhor Advogado 2024",
       quote: "Excelência em direito, serviço personalizado"
     },
     about: {
@@ -1376,7 +1376,7 @@ export const translations: Record<string, Translations> = {
       subtitle: "Seu especialista em direito internacional",
       description: "Com mais de 25 anos de experiência em direito internacional, ofereço soluções jurídicas sob medida para questões transfronteiriças complexas.",
       experience: "Mais de 25 anos de experiência",
-      philosophy: "Confiança, competência e aconselhamento discreto são o núcleo do meu relacionamento com o cliente.",
+      philosophy: "Confiança, competência e assessoria discreta são o núcleo do meu relacionamento com o cliente.",
       aboutLawyer: "Sobre o advogado",
       qualifications: "Qualificações & Certificações",
       specialties: "Especialidades",
@@ -1386,18 +1386,18 @@ export const translations: Record<string, Translations> = {
     },
     services: {
       title: "Nossas áreas de especialização",
-      subtitle: "Consultoria jurídica completa em todas as áreas do direito internacional e comercial com expertise e serviço personalizado",
+      subtitle: "Assessoria jurídica completa em todas as áreas do direito internacional e comercial com expertise e serviço personalizado",
       international: {
         title: "Direito Internacional",
-        description: "Consultoria completa em questões jurídicas transfronteiriças e contratos internacionais."
+        description: "Assessoria completa em questões jurídicas transfronteiriças e contratos internacionais."
       },
       commercial: {
         title: "Direito Comercial",
-        description: "Suporte jurídico para empresas em transações comerciais e direito societário."
+        description: "Apoio jurídico para empresas em transações comerciais e direito societário."
       },
       european: {
         title: "Direito Econômico Europeu",
-        description: "Especialização em direito econômico europeu e atividades comerciais em nível da UE."
+        description: "Expertise em direito econômico europeu e atividades comerciais em nível da UE."
       },
       contracts: {
         title: "Direito Contratual Transfronteiriço",
@@ -1414,7 +1414,7 @@ export const translations: Record<string, Translations> = {
           description: "Competência local com compreensão global"
         },
         multilingual: {
-          title: "Consultoria Multilíngue",
+          title: "Assessoria Multilíngue",
           description: "Comunicação fluente em 4 idiomas"
         },
         experience: {
@@ -1429,7 +1429,7 @@ export const translations: Record<string, Translations> = {
       consultation: {
         title: "Primeira consulta gratuita",
         subtitle: "Sem compromisso & profissional",
-        description: "Aproveite nossa consulta gratuita para uma primeira avaliação da sua questão jurídica.",
+        description: "Aproveite nossa consulta gratuita para uma primeira avaliação de sua questão jurídica.",
         duration: "30min",
         response: "24h",
         cta: "Agendar agora",
@@ -1444,14 +1444,14 @@ export const translations: Record<string, Translations> = {
     },
     header: {
       profession: "Advogado",
-      phone: "+55 (11) 1234-5678"
+      phone: "+351 21 123 45 67"
     },
     process: {
       title: "Nosso processo de excelência",
       subtitle: "Uma metodologia comprovada para resultados ótimos em cada etapa",
       step1: {
         title: "Consulta inicial",
-        description: "Análise gratuita da sua situação jurídica e definição da estratégia ideal.",
+        description: "Análise gratuita de sua situação jurídica e definição da estratégia ótima.",
         duration: "30 min",
         features: ["Avaliação gratuita", "Confidencialidade absoluta", "Assessoria estratégica"]
       },
@@ -1470,102 +1470,102 @@ export const translations: Record<string, Translations> = {
       step4: {
         title: "Resolução",
         description: "Finalização do caso com documentação completa e acompanhamento pós-resolução.",
-        duration: "Concluído",
+        duration: "Finalizado",
         features: ["Documentação", "Acompanhamento gratuito", "Garantias"]
       },
       cta: {
         title: "Pronto para começar?",
-        subtitle: "Contate-nos hoje para sua consulta gratuita e descubra como podemos ajudar.",
+        subtitle: "Entre em contato hoje para sua consulta gratuita e descubra como podemos ajudá-lo.",
         button: "Consulta gratuita"
       }
     },
     team: {
       title: "Nossa equipe de excelência",
-      subtitle: "Expertise multilíngue e multicultural a serviço dos seus projetos internacionais",
+      subtitle: "Expertise multilíngue e multicultural a serviço de seus projetos internacionais",
       lawyer: {
         name: "Dr. Jozef Pister",
         role: "Advogado principal",
         description: "Mais de 25 anos de experiência em direito internacional. Especializado em transações transfronteiriças complexas.",
         specialties: ["Direito Internacional", "Direito Comercial", "Arbitragem"],
         languages: ["Português", "Francês", "Inglês", "Alemão"],
-        location: "São Paulo & Rio de Janeiro",
+        location: "Lisboa & Porto",
         qualifications: ["Certificado DAV", "Mestre em Direito Internacional", "Árbitro ICC"]
       },
       labels: {
         founder: "Fundador",
         specializations: "Especializações",
         qualifications: "Qualificações",
-        contact: "Contato",
+        contact: "Contatar",
         call: "Ligar"
       }
     },
     testimonials: {
       title: "O que dizem nossos clientes",
-      subtitle: "A confiança dos nossos clientes é nossa maior recompensa",
+      subtitle: "A confiança de nossos clientes é nossa maior recompensa",
       testimonial1: {
-        name: "Dr. Marcos Silva",
+        name: "Dr. Miguel Santos",
         role: "CEO",
-        company: "Silva Indústrias",
-        content: "O Dr. Pister gerenciou nossa expansão internacional com uma expertise notável. Sua abordagem estratégica nos economizou milhares de reais evitando armadilhas legais."
+        company: "Santos Industries",
+        content: "O Dr. Pister gerenciou nossa expansão internacional com expertise notável. Sua abordagem estratégica nos economizou milhares de euros evitando armadilhas jurídicas."
       },
       testimonial2: {
-        name: "Ana Costa",
+        name: "Ana Silva",
         role: "Diretora Jurídica",
-        company: "TechStart Ltda",
+        company: "TechStart Lda",
         content: "A expertise em direito comercial internacional do Dr. Pister é excepcional. Ele negociou nossos contratos com precisão cirúrgica."
       },
       testimonial3: {
-        name: "João Pereira",
+        name: "Carlos Ferreira",
         role: "Empresário",
         company: "Export Solutions",
-        content: "Graças ao Dr. Pister, evitamos uma disputa custosa. Seu domínio do direito internacional nos permitiu encontrar uma solução elegante."
+        content: "Graças ao Dr. Pister, evitamos um litígio custoso. Seu domínio do direito internacional nos permitiu encontrar uma solução elegante."
       },
       cta: "Mais de 500 clientes confiam em nós"
     },
     faq: {
       title: "Perguntas frequentes",
-      subtitle: "Encontre rapidamente respostas para suas dúvidas mais comuns",
+      subtitle: "Encontre rapidamente respostas para suas perguntas mais comuns",
       questions: {
         q1: {
           question: "Quais são suas áreas de especialização?",
-          answer: "Somos especializados em direito internacional, direito comercial, direito de contratos internacionais, arbitragem comercial e assessoria jurídica para empresas em expansão internacional. Nossa expertise cobre especialmente transações transfronteiriças e conformidade regulatória internacional."
+          answer: "Especializamo-nos em direito internacional, direito comercial, direito de contratos internacionais, arbitragem comercial e assessoria jurídica para empresas em expansão internacional. Nossa expertise cobre especialmente transações transfronteiriças e conformidade regulatória internacional."
         },
         q2: {
           question: "Quanto custa uma consulta?",
-          answer: "A primeira consulta de 30 minutos é totalmente gratuita. Isso nos permite avaliar sua situação e propor uma estratégia adequada. Para serviços posteriores, oferecemos tarifas transparentes adaptadas à complexidade do caso, com possibilidade de pacotes para projetos de longo prazo."
+          answer: "A primeira consulta de 30 minutos é completamente gratuita. Isso nos permite avaliar sua situação e propor uma estratégia adequada. Para serviços subsequentes, oferecemos tarifas transparentes adaptadas à complexidade do caso, com possibilidade de pacotes para projetos de longo prazo."
         },
         q3: {
-          question: "Em quais países atuam?",
-          answer: "Graças à nossa rede internacional de associados, atuamos principalmente na Europa (França, Alemanha, Espanha, Itália, Portugal), mas também em outras jurisdições conforme necessário. Falamos 6 idiomas e temos a expertise necessária para navegar em diferentes sistemas jurídicos."
+          question: "Em quais países operam?",
+          answer: "Graças à nossa rede internacional de associados, operamos principalmente na Europa (França, Alemanha, Espanha, Itália, Portugal), mas também em outras jurisdições conforme as necessidades. Falamos 6 idiomas e temos a expertise necessária para navegar em diferentes sistemas jurídicos."
         },
         q4: {
-          question: "Quais são os prazos de atendimento?",
-          answer: "Comprometemo-nos a responder em 24h para qualquer solicitação urgente. Para consultas padrão, uma reunião pode ser agendada em 48-72h. Os prazos de processamento dependem da complexidade do caso, mas sempre fornecemos um cronograma preciso no momento do compromisso."
+          question: "Quais são os tempos de resposta?",
+          answer: "Comprometemo-nos a responder em 24h para qualquer solicitação urgente. Para consultas padrão, um compromisso pode ser marcado em 48-72h. Os tempos de gestão dependem da complexidade do caso, mas sempre fornecemos um cronograma preciso no compromisso."
         },
         q5: {
           question: "Como é feito o acompanhamento do meu caso?",
-          answer: "Oferecemos acompanhamento personalizado com atualizações regulares sobre o progresso. Utilizamos ferramentas modernas de comunicação para mantê-lo informado em tempo real. Cada etapa importante é acompanhada de um relatório detalhado."
+          answer: "Oferecemos acompanhamento personalizado com atualizações regulares sobre o progresso. Utilizamos ferramentas de comunicação modernas para mantê-lo informado em tempo real. Cada etapa importante é acompanhada de um relatório detalhado."
         },
         q6: {
-          question: "Vocês oferecem serviços de emergência?",
-          answer: "Sim, temos um serviço de emergência para situações críticas que exigem intervenção rápida. Nossas equipes estão disponíveis para tratar casos urgentes com a reatividade necessária para sua situação."
+          question: "Vocês oferecem serviços de urgência?",
+          answer: "Sim, temos um serviço de emergência para situações críticas que requerem intervenção rápida. Nossas equipes estão disponíveis para gerenciar casos urgentes com a reatividade necessária para sua situação."
         }
       },
       contact: {
-        title: "Não encontrou a resposta?",
-        subtitle: "Nossa equipe está à disposição para responder todas as suas perguntas específicas.",
-        button: "Contate-nos diretamente"
+        title: "Não encontra a resposta?",
+        subtitle: "Nossa equipe está à sua disposição para responder a todas as suas perguntas específicas.",
+        button: "Entre em contato diretamente"
       }
     },
     contact: {
       badge: "Contato & Consulta",
       title: "Entre em contato",
-      subtitle: "Estou à sua disposição para um aconselhamento personalizado",
+      subtitle: "Estou à sua disposição para assessoria personalizada",
       office: {
-        title: "Contato do escritório",
+        title: "Contato escritório",
         address: {
           label: "Endereço",
-          value: "Rua das Flores 123\n01000-000 São Paulo\nBrasil"
+          value: "Rua Augusta 123\n1200-001 Lisboa\nPortugal"
         },
         phone: {
           label: "Telefone"
@@ -1574,15 +1574,15 @@ export const translations: Record<string, Translations> = {
           label: "E-mail"
         },
         hours: {
-          label: "Horário de atendimento",
-          value: "Seg-Sex: 09:00 - 18:00\nSáb: 10:00 - 14:00\nDom: Sob agendamento"
+          label: "Horário de funcionamento",
+          value: "Seg-Sex: 09:00 - 18:00\nSáb: 10:00 - 14:00\nDom: Mediante agendamento"
         }
       },
       emergency: {
         title: "Linha de emergência",
         subtitle: "Disponível 24h/24",
-        description: "Para questões jurídicas urgentes, estamos disponíveis fora do horário comercial.",
-        phone: "+55 (11) 1234-5670"
+        description: "Para questões jurídicas urgentes, estamos disponíveis fora do horário de funcionamento.",
+        phone: "+351 21 123 45 60"
       },
       form: {
         title: "Enviar uma mensagem",
@@ -1591,22 +1591,22 @@ export const translations: Record<string, Translations> = {
         email: "Endereço de e-mail *",
         subject: "Assunto *",
         message: "Sua mensagem *",
-        messagePlaceholder: "Descreva sua solicitação jurídica...",
-        privacy: "Aceito o tratamento dos meus dados conforme a",
+        messagePlaceholder: "Descreva sua consulta jurídica...",
+        privacy: "Aceito o tratamento dos meus dados segundo a",
         privacyLink: "política de privacidade",
         submit: "Enviar mensagem",
         sending: "Enviando...",
         success: {
           title: "Mensagem enviada",
-          description: "Obrigado pela sua mensagem. Entraremos em contato em até 24 horas."
+          description: "Obrigado por sua mensagem. Entraremos em contato em 24 horas."
         }
       }
     },
     footer: {
-      description: "Seu especialista em direito internacional e comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça.",
+      description: "Seu especialista em direito internacional e comercial com mais de 25 anos de experiência em assessoria jurídica transfronteiriça.",
       badges: {
-        member: "Membro da Ordem",
-        top: "Top Advogado 2024"
+        member: "Membro da Ordem dos Advogados",
+        top: "Melhor Advogado 2024"
       },
       navigation: {
         title: "Navegação",
@@ -1627,24 +1627,24 @@ export const translations: Record<string, Translations> = {
       },
       contact: {
         title: "Contato",
-        address: "Rua das Flores 123, 01000-000 São Paulo, Brasil",
+        address: "Rua Augusta 123, 1200-001 Lisboa, Portugal",
         hours: {
-          title: "Horário de atendimento",
+          title: "Horário de funcionamento",
           weekdays: "09:00 - 18:00",
           saturday: "10:00 - 14:00",
-          sunday: "Sob agendamento"
+          sunday: "Mediante agendamento"
         }
       },
       legal: {
         title: "Avisos legais importantes",
-        description: "Todos os conteúdos deste site são protegidos. A reprodução, cópia ou extração não autorizada de informações jurídicas ou dados profissionais é estritamente proibida conforme a legislação brasileira.",
-        features: ["Site protegido SSL", "Dados seguros", "Conformidade LGPD"],
+        description: "Todo o conteúdo deste site é protegido. A reprodução, cópia ou extração não autorizada de informações jurídicas ou dados profissionais é estritamente proibida segundo a lei portuguesa.",
+        features: ["Site protegido SSL", "Dados seguros", "Conformidade RGPD"],
         bottom: {
           rights: "© 2024 Escritório Pister. Todos os direitos reservados.",
           security: "Monitoramento técnico ativo",
           links: ["Avisos legais", "Privacidade", "Condições"],
           securityStatus: "Última verificação de segurança: julho 2025",
-          compliance: "Este site está em conformidade com as obrigações legais brasileiras"
+          compliance: "Este site está em conformidade com as obrigações legais portuguesas"
         }
       }
     },
@@ -1652,7 +1652,7 @@ export const translations: Record<string, Translations> = {
       minimal: "Site protegido SSL",
       compact: {
         title: "Site seguro",
-        subtitle: "Dados protegidos LGPD",
+        subtitle: "Dados protegidos RGPD",
         ssl: "SSL 256-bit",
         verified: "Verificado"
       },
@@ -1662,7 +1662,7 @@ export const translations: Record<string, Translations> = {
         features: {
           ssl: { label: "Criptografia SSL 256-bit", status: "Ativo" },
           monitoring: { label: "Monitoramento técnico", status: "24/7" },
-          gdpr: { label: "Conformidade LGPD", status: "Certificado" },
+          gdpr: { label: "Conformidade RGPD", status: "Certificado" },
           legal: { label: "Normas jurídicas", status: "Conforme" }
         },
         status: {
@@ -1672,7 +1672,7 @@ export const translations: Record<string, Translations> = {
         },
         notice: {
           title: "Aviso legal:",
-          description: "A reprodução, cópia ou extração não autorizada de informações é estritamente proibida conforme a legislação brasileira."
+          description: "A reprodução, cópia ou extração não autorizada de informações é estritamente proibida segundo a lei portuguesa."
         }
       }
     },
