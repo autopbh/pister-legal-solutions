@@ -79,7 +79,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 type="button"
-                className="relative bg-gradient-to-r from-primary to-primary-light hover:from-primary-light hover:to-primary text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 group overflow-hidden"
+                className="relative bg-gradient-to-r from-primary to-primary-light hover:from-primary-light hover:to-primary text-primary-foreground px-10 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 group overflow-hidden"
                 onClick={() => {
                   console.log("Hero contact button clicked");
                   const contactSection = document.getElementById('contact');
@@ -97,7 +97,7 @@ const HeroSection = () => {
                 size="lg" 
                 type="button"
                 variant="outline" 
-                className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm bg-primary-foreground/5 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="border-2 border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:scale-105"
                 onClick={(e) => {
                   e.preventDefault();
                   const aboutSection = document.getElementById('about');
