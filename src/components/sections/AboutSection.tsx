@@ -26,9 +26,13 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-16 bg-gradient-to-br from-secondary via-muted/30 to-secondary">
+    <section id="about" className="py-16 bg-gradient-to-br from-muted/20 via-primary/5 to-accent/10 relative overflow-hidden">
 
-      <div className="container mx-auto px-4">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
@@ -52,7 +56,7 @@ const AboutSection = () => {
 
             <div className="space-y-6">
               <h4 className="text-xl font-playfair font-semibold text-primary">Meine Philosophie</h4>
-              <div className="relative bg-background/50 p-6 rounded-lg border border-border">
+              <div className="relative bg-background/70 backdrop-blur-sm p-6 rounded-lg border border-border/50 hover:bg-background/90 transition-all duration-300">
                 <Quote className="h-6 w-6 text-accent mb-4" />
                 <p className="text-muted-foreground leading-relaxed italic">
                   {t.about.philosophy}
@@ -67,7 +71,7 @@ const AboutSection = () => {
                 {achievements.map((achievement, index) => (
                   <div 
                     key={index} 
-                    className="bg-background p-4 rounded-lg border border-border hover:shadow-card transition-shadow"
+                    className="bg-background/70 backdrop-blur-sm p-4 rounded-lg border border-border/50 hover:shadow-card hover:bg-background/90 transition-all duration-300"
                   >
                     <div className="flex items-start space-x-4">
                       <div className={`w-10 h-10 ${achievement.color === 'primary' ? 'bg-primary' : 'bg-accent'} rounded-lg flex items-center justify-center flex-shrink-0`}>
