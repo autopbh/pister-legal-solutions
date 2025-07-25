@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { translations, Translation } from '../lib/translations';
+import { translations, Translation } from '../lib/simple-translations';
 
 interface LanguageState {
   currentLanguage: string;

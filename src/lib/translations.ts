@@ -189,14 +189,14 @@ export const translations: Record<string, Translation> = {
   de: {
     nav: {
       home: "Startseite",
-      about: "Über die Kanzlei",
+      about: "Über die Kanzlei", 
       services: "Rechtsgebiete",
       practice: "Mandantenservice",
       contact: "Kontakt"
     },
     hero: {
       title: "Grenzüberschreitende Lösungen.",
-      subtitle: "Juristische Exzellenz.",
+      subtitle: "Juristische Exzellenz.", 
       cta: "Kostenlose Erstberatung anfragen",
       secondaryCta: "Kanzlei entdecken",
       description: "Spezialisiert auf Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung."
