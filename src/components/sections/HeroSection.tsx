@@ -1,7 +1,9 @@
 import { ArrowRight, Scale, Users, Award, Sparkles, Globe2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const HeroSection = () => {
+  const { t } = useTranslations();
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
@@ -31,15 +33,15 @@ const HeroSection = () => {
 
             <div className="space-y-6">
               <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight animate-fade-in">
-                Grenzüberschreitende Lösungen.
+                {t.hero.title}
               </h1>
               <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-accent font-medium leading-relaxed animate-fade-in" style={{animationDelay: '0.2s'}}>
-                Juristische Exzellenz.
+                {t.hero.subtitle}
               </h2>
             </div>
             
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl animate-fade-in" style={{animationDelay: '0.4s'}}>
-              Spezialisiert auf Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung.
+              {t.hero.description}
             </p>
 
 
@@ -56,7 +58,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                <span>Kostenlose Erstberatung anfragen</span>
+                <span>{t.hero.cta}</span>
                 <ArrowRight className="h-5 w-5" />
               </Button>
               
@@ -72,7 +74,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                Kanzlei entdecken
+                {t.hero.secondaryCta}
               </Button>
             </div>
 

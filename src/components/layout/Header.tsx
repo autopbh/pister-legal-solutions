@@ -121,10 +121,10 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-2">
               {[
-                { id: 'home', label: 'Startseite' },
-                { id: 'about', label: 'Über die Kanzlei' },
-                { id: 'services', label: 'Rechtsgebiete' },
-                { id: 'contact', label: 'Kontakt' }
+                { id: 'home', label: t.nav.home },
+                { id: 'about', label: t.nav.about },
+                { id: 'services', label: t.nav.services },
+                { id: 'contact', label: t.nav.contact }
               ].map((item) => (
                 <button
                   key={item.id}
@@ -144,6 +144,7 @@ const Header = () => {
                   <Phone className="h-4 w-4" />
                   <span>+49 (0) 30 123 456 789</span>
                 </div>
+                <LanguageSelector />
               </div>
             </nav>
           </div>
