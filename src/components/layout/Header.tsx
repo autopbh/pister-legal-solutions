@@ -77,10 +77,10 @@ const Header = () => {
           {/* Navigation épurée */}
           <nav className="hidden md:flex items-center space-x-8">
             {[
-              { id: 'home', label: t.nav.home },
-              { id: 'about', label: t.nav.about },
-              { id: 'services', label: t.nav.services },
-              { id: 'contact', label: t.nav.contact }
+              { id: 'home', label: t.menu.home },
+              { id: 'about', label: t.menu.about },
+              { id: 'services', label: t.menu.services },
+              { id: 'contact', label: t.menu.contact }
             ].map((item) => (
               <button
                 key={item.id}
@@ -120,11 +120,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-2">
-              {[
-                { id: 'home', label: t.nav.home },
-                { id: 'about', label: t.nav.about },
-                { id: 'services', label: t.nav.services },
-                { id: 'contact', label: t.nav.contact }
+            {[
+              { id: 'home', label: t.menu.home },
+              { id: 'about', label: t.menu.about },
+              { id: 'services', label: t.menu.services },
+              { id: 'contact', label: t.menu.contact }
               ].map((item) => (
                 <button
                   key={item.id}

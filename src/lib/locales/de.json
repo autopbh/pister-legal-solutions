@@ -1,0 +1,122 @@
+{
+  "menu": {
+    "home": "Startseite",
+    "about": "Über die Kanzlei",
+    "services": "Fachgebiete",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "hero": {
+    "title": "Grenzüberschreitende Lösungen. Juristische Exzellenz.",
+    "subtitle": "Ihr Anwalt für internationales Recht und grenzüberschreitende Rechtsberatung",
+    "description": "Mit über 25 Jahren Erfahrung im internationalen Wirtschaftsrecht bietet Rechtsanwalt Jozef Pister professionelle Rechtsberatung für Unternehmen und Privatpersonen in grenzüberschreitenden Rechtsangelegenheiten.",
+    "cta": "Erstberatung anfragen",
+    "contact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über Rechtsanwalt Jozef Pister",
+    "subtitle": "Ihr Spezialist für internationales Recht",
+    "description": "Rechtsanwalt Jozef Pister ist ein erfahrener Fachanwalt für internationales und Handelsrecht mit Sitz in Deutschland. Mit seiner umfassenden Expertise im grenzüberschreitenden Recht unterstützt er Mandanten bei komplexen rechtlichen Herausforderungen.",
+    "experience": "25+ Jahre Erfahrung",
+    "specialization": "Spezialisierung auf internationales Recht",
+    "languages": "Mehrsprachige Beratung"
+  },
+  "services": {
+    "title": "Unsere Fachgebiete",
+    "subtitle": "Umfassende Rechtsberatung in allen Bereichen des internationalen Rechts",
+    "internationalLaw": {
+      "title": "Internationales Recht",
+      "description": "Beratung bei grenzüberschreitenden Rechtsfragen und internationalen Verträgen"
+    },
+    "commercialLaw": {
+      "title": "Handelsrecht",
+      "description": "Umfassende Beratung im nationalen und internationalen Handelsrecht"
+    },
+    "euLaw": {
+      "title": "EU-Wirtschaftsrecht",
+      "description": "Spezialisierung auf europäisches Wirtschaftsrecht und EU-Verordnungen"
+    },
+    "contracts": {
+      "title": "Vertragsrecht (grenzüberschreitend)",
+      "description": "Gestaltung und Prüfung internationaler Verträge und Abkommen"
+    },
+    "arbitration": {
+      "title": "Internationale Schiedsgerichtsbarkeit",
+      "description": "Vertretung in internationalen Schiedsverfahren und alternativen Streitbeilegungen"
+    },
+    "corporateLaw": {
+      "title": "Gesellschaftsrecht",
+      "description": "Beratung bei Unternehmensgründungen und -umstrukturierungen"
+    }
+  },
+  "process": {
+    "title": "Unser Beratungsprozess",
+    "subtitle": "Von der ersten Kontaktaufnahme bis zur erfolgreichen Lösung",
+    "step1": {
+      "title": "Erstberatung",
+      "description": "Kostenlose Ersteinschätzung Ihres Rechtsfalls"
+    },
+    "step2": {
+      "title": "Analyse",
+      "description": "Detaillierte Prüfung aller rechtlichen Aspekte"
+    },
+    "step3": {
+      "title": "Strategie",
+      "description": "Entwicklung einer maßgeschneiderten Lösungsstrategie"
+    },
+    "step4": {
+      "title": "Umsetzung",
+      "description": "Professionelle Durchführung und Begleitung"
+    }
+  },
+  "team": {
+    "title": "Unser Team",
+    "subtitle": "Erfahrene Rechtsexperten an Ihrer Seite"
+  },
+  "testimonials": {
+    "title": "Was unsere Mandanten sagen",
+    "subtitle": "Vertrauen durch Kompetenz und Erfahrung"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf die wichtigsten Fragen rund um unsere Rechtsberatung"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir sind für Sie da - persönlich, telefonisch oder per E-Mail",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "form": {
+      "name": "Ihr vollständiger Name",
+      "email": "Ihre E-Mail-Adresse",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "privacy": "Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu",
+      "submit": "Nachricht senden",
+      "success": "Ihre Nachricht wurde erfolgreich gesendet!"
+    },
+    "quickActions": "Schnellkontakt",
+    "emergency": "Notfall-Hotline"
+  },
+  "legal": {
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookie-Richtlinie",
+    "terms": "Allgemeine Geschäftsbedingungen"
+  },
+  "footer": {
+    "description": "Rechtsanwalt Jozef Pister - Ihr Spezialist für internationales Recht und grenzüberschreitende Rechtsberatung.",
+    "quickLinks": "Schnellzugriff",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "rights": "© 2024 Kanzlei Jozef Pister. Alle Rechte vorbehalten."
+  },
+  "stats": {
+    "experience": "25+ Jahre Erfahrung",
+    "cases": "500+ Erfolgreiche Fälle",
+    "expertise": "12+ Domaines d'expertise",
+    "satisfaction": "98% Kundenzufriedenheit"
+  }
+}

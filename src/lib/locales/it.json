@@ -1,0 +1,122 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "Informazioni sullo Studio",
+    "services": "Aree di Pratica",
+    "contact": "Contatto",
+    "language": "Lingua"
+  },
+  "hero": {
+    "title": "Soluzioni transfrontaliere. Eccellenza legale.",
+    "subtitle": "Il vostro avvocato per il diritto internazionale e la consulenza legale transfrontaliera",
+    "description": "Con oltre 25 anni di esperienza nel diritto commerciale internazionale, l'Avvocato Jozef Pister offre consulenza legale professionale ad aziende e privati in questioni legali transfrontaliere.",
+    "cta": "Richiedi consulenza iniziale",
+    "contact": "Contattaci"
+  },
+  "about": {
+    "title": "Informazioni sull'Avvocato Jozef Pister",
+    "subtitle": "Il vostro specialista in diritto internazionale",
+    "description": "L'Avvocato Jozef Pister è un avvocato specialista esperto in diritto internazionale e commerciale con sede in Germania. Con la sua vasta competenza nel diritto transfrontaliero, supporta i clienti nelle sfide legali complesse.",
+    "experience": "25+ anni di esperienza",
+    "specialization": "Specializzazione in diritto internazionale",
+    "languages": "Consulenza multilingue"
+  },
+  "services": {
+    "title": "Le nostre aree di pratica",
+    "subtitle": "Consulenza legale completa in tutte le aree del diritto internazionale",
+    "internationalLaw": {
+      "title": "Diritto internazionale",
+      "description": "Consulenza su questioni legali transfrontaliere e contratti internazionali"
+    },
+    "commercialLaw": {
+      "title": "Diritto commerciale",
+      "description": "Consulenza completa nel diritto commerciale nazionale e internazionale"
+    },
+    "euLaw": {
+      "title": "Diritto economico UE",
+      "description": "Specializzazione nel diritto economico europeo e regolamenti UE"
+    },
+    "contracts": {
+      "title": "Diritto contrattuale (transfrontaliero)",
+      "description": "Redazione e revisione di contratti e accordi internazionali"
+    },
+    "arbitration": {
+      "title": "Arbitrato internazionale",
+      "description": "Rappresentanza in procedimenti di arbitrato internazionale e risoluzione alternativa delle controversie"
+    },
+    "corporateLaw": {
+      "title": "Diritto societario",
+      "description": "Consulenza su costituzioni di società e ristrutturazioni"
+    }
+  },
+  "process": {
+    "title": "Il nostro processo di consulenza",
+    "subtitle": "Dal primo contatto alla soluzione di successo",
+    "step1": {
+      "title": "Consulenza iniziale",
+      "description": "Valutazione iniziale gratuita del vostro caso legale"
+    },
+    "step2": {
+      "title": "Analisi",
+      "description": "Esame dettagliato di tutti gli aspetti legali"
+    },
+    "step3": {
+      "title": "Strategia",
+      "description": "Sviluppo di una strategia di soluzione su misura"
+    },
+    "step4": {
+      "title": "Implementazione",
+      "description": "Esecuzione e supporto professionale"
+    }
+  },
+  "team": {
+    "title": "Il nostro team",
+    "subtitle": "Esperti legali esperti al vostro fianco"
+  },
+  "testimonials": {
+    "title": "Cosa dicono i nostri clienti",
+    "subtitle": "Fiducia attraverso competenza ed esperienza"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Risposte alle domande importanti sulla nostra consulenza legale"
+  },
+  "contact": {
+    "title": "Contattateci",
+    "subtitle": "Siamo qui per voi - di persona, per telefono o email",
+    "address": "Indirizzo",
+    "phone": "Telefono",
+    "email": "Email",
+    "hours": "Orari di apertura",
+    "form": {
+      "name": "Il vostro nome completo",
+      "email": "Il vostro indirizzo email",
+      "subject": "Oggetto",
+      "message": "Il vostro messaggio",
+      "privacy": "Accetto il trattamento dei miei dati secondo l'informativa sulla privacy",
+      "submit": "Invia messaggio",
+      "success": "Il vostro messaggio è stato inviato con successo!"
+    },
+    "quickActions": "Contatto rapido",
+    "emergency": "Linea di emergenza"
+  },
+  "legal": {
+    "impressum": "Note legali",
+    "privacy": "Privacy",
+    "cookies": "Politica dei cookie",
+    "terms": "Termini e condizioni"
+  },
+  "footer": {
+    "description": "Avvocato Jozef Pister - Il vostro specialista per il diritto internazionale e la consulenza legale transfrontaliera.",
+    "quickLinks": "Accesso rapido",
+    "contact": "Contatto",
+    "legal": "Legale",
+    "rights": "© 2024 Studio Legale Jozef Pister. Tutti i diritti riservati."
+  },
+  "stats": {
+    "experience": "25+ anni di esperienza",
+    "cases": "500+ casi di successo",
+    "expertise": "12+ aree di competenza",
+    "satisfaction": "98% soddisfazione del cliente"
+  }
+}

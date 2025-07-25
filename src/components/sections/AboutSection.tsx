@@ -59,7 +59,7 @@ const AboutSection = () => {
               <div className="relative bg-background/70 backdrop-blur-sm p-6 rounded-lg border border-border/50 hover:bg-background/90 transition-all duration-300">
                 <Quote className="h-6 w-6 text-accent mb-4" />
                 <p className="text-muted-foreground leading-relaxed italic">
-                  {t.about.philosophy}
+                  {t.about.description}
                 </p>
               </div>
             </div>

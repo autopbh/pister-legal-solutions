@@ -74,7 +74,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                {t.hero.secondaryCta}
+                {t.hero.contact}
               </Button>
             </div>
 
