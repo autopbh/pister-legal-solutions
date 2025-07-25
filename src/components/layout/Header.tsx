@@ -9,6 +9,9 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const { t } = useLanguage();
+  
+  console.log('Header rendering, t object:', t);
+  console.log('Header nav translations:', t?.nav);
 
   useEffect(() => {
     const handleScroll = () => {

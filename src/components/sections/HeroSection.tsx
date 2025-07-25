@@ -4,6 +4,9 @@ import { useLanguage } from '@/hooks/useLanguage';
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  
+  console.log('HeroSection rendering, t object:', t);
+  console.log('HeroSection hero translations:', t?.hero);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
