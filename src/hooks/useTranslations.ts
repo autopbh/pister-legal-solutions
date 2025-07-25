@@ -3,9 +3,9 @@ import { translations } from '../data/translations';
 import { Translations } from '../types/translations';
 
 export const useTranslations = () => {
-  const [currentLanguage, setCurrentLanguage] = useState('de');
+  const [currentLanguage, setCurrentLanguage] = useState('fr');
   
-  const t = translations[currentLanguage] || translations.de;
+  const t = translations[currentLanguage] || translations.fr;
   
   const setLanguage = (language: string) => {
     if (translations[language]) {
@@ -14,9 +14,10 @@ export const useTranslations = () => {
   };
 
   const availableLanguages = [
-    { code: 'de', name: 'Deutsch', flag: 'DE' },
-    { code: 'en', name: 'English', flag: 'EN' },
-    { code: 'fr', name: 'Français', flag: 'FR' }
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'pt', name: 'Português', flag: '🇵🇹' }
   ];
 
   return {

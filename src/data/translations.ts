@@ -1,64 +1,6 @@
 import { Translations } from '../types/translations';
 
 export const translations: Record<string, Translations> = {
-  de: {
-    nav: {
-      home: "Startseite",
-      about: "Über die Kanzlei", 
-      services: "Rechtsgebiete",
-      contact: "Kontakt"
-    },
-    hero: {
-      title: "Grenzüberschreitende Lösungen.",
-      subtitle: "Juristische Exzellenz.",
-      cta: "Kostenlose Erstberatung anfragen",
-      secondaryCta: "Kanzlei entdecken", 
-      description: "Spezialisiert auf Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung."
-    },
-    about: {
-      title: "Me Jozef Pister",
-      subtitle: "Ihr Spezialist für Internationales Recht",
-      description: "Mit über 25 Jahren Erfahrung im internationalen Recht biete ich maßgeschneiderte juristische Lösungen für komplexe grenzüberschreitende Rechtsfragen.",
-      experience: "25+ Jahre Erfahrung",
-      philosophy: "Vertrauen, Kompetenz und diskrete Beratung stehen im Mittelpunkt meiner Mandantenbetreuung."
-    },
-    services: {
-      title: "Unsere Rechtsgebiete"
-    },
-    contact: {
-      title: "Kontakt aufnehmen",
-      subtitle: "Ich stehe Ihnen gerne für eine persönliche Beratung zur Verfügung"
-    }
-  },
-  en: {
-    nav: {
-      home: "Home",
-      about: "About",
-      services: "Services", 
-      contact: "Contact"
-    },
-    hero: {
-      title: "Cross-border Solutions.",
-      subtitle: "Legal Excellence.",
-      cta: "Request Free Consultation",
-      secondaryCta: "Discover Firm",
-      description: "Specialized in International and Commercial Law with over 25 years of experience in cross-border legal advice."
-    },
-    about: {
-      title: "Mr. Jozef Pister",
-      subtitle: "Your International Law Specialist",
-      description: "With over 25 years of experience in international law, I provide tailored legal solutions for complex cross-border legal issues.",
-      experience: "25+ years experience",
-      philosophy: "Trust, competence, and discrete counsel are at the heart of my client relationship."
-    },
-    services: {
-      title: "Our Practice Areas"
-    },
-    contact: {
-      title: "Get in Touch",
-      subtitle: "I am available for personal consultation"
-    }
-  },
   fr: {
     nav: {
       home: "Accueil",
@@ -86,6 +28,93 @@ export const translations: Record<string, Translations> = {
     contact: {
       title: "Nous contacter",
       subtitle: "Je suis à votre disposition pour un conseil personnalisé"
+    }
+  },
+  it: {
+    nav: {
+      home: "Home",
+      about: "Chi siamo",
+      services: "Servizi",
+      contact: "Contatto"
+    },
+    hero: {
+      title: "Soluzioni transfrontaliere.",
+      subtitle: "Eccellenza legale.",
+      cta: "Richiedi consultazione gratuita",
+      secondaryCta: "Scopri studio",
+      description: "Specializzato in Diritto Internazionale e Commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera."
+    },
+    about: {
+      title: "Sig. Jozef Pister",
+      subtitle: "Il vostro specialista in Diritto Internazionale",
+      description: "Con oltre 25 anni di esperienza nel diritto internazionale, fornisco soluzioni legali su misura per questioni legali transfrontaliere complesse.",
+      experience: "25+ anni di esperienza",
+      philosophy: "Fiducia, competenza e consulenza discreta sono al centro del mio rapporto con il cliente."
+    },
+    services: {
+      title: "Le nostre aree di pratica"
+    },
+    contact: {
+      title: "Mettersi in contatto",
+      subtitle: "Sono disponibile per consultazione personale"
+    }
+  },
+  es: {
+    nav: {
+      home: "Inicio",
+      about: "Acerca de",
+      services: "Servicios",
+      contact: "Contacto"
+    },
+    hero: {
+      title: "Soluciones transfronterizas.",
+      subtitle: "Excelencia jurídica.",
+      cta: "Solicitar consulta gratuita",
+      secondaryCta: "Descubrir despacho",
+      description: "Especializado en Derecho Internacional y Comercial con más de 25 años de experiencia en asesoramiento jurídico transfronterizo."
+    },
+    about: {
+      title: "Sr. Jozef Pister",
+      subtitle: "Su especialista en Derecho Internacional",
+      description: "Con más de 25 años de experiencia en derecho internacional, proporciono soluciones jurídicas a medida para cuestiones jurídicas transfronterizas complejas.",
+      experience: "25+ años de experiencia",
+      philosophy: "La confianza, la competencia y el asesoramiento discreto están en el corazón de mi relación con el cliente."
+    },
+    services: {
+      title: "Nuestras áreas de práctica"
+    },
+    contact: {
+      title: "Póngase en contacto",
+      subtitle: "Estoy disponible para consulta personal"
+    }
+  },
+  pt: {
+    nav: {
+      home: "Início",
+      about: "Sobre",
+      services: "Serviços",
+      contact: "Contato"
+    },
+    hero: {
+      title: "Soluções transfronteiriças.",
+      subtitle: "Excelência jurídica.",
+      cta: "Solicitar consulta gratuita",
+      secondaryCta: "Descobrir escritório",
+      description: "Especializado em Direito Internacional e Comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça."
+    },
+    about: {
+      title: "Sr. Jozef Pister",
+      subtitle: "Seu especialista em Direito Internacional",
+      description: "Com mais de 25 anos de experiência em direito internacional, forneço soluções jurídicas sob medida para questões jurídicas transfronteiriças complexas.",
+      experience: "25+ anos de experiência",
+      philosophy: "Confiança, competência e aconselhamento discreto estão no centro do meu relacionamento com o cliente."
+    },
+    services: {
+      title: "Nossas áreas de prática"
+    },
+    contact: {
+      title: "Entre em contato",
+      subtitle: "Estou disponível para consulta pessoal"
     }
   }
 };
