@@ -104,10 +104,11 @@ const ServicesSection = () => {
                   type="button"
                   variant="ghost" 
                   className="w-full text-primary hover:bg-primary/10"
-                  onClick={(e) => {
-                    e.preventDefault();
+                  onClick={() => {
                     const contactSection = document.getElementById('contact');
-                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
                   }}
                 >
                   Mehr erfahren
@@ -206,10 +207,11 @@ const ServicesSection = () => {
                   type="button"
                   size="lg"
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-                  onClick={(e) => {
-                    e.preventDefault();
+                  onClick={() => {
                     const contactSection = document.getElementById('contact');
-                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
                   }}
                 >
                   Jetzt Termin vereinbaren

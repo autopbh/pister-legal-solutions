@@ -145,6 +145,14 @@ All colors MUST be HSL.
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Allow text selection for inputs and buttons */
+  input, textarea, button, a {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
   html {
     scroll-behavior: smooth;
   }
