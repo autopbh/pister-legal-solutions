@@ -91,10 +91,12 @@ const ContactSection = () => {
                    <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
                      <Mail className="h-6 w-6 text-primary-foreground" />
                    </div>
-                   <div className="flex-1">
-                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">E-Mail</p>
-                     <ProtectedContact type="email" variant="reveal" className="mt-2" />
-                   </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">E-Mail</p>
+                      <a href="mailto:contact@pister-law.com" className="text-accent hover:text-accent-gold transition-colors font-medium">
+                        contact@pister-law.com
+                      </a>
+                    </div>
                  </div>
 
                  <div className="flex items-start space-x-4 group">
