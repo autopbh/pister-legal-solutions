@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { translations, Translation } from '../lib/simple-translations';
+import { translations, Translation } from '../lib/translations';
 
 interface LanguageState {
   currentLanguage: string;
@@ -11,28 +11,23 @@ interface LanguageState {
 
 export const useLanguage = create<LanguageState>()(
   persist(
-    (set) => {
-      console.log('useLanguage hook initializing...');
-      return {
-        currentLanguage: 'de',
-        t: translations.de,
-        setLanguage: (language: string) => {
-          console.log('Setting language to:', language);
-          set({ 
-            currentLanguage: language, 
-            t: translations[language] || translations.de 
-          });
-        },
-        availableLanguages: [
-          { code: 'de', name: 'Deutsch', flag: 'DE' },
-          { code: 'en', name: 'English', flag: 'EN' },
-          { code: 'fr', name: 'Français', flag: 'FR' },
-          { code: 'es', name: 'Español', flag: 'ES' },
-          { code: 'it', name: 'Italiano', flag: 'IT' },
-          { code: 'pt', name: 'Português', flag: 'PT' }
-        ]
-      };
-    },
+    (set) => ({
+      currentLanguage: 'de',
+      t: translations.de,
+      setLanguage: (language: string) => 
+        set({ 
+          currentLanguage: language, 
+          t: translations[language] || translations.de 
+        }),
+      availableLanguages: [
+        { code: 'de', name: 'Deutsch', flag: 'DE' },
+        { code: 'en', name: 'English', flag: 'EN' },
+        { code: 'fr', name: 'Français', flag: 'FR' },
+        { code: 'es', name: 'Español', flag: 'ES' },
+        { code: 'it', name: 'Italiano', flag: 'IT' },
+        { code: 'pt', name: 'Português', flag: 'PT' }
+      ]
+    }),
     {
       name: 'language-storage',
     }
