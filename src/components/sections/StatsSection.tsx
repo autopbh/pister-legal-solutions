@@ -28,8 +28,8 @@ const StatsSection = () => {
     },
     {
       icon: Globe,
-      number: "6",
-      label: "Langues parlées",
+      number: "12+",
+      label: "Domaines d'expertise",
       suffix: "",
       color: "from-primary to-accent"
     },
