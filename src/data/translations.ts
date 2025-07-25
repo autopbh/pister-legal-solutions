@@ -85,55 +85,273 @@ export const translations: Record<string, Translations> = {
         hours: "Lun-Ven 9:00-18:00 • Sam 10:00-14:00"
       }
     },
-    contact: {
-      title: "Nous contacter",
-      subtitle: "Je suis à votre disposition pour un conseil personnalisé",
-      form: {
-        name: "Nom complet",
-        email: "Adresse e-mail",
-        subject: "Objet",
-        message: "Votre message",
-        messagePlaceholder: "Veuillez décrire votre question juridique...",
-        submit: "Envoyer le message",
-        privacy: "J'accepte le traitement de mes données selon la politique de confidentialité",
-        sending: "Envoi en cours..."
-      },
-      info: {
-        address: "Adresse",
-        phone: "Téléphone",
-        email: "E-mail",
-        hours: "Heures d'ouverture",
-        emergency: "Ligne d'urgence",
-        available: "Disponibilité 24/7",
-        description: "Pour les questions juridiques urgentes, vous pouvez nous joindre en dehors des heures d'ouverture."
-      }
-    },
     stats: {
       experience: "25+ ans d'expérience",
       clients: "Clients satisfaits",
       domains: "Domaines d'expertise",
       awards: "Récompenses juridiques"
     },
+    header: {
+      profession: "Avocat",
+      phone: "+33 (0) 1 23 45 67 89"
+    },
+    process: {
+      title: "Notre Processus d'Excellence",
+      subtitle: "Une méthodologie éprouvée pour des résultats optimaux à chaque étape",
+      step1: {
+        title: "Consultation Initiale",
+        description: "Analyse gratuite de votre situation juridique et définition de la stratégie optimale.",
+        duration: "30 min",
+        features: ["Évaluation gratuite", "Confidentialité absolue", "Conseil stratégique"]
+      },
+      step2: {
+        title: "Étude Approfondie",
+        description: "Analyse détaillée des aspects juridiques avec recherche documentaire complète.",
+        duration: "2-5 jours",
+        features: ["Recherche juridique", "Analyse des risques", "Rapport détaillé"]
+      },
+      step3: {
+        title: "Action Juridique",
+        description: "Mise en œuvre de la stratégie avec négociation et représentation professionnelle.",
+        duration: "Variable",
+        features: ["Négociation experte", "Représentation", "Suivi personnalisé"]
+      },
+      step4: {
+        title: "Résolution",
+        description: "Finalisation du dossier avec documentation complète et suivi post-résolution.",
+        duration: "Finalisé",
+        features: ["Documentation", "Suivi gratuit", "Garanties"]
+      },
+      cta: {
+        title: "Prêt à Commencer ?",
+        subtitle: "Contactez-nous dès aujourd'hui pour votre consultation gratuite et découvrez comment nous pouvons vous aider.",
+        button: "Consultation Gratuite"
+      }
+    },
+    team: {
+      title: "Notre Équipe d'Excellence",
+      subtitle: "Une expertise multilingue et multiculturelle au service de vos projets internationaux",
+      lawyer: {
+        name: "Me Jozef Pister",
+        role: "Avocat Principal",
+        description: "Plus de 25 ans d'expérience en droit international. Spécialisé dans les transactions transfrontalières complexes.",
+        specialties: ["Droit International", "Droit Commercial", "Arbitrage"],
+        languages: ["Français", "Allemand", "Anglais", "Italien"],
+        location: "Paris & Berlin",
+        qualifications: ["DAV Certifié", "Maître en Droit International", "Arbitre ICC"]
+      },
+      labels: {
+        founder: "Fondateur",
+        specializations: "Spécialisations",
+        qualifications: "Qualifications",
+        contact: "Contacter",
+        call: "Appeler"
+      }
+    },
+    testimonials: {
+      title: "Ce Que Disent Nos Clients",
+      subtitle: "La confiance de nos clients est notre plus grande récompense",
+      testimonial1: {
+        name: "Dr. Michael Weber",
+        role: "CEO",
+        company: "Weber Industries",
+        content: "Me Pister a géré notre expansion internationale avec une expertise remarquable. Son approche stratégique nous a fait économiser des milliers d'euros en évitant les pièges juridiques."
+      },
+      testimonial2: {
+        name: "Sarah Chen",
+        role: "Directrice Juridique",
+        company: "TechStart GmbH",
+        content: "L'expertise en droit commercial international de Me Pister est exceptionnelle. Il a négocié nos contrats avec une précision chirurgicale."
+      },
+      testimonial3: {
+        name: "Jean-Pierre Dubois",
+        role: "Entrepreneur",
+        company: "Export Solutions",
+        content: "Grâce à Me Pister, nous avons évité un litige coûteux. Sa maîtrise du droit international nous a permis de trouver une solution élégante."
+      },
+      cta: "Plus de 500 clients nous font confiance"
+    },
+    faq: {
+      title: "Questions Fréquentes",
+      subtitle: "Trouvez rapidement les réponses à vos questions les plus courantes",
+      questions: {
+        q1: {
+          question: "Quels sont vos domaines de spécialisation ?",
+          answer: "Nous nous spécialisons en droit international, droit commercial, droit des contrats internationaux, arbitrage commercial, et accompagnement juridique pour les entreprises en expansion internationale. Notre expertise couvre particulièrement les transactions transfrontalières et la conformité réglementaire internationale."
+        },
+        q2: {
+          question: "Combien coûte une consultation ?",
+          answer: "La première consultation de 30 minutes est entièrement gratuite. Cela nous permet d'évaluer votre situation et de vous proposer une stratégie adaptée. Pour les services suivants, nous proposons des tarifs transparents adaptés à la complexité de votre dossier, avec possibilité de forfaits pour les projets long terme."
+        },
+        q3: {
+          question: "Dans quels pays intervenez-vous ?",
+          answer: "Grâce à notre réseau international d'associés, nous intervenons principalement en Europe (France, Allemagne, Espagne, Italie, Portugal), mais également dans d'autres juridictions selon les besoins. Nous parlons 6 langues et avons l'expertise nécessaire pour naviguer dans différents systèmes juridiques."
+        },
+        q4: {
+          question: "Quels sont vos délais d'intervention ?",
+          answer: "Nous nous engageons à répondre dans les 24h pour toute demande urgente. Pour les consultations standard, un rendez-vous peut être fixé sous 48-72h. Les délais de traitement dépendent de la complexité du dossier, mais nous fournissons toujours un calendrier précis dès l'engagement."
+        },
+        q5: {
+          question: "Comment se déroule le suivi de mon dossier ?",
+          answer: "Vous bénéficiez d'un suivi personnalisé avec des points réguliers sur l'avancement. Nous utilisons des outils de communication modernes pour vous tenir informé en temps réel. Chaque étape importante fait l'objet d'un compte-rendu détaillé."
+        },
+        q6: {
+          question: "Proposez-vous des services en urgence ?",
+          answer: "Oui, nous avons un service d'urgence pour les situations critiques nécessitant une intervention rapide. Nos équipes sont disponibles pour traiter les dossiers urgents, avec une réactivité adaptée aux enjeux de votre situation."
+        }
+      },
+      contact: {
+        title: "Vous ne trouvez pas la réponse ?",
+        subtitle: "Notre équipe est à votre disposition pour répondre à toutes vos questions spécifiques.",
+        button: "Contactez-nous directement"
+      }
+    },
+    contact: {
+      badge: "Contact & Consultation",
+      title: "Prendre Contact",
+      subtitle: "Je me tiens à votre disposition pour un conseil personnalisé",
+      office: {
+        title: "Contact Cabinet",
+        address: {
+          label: "Adresse",
+          value: "123 Rue de la Paix\n75001 Paris\nFrance"
+        },
+        phone: {
+          label: "Téléphone"
+        },
+        email: {
+          label: "E-mail"
+        },
+        hours: {
+          label: "Heures d'ouverture",
+          value: "Lun-Ven: 09:00 - 18:00\nSam: 10:00 - 14:00\nDim: Sur rendez-vous"
+        }
+      },
+      emergency: {
+        title: "Ligne d'Urgence",
+        subtitle: "Disponible 24h/24",
+        description: "Pour les questions juridiques urgentes, nous sommes joignables en dehors des heures d'ouverture.",
+        phone: "+33 (0) 1 23 45 67 00"
+      },
+      form: {
+        title: "Envoyer un Message",
+        security: "Formulaire sécurisé et chiffré",
+        name: "Nom complet *",
+        email: "Adresse e-mail *",
+        subject: "Objet *",
+        message: "Votre message *",
+        messagePlaceholder: "Décrivez votre demande juridique...",
+        privacy: "J'accepte le traitement de mes données selon la",
+        privacyLink: "politique de confidentialité",
+        submit: "Envoyer le message",
+        sending: "Envoi en cours...",
+        success: {
+          title: "Message envoyé",
+          description: "Merci pour votre message. Nous vous recontacterons sous 24 heures."
+        }
+      }
+    },
     footer: {
-      copyright: "© 2024 Cabinet Pister. Tous droits réservés.",
-      impressum: "Mentions légales",
-      privacy: "Confidentialité",
-      disclaimer: "Avertissement"
+      description: "Votre spécialiste en droit international et commercial avec plus de 25 ans d'expérience en conseil juridique transfrontalier.",
+      badges: {
+        member: "Membre du Barreau",
+        top: "Top Avocat 2024"
+      },
+      navigation: {
+        title: "Navigation",
+        home: "Accueil",
+        about: "À propos du cabinet",
+        services: "Domaines juridiques",
+        contact: "Contact"
+      },
+      services: {
+        title: "Domaines Juridiques",
+        list: [
+          "Droit International",
+          "Droit Commercial", 
+          "Droit Européen des Affaires",
+          "Droit des Contrats",
+          "Arbitrage"
+        ]
+      },
+      contact: {
+        title: "Contact",
+        address: "123 Rue de la Paix, 75001 Paris, France",
+        hours: {
+          title: "Heures d'ouverture",
+          weekdays: "09:00 - 18:00",
+          saturday: "10:00 - 14:00",
+          sunday: "Sur rendez-vous"
+        }
+      },
+      legal: {
+        title: "Mentions Légales Importantes",
+        description: "Tous les contenus de ce site sont protégés. La reproduction, la copie ou l'extraction non autorisée d'informations juridiques ou de coordonnées professionnelles est strictement interdite selon le droit français.",
+        features: ["Site protégé SSL", "Données sécurisées", "Conformité RGPD"],
+        bottom: {
+          rights: "© 2024 Cabinet Pister. Tous droits réservés.",
+          security: "Surveillance technique active",
+          links: ["Mentions légales", "Confidentialité", "Conditions"],
+          securityStatus: "Dernière vérification de sécurité : juillet 2025",
+          compliance: "Ce site est conforme aux obligations légales françaises"
+        }
+      }
+    },
+    security: {
+      minimal: "Site protégé SSL",
+      compact: {
+        title: "Site sécurisé",
+        subtitle: "Données protégées RGPD",
+        ssl: "SSL 256-bit",
+        verified: "Vérifié"
+      },
+      full: {
+        title: "Cabinet Surveillé & Protégé",
+        subtitle: "Sécurité juridique renforcée",
+        features: {
+          ssl: { label: "Chiffrement SSL 256-bit", status: "Actif" },
+          monitoring: { label: "Surveillance technique", status: "24/7" },
+          gdpr: { label: "Conformité RGPD", status: "Certifié" },
+          legal: { label: "Normes juridiques", status: "Conforme" }
+        },
+        status: {
+          title: "Dernière vérification",
+          lastCheck: "Fichiers protégés • Données sécurisées • Accès surveillé",
+          info: "Fichiers protégés • Données sécurisées • Accès surveillé"
+        },
+        notice: {
+          title: "Notice légale :",
+          description: "La reproduction, copie ou extraction non autorisée d'informations est strictement interdite selon le droit français."
+        }
+      }
+    },
+    protectedContact: {
+      protected: "Contenu protégé",
+      emailProtected: "Adresse e-mail protégée",
+      phoneProtected: "Numéro protégé",
+      show: "Afficher",
+      hide: "Masquer",
+      protectedTitle: "Contact protégé",
+      protectedDescription: "Coordonnées protégées contre le scraping automatisé",
+      toast: {
+        title: "Contenu protégé",
+        description: "Les coordonnées sont protégées contre la copie automatisée. Veuillez utiliser le bouton d'affichage."
+      }
     }
   },
   it: {
     nav: {
       home: "Home",
       about: "Chi siamo",
-      services: "Servizi",
+      services: "Aree di competenza",
       contact: "Contatto"
     },
     hero: {
       title: "Soluzioni transfrontaliere.",
       subtitle: "Eccellenza legale.",
-      cta: "Richiedi consultazione gratuita",
-      secondaryCta: "Scopri studio",
-      description: "Specializzato in Diritto Internazionale e Commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera.",
+      cta: "Richiedi una consulenza gratuita",
+      secondaryCta: "Scopri lo studio",
+      description: "Specializzato in diritto internazionale e commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera.",
       badge: "Dal 1999 • Pratica legale internazionale",
       davMember: "Membro DAV",
       certified: "Certificato",
@@ -141,20 +359,20 @@ export const translations: Record<string, Translations> = {
       quote: "Eccellenza nel diritto, servizio personalizzato"
     },
     about: {
-      title: "Sig. Jozef Pister",
-      subtitle: "Il vostro specialista in Diritto Internazionale",
-      description: "Con oltre 25 anni di esperienza nel diritto internazionale, fornisco soluzioni legali su misura per questioni legali transfrontaliere complesse.",
-      experience: "25+ anni di esperienza",
+      title: "Avv. Jozef Pister",
+      subtitle: "Il tuo specialista in diritto internazionale",
+      description: "Con oltre 25 anni di esperienza in diritto internazionale, offro soluzioni legali su misura per questioni transfrontaliere complesse.",
+      experience: "Oltre 25 anni di esperienza",
       philosophy: "Fiducia, competenza e consulenza discreta sono al centro del mio rapporto con il cliente.",
-      aboutLawyer: "Riguardo l'avvocato",
-      qualifications: "Qualifiche e Certificazioni",
-      specialties: "Specialità",
-      founderTitle: "Fondatore e Avvocato principale",
-      personalService: "Servizio personale",
-      bridgeQuote: "Il diritto unisce le nazioni. Il mio compito è costruire ponti dove altri vedono ostacoli."
+      aboutLawyer: "Informazioni sull'avvocato",
+      qualifications: "Qualifiche & Certificazioni",
+      specialties: "Specializzazioni",
+      founderTitle: "Fondatore & Avvocato principale",
+      personalService: "Servizio personalizzato",
+      bridgeQuote: "Il diritto unisce le nazioni. La mia missione è costruire ponti dove altri vedono ostacoli."
     },
     services: {
-      title: "Le nostre aree di pratica",
+      title: "Le nostre aree di competenza",
       subtitle: "Consulenza legale completa in tutti i settori del diritto internazionale e commerciale con competenza e servizio personalizzato",
       international: {
         title: "Diritto Internazionale",
@@ -165,30 +383,30 @@ export const translations: Record<string, Translations> = {
         description: "Supporto legale per aziende in transazioni commerciali e diritto societario."
       },
       european: {
-        title: "Diritto Commerciale Europeo",
-        description: "Competenza nel diritto commerciale europeo e attività commerciali a livello UE."
+        title: "Diritto Economico Europeo",
+        description: "Competenza in diritto economico europeo e attività commerciali a livello UE."
       },
       contracts: {
         title: "Diritto Contrattuale Transfrontaliero",
-        description: "Redazione e revisione di contratti internazionali con diversi sistemi legali."
+        description: "Redazione e revisione di contratti internazionali con diversi sistemi giuridici."
       },
       arbitration: {
         title: "Arbitrato Internazionale",
-        description: "Rappresentanza in procedimenti di arbitrato internazionale e risoluzione alternativa delle controversie."
+        description: "Rappresentanza in procedimenti arbitrali internazionali e metodi alternativi di risoluzione delle controversie."
       },
-      whyUs: "Perché Studio Pister?",
+      whyUs: "Perché lo Studio Pister?",
       benefits: {
         expertise: {
           title: "Competenza Internazionale",
-          description: "Competenza locale con comprensione globale"
+          description: "Competenza locale con visione globale"
         },
         multilingual: {
           title: "Consulenza Multilingue",
-          description: "Comunicazione fluida in 4 lingue"
+          description: "Comunicazione fluente in 4 lingue"
         },
         experience: {
-          title: "25+ Anni di Esperienza",
-          description: "Competenza comprovata nel diritto internazionale"
+          title: "Oltre 25 Anni di Esperienza",
+          description: "Competenza comprovata in diritto internazionale"
         },
         personal: {
           title: "Servizio Personalizzato",
@@ -196,97 +414,315 @@ export const translations: Record<string, Translations> = {
         }
       },
       consultation: {
-        title: "Prima consultazione gratuita",
-        subtitle: "Non vincolante e professionale",
-        description: "Approfittate della nostra consultazione gratuita per una prima valutazione della vostra questione legale.",
+        title: "Prima consulenza gratuita",
+        subtitle: "Senza impegno & professionale",
+        description: "Approfitta della nostra consulenza gratuita per una prima valutazione della tua questione legale.",
         duration: "30min",
         response: "24h",
-        cta: "Prenota appuntamento ora",
+        cta: "Prenota ora",
         hours: "Lun-Ven 9:00-18:00 • Sab 10:00-14:00"
       }
     },
-    contact: {
-      title: "Mettersi in contatto",
-      subtitle: "Sono disponibile per consultazione personale",
-      form: {
-        name: "Nome completo",
-        email: "Indirizzo email",
-        subject: "Oggetto",
-        message: "Il tuo messaggio",
-        messagePlaceholder: "Si prega di descrivere la vostra questione legale...",
-        submit: "Invia messaggio",
-        privacy: "Accetto il trattamento dei miei dati secondo la politica sulla privacy",
-        sending: "Invio in corso..."
-      },
-      info: {
-        address: "Indirizzo",
-        phone: "Telefono",
-        email: "Email",
-        hours: "Orari di ufficio",
-        emergency: "Linea di emergenza",
-        available: "Disponibilità 24/7",
-        description: "Per questioni legali urgenti, potete contattarci anche al di fuori degli orari di ufficio."
-      }
-    },
     stats: {
-      experience: "25+ anni di esperienza",
+      experience: "Oltre 25 anni di esperienza",
       clients: "Clienti soddisfatti",
       domains: "Aree di competenza",
-      awards: "Premi legali"
+      awards: "Riconoscimenti legali"
+    },
+    header: {
+      profession: "Avvocato",
+      phone: "+39 06 1234 5678"
+    },
+    process: {
+      title: "Il nostro processo di eccellenza",
+      subtitle: "Una metodologia collaudata per risultati ottimali in ogni fase",
+      step1: {
+        title: "Consultazione iniziale",
+        description: "Analisi gratuita della tua situazione legale e definizione della strategia ottimale.",
+        duration: "30 min",
+        features: ["Valutazione gratuita", "Massima riservatezza", "Consulenza strategica"]
+      },
+      step2: {
+        title: "Studio approfondito",
+        description: "Analisi dettagliata degli aspetti legali con ricerca documentale completa.",
+        duration: "2-5 giorni",
+        features: ["Ricerca legale", "Analisi dei rischi", "Rapporto dettagliato"]
+      },
+      step3: {
+        title: "Azione legale",
+        description: "Implementazione della strategia con negoziazione e rappresentanza professionale.",
+        duration: "Variabile",
+        features: ["Negoziazione esperta", "Rappresentanza", "Supporto personalizzato"]
+      },
+      step4: {
+        title: "Risoluzione",
+        description: "Finalizzazione del caso con documentazione completa e follow-up post-risoluzione.",
+        duration: "Completato",
+        features: ["Documentazione", "Follow-up gratuito", "Garanzie"]
+      },
+      cta: {
+        title: "Pronto a iniziare?",
+        subtitle: "Contattaci oggi per la tua consulenza gratuita e scopri come possiamo aiutarti.",
+        button: "Consulenza gratuita"
+      }
+    },
+    team: {
+      title: "Il nostro team di eccellenza",
+      subtitle: "Competenza multilingue e multiculturale al servizio dei tuoi progetti internazionali",
+      lawyer: {
+        name: "Avv. Jozef Pister",
+        role: "Avvocato principale",
+        description: "Oltre 25 anni di esperienza in diritto internazionale. Specializzato in transazioni transfrontaliere complesse.",
+        specialties: ["Diritto Internazionale", "Diritto Commerciale", "Arbitrato"],
+        languages: ["Italiano", "Francese", "Inglese", "Tedesco"],
+        location: "Roma & Milano",
+        qualifications: ["Certificato DAV", "Master in Diritto Internazionale", "Arbitro ICC"]
+      },
+      labels: {
+        founder: "Fondatore",
+        specializations: "Specializzazioni",
+        qualifications: "Qualifiche",
+        contact: "Contatta",
+        call: "Chiama"
+      }
+    },
+    testimonials: {
+      title: "Cosa dicono i nostri clienti",
+      subtitle: "La fiducia dei nostri clienti è la nostra più grande ricompensa",
+      testimonial1: {
+        name: "Dott. Marco Rossi",
+        role: "CEO",
+        company: "Rossi Industries",
+        content: "L'Avv. Pister ha gestito la nostra espansione internazionale con competenza straordinaria. Il suo approccio strategico ci ha fatto risparmiare migliaia di euro evitando insidie legali."
+      },
+      testimonial2: {
+        name: "Laura Bianchi",
+        role: "Direttrice Legale",
+        company: "TechStart Srl",
+        content: "L'esperienza in diritto commerciale internazionale dell'Avv. Pister è eccezionale. Ha negoziato i nostri contratti con precisione chirurgica."
+      },
+      testimonial3: {
+        name: "Giovanni Verdi",
+        role: "Imprenditore",
+        company: "Export Solutions",
+        content: "Grazie all'Avv. Pister, abbiamo evitato una controversia costosa. La sua padronanza del diritto internazionale ci ha permesso di trovare una soluzione elegante."
+      },
+      cta: "Oltre 500 clienti si affidano a noi"
+    },
+    faq: {
+      title: "Domande frequenti",
+      subtitle: "Trova rapidamente le risposte alle tue domande più comuni",
+      questions: {
+        q1: {
+          question: "Quali sono le vostre specializzazioni?",
+          answer: "Siamo specializzati in diritto internazionale, diritto commerciale, diritto dei contratti internazionali, arbitrato commerciale e supporto legale per aziende in espansione internazionale. La nostra competenza copre in particolare le transazioni transfrontaliere e la conformità normativa internazionale."
+        },
+        q2: {
+          question: "Quanto costa una consulenza?",
+          answer: "La prima consulenza di 30 minuti è completamente gratuita. Ci permette di valutare la tua situazione e proporti una strategia adeguata. Per i servizi successivi, offriamo tariffe trasparenti adattate alla complessità del caso, con possibilità di pacchetti per progetti a lungo termine."
+        },
+        q3: {
+          question: "In quali paesi operate?",
+          answer: "Grazie alla nostra rete internazionale di associati, operiamo principalmente in Europa (Francia, Germania, Spagna, Italia, Portogallo), ma anche in altre giurisdizioni secondo le necessità. Parliamo 6 lingue e abbiamo l'esperienza necessaria per navigare in diversi sistemi giuridici."
+        },
+        q4: {
+          question: "Quali sono i tempi di intervento?",
+          answer: "Ci impegniamo a rispondere entro 24h per qualsiasi richiesta urgente. Per le consulenze standard, un appuntamento può essere fissato entro 48-72h. I tempi di gestione dipendono dalla complessità del caso, ma forniamo sempre un calendario preciso all'impegno."
+        },
+        q5: {
+          question: "Come viene seguito il mio caso?",
+          answer: "Offriamo un supporto personalizzato con aggiornamenti regolari sull'avanzamento. Utilizziamo strumenti di comunicazione moderni per tenerti informato in tempo reale. Ogni fase importante è accompagnata da un resoconto dettagliato."
+        },
+        q6: {
+          question: "Offrite servizi urgenti?",
+          answer: "Sì, disponiamo di un servizio di emergenza per situazioni critiche che richiedono un intervento rapido. I nostri team sono disponibili per gestire casi urgenti con la reattività necessaria alle tue esigenze."
+        }
+      },
+      contact: {
+        title: "Non trovi la risposta?",
+        subtitle: "Il nostro team è a tua disposizione per rispondere a tutte le tue domande specifiche.",
+        button: "Contattaci direttamente"
+      }
+    },
+    contact: {
+      badge: "Contatto & Consulenza",
+      title: "Contattaci",
+      subtitle: "Sono a tua disposizione per una consulenza personalizzata",
+      office: {
+        title: "Contatti Studio",
+        address: {
+          label: "Indirizzo",
+          value: "Via Roma 123\n00100 Roma\nItalia"
+        },
+        phone: {
+          label: "Telefono"
+        },
+        email: {
+          label: "E-mail"
+        },
+        hours: {
+          label: "Orari di apertura",
+          value: "Lun-Ven: 09:00 - 18:00\nSab: 10:00 - 14:00\nDom: Su appuntamento"
+        }
+      },
+      emergency: {
+        title: "Linea d'emergenza",
+        subtitle: "Disponibile 24h/24",
+        description: "Per questioni legali urgenti, siamo raggiungibili fuori dagli orari di apertura.",
+        phone: "+39 06 1234 5670"
+      },
+      form: {
+        title: "Invia un messaggio",
+        security: "Modulo sicuro e criptato",
+        name: "Nome completo *",
+        email: "Indirizzo e-mail *",
+        subject: "Oggetto *",
+        message: "Il tuo messaggio *",
+        messagePlaceholder: "Descrivi la tua richiesta legale...",
+        privacy: "Accetto il trattamento dei miei dati secondo la",
+        privacyLink: "politica sulla privacy",
+        submit: "Invia messaggio",
+        sending: "Invio in corso...",
+        success: {
+          title: "Messaggio inviato",
+          description: "Grazie per il tuo messaggio. Ti ricontatteremo entro 24 ore."
+        }
+      }
     },
     footer: {
-      copyright: "© 2024 Studio Legale Pister. Tutti i diritti riservati.",
-      impressum: "Note legali",
-      privacy: "Privacy",
-      disclaimer: "Disclaimer"
+      description: "Il tuo specialista in diritto internazionale e commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera.",
+      badges: {
+        member: "Membro dell'Ordine",
+        top: "Top Avvocato 2024"
+      },
+      navigation: {
+        title: "Navigazione",
+        home: "Home",
+        about: "Chi siamo",
+        services: "Aree di competenza",
+        contact: "Contatto"
+      },
+      services: {
+        title: "Aree di competenza",
+        list: [
+          "Diritto Internazionale",
+          "Diritto Commerciale", 
+          "Diritto Europeo degli Affari",
+          "Diritto Contrattuale",
+          "Arbitrato"
+        ]
+      },
+      contact: {
+        title: "Contatto",
+        address: "Via Roma 123, 00100 Roma, Italia",
+        hours: {
+          title: "Orari di apertura",
+          weekdays: "09:00 - 18:00",
+          saturday: "10:00 - 14:00",
+          sunday: "Su appuntamento"
+        }
+      },
+      legal: {
+        title: "Note legali importanti",
+        description: "Tutti i contenuti di questo sito sono protetti. La riproduzione, copia o estrazione non autorizzata di informazioni legali o dati professionali è severamente vietata secondo la legge italiana.",
+        features: ["Sito protetto SSL", "Dati sicuri", "Conformità GDPR"],
+        bottom: {
+          rights: "© 2024 Studio Pister. Tutti i diritti riservati.",
+          security: "Monitoraggio tecnico attivo",
+          links: ["Note legali", "Privacy", "Condizioni"],
+          securityStatus: "Ultimo controllo sicurezza: luglio 2025",
+          compliance: "Questo sito è conforme agli obblighi legali italiani"
+        }
+      }
+    },
+    security: {
+      minimal: "Sito protetto SSL",
+      compact: {
+        title: "Sito sicuro",
+        subtitle: "Dati protetti GDPR",
+        ssl: "SSL 256-bit",
+        verified: "Verificato"
+      },
+      full: {
+        title: "Studio monitorato & protetto",
+        subtitle: "Sicurezza legale rafforzata",
+        features: {
+          ssl: { label: "Crittografia SSL 256-bit", status: "Attivo" },
+          monitoring: { label: "Monitoraggio tecnico", status: "24/7" },
+          gdpr: { label: "Conformità GDPR", status: "Certificato" },
+          legal: { label: "Norme legali", status: "Conforme" }
+        },
+        status: {
+          title: "Ultimo controllo",
+          lastCheck: "File protetti • Dati sicuri • Accesso monitorato",
+          info: "File protetti • Dati sicuri • Accesso monitorato"
+        },
+        notice: {
+          title: "Avviso legale:",
+          description: "La riproduzione, copia o estrazione non autorizzata di informazioni è severamente vietata secondo la legge italiana."
+        }
+      }
+    },
+    protectedContact: {
+      protected: "Contenuto protetto",
+      emailProtected: "Indirizzo e-mail protetto",
+      phoneProtected: "Numero protetto",
+      show: "Mostra",
+      hide: "Nascondi",
+      protectedTitle: "Contatto protetto",
+      protectedDescription: "Dati protetti contro scraping automatizzato",
+      toast: {
+        title: "Contenuto protetto",
+        description: "I dati sono protetti contro la copia automatica. Usa il pulsante mostra."
+      }
     }
   },
   es: {
     nav: {
       home: "Inicio",
       about: "Acerca de",
-      services: "Servicios",
+      services: "Áreas",
       contact: "Contacto"
     },
     hero: {
       title: "Soluciones transfronterizas.",
-      subtitle: "Excelencia jurídica.",
+      subtitle: "Excelencia legal.",
       cta: "Solicitar consulta gratuita",
-      secondaryCta: "Descubrir despacho",
-      description: "Especializado en Derecho Internacional y Comercial con más de 25 años de experiencia en asesoramiento jurídico transfronterizo.",
+      secondaryCta: "Conocer el despacho",
+      description: "Especializado en derecho internacional y comercial con más de 25 años de experiencia en asesoría legal transfronteriza.",
       badge: "Desde 1999 • Práctica jurídica internacional",
       davMember: "Miembro DAV",
       certified: "Certificado",
-      topLawyer: "Top Abogado 2024",
+      topLawyer: "Mejor Abogado 2024",
       quote: "Excelencia en derecho, servicio personalizado"
     },
     about: {
-      title: "Sr. Jozef Pister",
-      subtitle: "Su especialista en Derecho Internacional",
-      description: "Con más de 25 años de experiencia en derecho internacional, proporciono soluciones jurídicas a medida para cuestiones jurídicas transfronterizas complejas.",
-      experience: "25+ años de experiencia",
-      philosophy: "La confianza, la competencia y el asesoramiento discreto están en el corazón de mi relación con el cliente.",
+      title: "Lic. Jozef Pister",
+      subtitle: "Su especialista en derecho internacional",
+      description: "Con más de 25 años de experiencia en derecho internacional, ofrezco soluciones legales a medida para cuestiones transfronterizas complejas.",
+      experience: "Más de 25 años de experiencia",
+      philosophy: "La confianza, competencia y asesoría discreta son el núcleo de mi relación con el cliente.",
       aboutLawyer: "Sobre el abogado",
-      qualifications: "Calificaciones y Certificaciones",
+      qualifications: "Calificaciones & Certificaciones",
       specialties: "Especialidades",
-      founderTitle: "Fundador y Abogado principal",
-      personalService: "Servicio personal",
-      bridgeQuote: "El derecho conecta naciones. Mi tarea es construir puentes donde otros ven obstáculos."
+      founderTitle: "Fundador & Abogado principal",
+      personalService: "Servicio personalizado",
+      bridgeQuote: "El derecho une naciones. Mi misión es construir puentes donde otros ven obstáculos."
     },
     services: {
-      title: "Nuestras áreas de práctica",
-      subtitle: "Asesoramiento jurídico integral en todas las áreas del derecho internacional y comercial con experiencia y servicio personalizado",
+      title: "Nuestras áreas de especialización",
+      subtitle: "Asesoría legal completa en todos los ámbitos del derecho internacional y comercial con experiencia y servicio personalizado",
       international: {
         title: "Derecho Internacional",
-        description: "Asesoramiento integral sobre cuestiones jurídicas transfronterizas y contratos internacionales."
+        description: "Asesoría completa en cuestiones legales transfronterizas y contratos internacionales."
       },
       commercial: {
         title: "Derecho Comercial",
-        description: "Apoyo jurídico para empresas en transacciones comerciales y derecho corporativo."
+        description: "Apoyo legal para empresas en transacciones comerciales y derecho societario."
       },
       european: {
-        title: "Derecho Empresarial Europeo",
-        description: "Experiencia en derecho empresarial europeo y actividades comerciales en toda la UE."
+        title: "Derecho Económico Europeo",
+        description: "Experiencia en derecho económico europeo y actividades comerciales a nivel de la UE."
       },
       contracts: {
         title: "Derecho Contractual Transfronterizo",
@@ -294,21 +730,21 @@ export const translations: Record<string, Translations> = {
       },
       arbitration: {
         title: "Arbitraje Internacional",
-        description: "Representación en procedimientos de arbitraje internacional y resolución alternativa de disputas."
+        description: "Representación en procedimientos de arbitraje internacional y métodos alternativos de resolución de conflictos."
       },
-      whyUs: "¿Por qué Bufete Pister?",
+      whyUs: "¿Por qué el Despacho Pister?",
       benefits: {
         expertise: {
           title: "Experiencia Internacional",
           description: "Competencia local con comprensión global"
         },
         multilingual: {
-          title: "Asesoramiento Multilingüe",
+          title: "Asesoría Multilingüe",
           description: "Comunicación fluida en 4 idiomas"
         },
         experience: {
-          title: "25+ Años de Experiencia",
-          description: "Experiencia probada en derecho internacional"
+          title: "Más de 25 Años de Experiencia",
+          description: "Experiencia comprobada en derecho internacional"
         },
         personal: {
           title: "Servicio Personalizado",
@@ -317,63 +753,281 @@ export const translations: Record<string, Translations> = {
       },
       consultation: {
         title: "Primera consulta gratuita",
-        subtitle: "Sin compromiso y profesional",
-        description: "Aproveche nuestra consulta gratuita para una primera evaluación de su cuestión jurídica.",
+        subtitle: "Sin compromiso & profesional",
+        description: "Aproveche nuestra consulta gratuita para una primera evaluación de su asunto legal.",
         duration: "30min",
         response: "24h",
-        cta: "Reservar cita ahora",
+        cta: "Agendar cita ahora",
         hours: "Lun-Vie 9:00-18:00 • Sáb 10:00-14:00"
       }
     },
-    contact: {
-      title: "Póngase en contacto",
-      subtitle: "Estoy disponible para consulta personal",
-      form: {
-        name: "Nombre completo",
-        email: "Dirección de correo electrónico",
-        subject: "Asunto",
-        message: "Su mensaje",
-        messagePlaceholder: "Por favor, describa su cuestión jurídica...",
-        submit: "Enviar mensaje",
-        privacy: "Acepto el procesamiento de mis datos según la política de privacidad",
-        sending: "Enviando..."
-      },
-      info: {
-        address: "Dirección",
-        phone: "Teléfono",
-        email: "Correo electrónico",
-        hours: "Horario de oficina",
-        emergency: "Línea de emergencia",
-        available: "Disponibilidad 24/7",
-        description: "Para cuestiones jurídicas urgentes, puede contactarnos fuera del horario de oficina."
-      }
-    },
     stats: {
-      experience: "25+ años de experiencia",
+      experience: "Más de 25 años de experiencia",
       clients: "Clientes satisfechos",
       domains: "Áreas de especialización",
-      awards: "Premios jurídicos"
+      awards: "Reconocimientos legales"
+    },
+    header: {
+      profession: "Abogado",
+      phone: "+34 91 123 45 67"
+    },
+    process: {
+      title: "Nuestro proceso de excelencia",
+      subtitle: "Una metodología probada para resultados óptimos en cada etapa",
+      step1: {
+        title: "Consulta inicial",
+        description: "Análisis gratuito de su situación legal y definición de la estrategia óptima.",
+        duration: "30 min",
+        features: ["Evaluación gratuita", "Confidencialidad absoluta", "Asesoría estratégica"]
+      },
+      step2: {
+        title: "Estudio profundo",
+        description: "Análisis detallado de los aspectos legales con investigación documental completa.",
+        duration: "2-5 días",
+        features: ["Investigación legal", "Análisis de riesgos", "Informe detallado"]
+      },
+      step3: {
+        title: "Acción legal",
+        description: "Implementación de la estrategia con negociación y representación profesional.",
+        duration: "Variable",
+        features: ["Negociación experta", "Representación", "Seguimiento personalizado"]
+      },
+      step4: {
+        title: "Resolución",
+        description: "Finalización del caso con documentación completa y seguimiento post-resolución.",
+        duration: "Finalizado",
+        features: ["Documentación", "Seguimiento gratuito", "Garantías"]
+      },
+      cta: {
+        title: "¿Listo para comenzar?",
+        subtitle: "Contáctenos hoy para su consulta gratuita y descubra cómo podemos ayudarle.",
+        button: "Consulta gratuita"
+      }
+    },
+    team: {
+      title: "Nuestro equipo de excelencia",
+      subtitle: "Experiencia multilingüe y multicultural al servicio de sus proyectos internacionales",
+      lawyer: {
+        name: "Lic. Jozef Pister",
+        role: "Abogado principal",
+        description: "Más de 25 años de experiencia en derecho internacional. Especializado en transacciones transfronterizas complejas.",
+        specialties: ["Derecho Internacional", "Derecho Comercial", "Arbitraje"],
+        languages: ["Español", "Francés", "Inglés", "Alemán"],
+        location: "Madrid & Barcelona",
+        qualifications: ["Certificado DAV", "Máster en Derecho Internacional", "Árbitro ICC"]
+      },
+      labels: {
+        founder: "Fundador",
+        specializations: "Especializaciones",
+        qualifications: "Calificaciones",
+        contact: "Contactar",
+        call: "Llamar"
+      }
+    },
+    testimonials: {
+      title: "Lo que dicen nuestros clientes",
+      subtitle: "La confianza de nuestros clientes es nuestra mayor recompensa",
+      testimonial1: {
+        name: "Dr. Miguel López",
+        role: "CEO",
+        company: "López Industries",
+        content: "El Lic. Pister gestionó nuestra expansión internacional con una experiencia notable. Su enfoque estratégico nos ahorró miles de euros evitando trampas legales."
+      },
+      testimonial2: {
+        name: "Ana Martínez",
+        role: "Directora Legal",
+        company: "TechStart SL",
+        content: "La experiencia en derecho comercial internacional del Lic. Pister es excepcional. Negoció nuestros contratos con precisión quirúrgica."
+      },
+      testimonial3: {
+        name: "Carlos Fernández",
+        role: "Empresario",
+        company: "Export Solutions",
+        content: "Gracias al Lic. Pister, evitamos un litigio costoso. Su dominio del derecho internacional nos permitió encontrar una solución elegante."
+      },
+      cta: "Más de 500 clientes confían en nosotros"
+    },
+    faq: {
+      title: "Preguntas frecuentes",
+      subtitle: "Encuentre rápidamente respuestas a sus preguntas más comunes",
+      questions: {
+        q1: {
+          question: "¿Cuáles son sus áreas de especialización?",
+          answer: "Nos especializamos en derecho internacional, derecho comercial, derecho de contratos internacionales, arbitraje comercial y asesoría legal para empresas en expansión internacional. Nuestra experiencia cubre especialmente transacciones transfronterizas y cumplimiento normativo internacional."
+        },
+        q2: {
+          question: "¿Cuánto cuesta una consulta?",
+          answer: "La primera consulta de 30 minutos es completamente gratuita. Esto nos permite evaluar su situación y proponerle una estrategia adecuada. Para servicios posteriores, ofrecemos tarifas transparentes adaptadas a la complejidad del caso, con posibilidad de paquetes para proyectos a largo plazo."
+        },
+        q3: {
+          question: "¿En qué países operan?",
+          answer: "Gracias a nuestra red internacional de asociados, operamos principalmente en Europa (Francia, Alemania, España, Italia, Portugal), pero también en otras jurisdicciones según las necesidades. Hablamos 6 idiomas y tenemos la experiencia necesaria para navegar en diferentes sistemas jurídicos."
+        },
+        q4: {
+          question: "¿Cuáles son los tiempos de respuesta?",
+          answer: "Nos comprometemos a responder en 24h para cualquier solicitud urgente. Para consultas estándar, se puede fijar una cita en 48-72h. Los tiempos de gestión dependen de la complejidad del caso, pero siempre proporcionamos un calendario preciso al compromiso."
+        },
+        q5: {
+          question: "¿Cómo se realiza el seguimiento de mi caso?",
+          answer: "Ofrecemos un seguimiento personalizado con actualizaciones regulares sobre el progreso. Utilizamos herramientas de comunicación modernas para mantenerle informado en tiempo real. Cada etapa importante se acompaña de un informe detallado."
+        },
+        q6: {
+          question: "¿Ofrecen servicios de urgencia?",
+          answer: "Sí, disponemos de un servicio de urgencia para situaciones críticas que requieren intervención rápida. Nuestros equipos están disponibles para gestionar casos urgentes con la reactividad necesaria para su situación."
+        }
+      },
+      contact: {
+        title: "¿No encuentra la respuesta?",
+        subtitle: "Nuestro equipo está a su disposición para responder a todas sus preguntas específicas.",
+        button: "Contáctenos directamente"
+      }
+    },
+    contact: {
+      badge: "Contacto & Consulta",
+      title: "Póngase en contacto",
+      subtitle: "Estoy a su disposición para un asesoramiento personalizado",
+      office: {
+        title: "Contacto despacho",
+        address: {
+          label: "Dirección",
+          value: "Calle Mayor 123\n28001 Madrid\nEspaña"
+        },
+        phone: {
+          label: "Teléfono"
+        },
+        email: {
+          label: "Correo electrónico"
+        },
+        hours: {
+          label: "Horario de apertura",
+          value: "Lun-Vie: 09:00 - 18:00\nSáb: 10:00 - 14:00\nDom: Con cita previa"
+        }
+      },
+      emergency: {
+        title: "Línea de emergencia",
+        subtitle: "Disponible 24h/24",
+        description: "Para cuestiones legales urgentes, estamos disponibles fuera del horario de oficina.",
+        phone: "+34 91 123 45 60"
+      },
+      form: {
+        title: "Enviar un mensaje",
+        security: "Formulario seguro y cifrado",
+        name: "Nombre completo *",
+        email: "Correo electrónico *",
+        subject: "Asunto *",
+        message: "Su mensaje *",
+        messagePlaceholder: "Describa su consulta legal...",
+        privacy: "Acepto el tratamiento de mis datos según la",
+        privacyLink: "política de privacidad",
+        submit: "Enviar mensaje",
+        sending: "Enviando...",
+        success: {
+          title: "Mensaje enviado",
+          description: "Gracias por su mensaje. Le responderemos en 24 horas."
+        }
+      }
     },
     footer: {
-      copyright: "© 2024 Bufete Pister. Todos los derechos reservados.",
-      impressum: "Aviso legal",
-      privacy: "Privacidad",
-      disclaimer: "Descargo de responsabilidad"
+      description: "Su especialista en derecho internacional y comercial con más de 25 años de experiencia en asesoría legal transfronteriza.",
+      badges: {
+        member: "Miembro del Colegio de Abogados",
+        top: "Mejor Abogado 2024"
+      },
+      navigation: {
+        title: "Navegación",
+        home: "Inicio",
+        about: "Acerca del despacho",
+        services: "Áreas legales",
+        contact: "Contacto"
+      },
+      services: {
+        title: "Áreas legales",
+        list: [
+          "Derecho Internacional",
+          "Derecho Comercial", 
+          "Derecho Europeo de los Negocios",
+          "Derecho de Contratos",
+          "Arbitraje"
+        ]
+      },
+      contact: {
+        title: "Contacto",
+        address: "Calle Mayor 123, 28001 Madrid, España",
+        hours: {
+          title: "Horario de apertura",
+          weekdays: "09:00 - 18:00",
+          saturday: "10:00 - 14:00",
+          sunday: "Con cita previa"
+        }
+      },
+      legal: {
+        title: "Avisos legales importantes",
+        description: "Todos los contenidos de este sitio están protegidos. La reproducción, copia o extracción no autorizada de información legal o datos profesionales está estrictamente prohibida según la ley española.",
+        features: ["Sitio protegido SSL", "Datos seguros", "Cumplimiento RGPD"],
+        bottom: {
+          rights: "© 2024 Despacho Pister. Todos los derechos reservados.",
+          security: "Monitoreo técnico activo",
+          links: ["Avisos legales", "Privacidad", "Condiciones"],
+          securityStatus: "Última verificación de seguridad: julio 2025",
+          compliance: "Este sitio cumple con las obligaciones legales españolas"
+        }
+      }
+    },
+    security: {
+      minimal: "Sitio protegido SSL",
+      compact: {
+        title: "Sitio seguro",
+        subtitle: "Datos protegidos RGPD",
+        ssl: "SSL 256-bit",
+        verified: "Verificado"
+      },
+      full: {
+        title: "Despacho monitoreado & protegido",
+        subtitle: "Seguridad legal reforzada",
+        features: {
+          ssl: { label: "Cifrado SSL 256-bit", status: "Activo" },
+          monitoring: { label: "Monitoreo técnico", status: "24/7" },
+          gdpr: { label: "Cumplimiento RGPD", status: "Certificado" },
+          legal: { label: "Normas legales", status: "Conforme" }
+        },
+        status: {
+          title: "Última verificación",
+          lastCheck: "Archivos protegidos • Datos seguros • Acceso monitoreado",
+          info: "Archivos protegidos • Datos seguros • Acceso monitoreado"
+        },
+        notice: {
+          title: "Aviso legal:",
+          description: "La reproducción, copia o extracción no autorizada de información está estrictamente prohibida según la ley española."
+        }
+      }
+    },
+    protectedContact: {
+      protected: "Contenido protegido",
+      emailProtected: "Dirección de correo protegida",
+      phoneProtected: "Número protegido",
+      show: "Mostrar",
+      hide: "Ocultar",
+      protectedTitle: "Contacto protegido",
+      protectedDescription: "Datos protegidos contra scraping automatizado",
+      toast: {
+        title: "Contenido protegido",
+        description: "Los datos están protegidos contra copia automática. Use el botón mostrar."
+      }
     }
   },
   pt: {
     nav: {
       home: "Início",
       about: "Sobre",
-      services: "Serviços",
+      services: "Áreas",
       contact: "Contato"
     },
     hero: {
       title: "Soluções transfronteiriças.",
       subtitle: "Excelência jurídica.",
       cta: "Solicitar consulta gratuita",
-      secondaryCta: "Descobrir escritório",
-      description: "Especializado em Direito Internacional e Comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça.",
+      secondaryCta: "Conhecer o escritório",
+      description: "Especializado em direito internacional e comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça.",
       badge: "Desde 1999 • Prática jurídica internacional",
       davMember: "Membro DAV",
       certified: "Certificado",
@@ -381,32 +1035,32 @@ export const translations: Record<string, Translations> = {
       quote: "Excelência em direito, serviço personalizado"
     },
     about: {
-      title: "Sr. Jozef Pister",
-      subtitle: "Seu especialista em Direito Internacional",
-      description: "Com mais de 25 anos de experiência em direito internacional, forneço soluções jurídicas sob medida para questões jurídicas transfronteiriças complexas.",
-      experience: "25+ anos de experiência",
-      philosophy: "Confiança, competência e aconselhamento discreto estão no centro do meu relacionamento com o cliente.",
+      title: "Dr. Jozef Pister",
+      subtitle: "Seu especialista em direito internacional",
+      description: "Com mais de 25 anos de experiência em direito internacional, ofereço soluções jurídicas sob medida para questões transfronteiriças complexas.",
+      experience: "Mais de 25 anos de experiência",
+      philosophy: "Confiança, competência e aconselhamento discreto são o núcleo do meu relacionamento com o cliente.",
       aboutLawyer: "Sobre o advogado",
-      qualifications: "Qualificações e Certificações",
+      qualifications: "Qualificações & Certificações",
       specialties: "Especialidades",
-      founderTitle: "Fundador e Advogado principal",
-      personalService: "Serviço pessoal",
-      bridgeQuote: "O direito conecta nações. Minha tarefa é construir pontes onde outros veem obstáculos."
+      founderTitle: "Fundador & Advogado principal",
+      personalService: "Serviço personalizado",
+      bridgeQuote: "O direito une nações. Minha missão é construir pontes onde outros veem obstáculos."
     },
     services: {
-      title: "Nossas áreas de prática",
-      subtitle: "Consultoria jurídica abrangente em todas as áreas do direito internacional e comercial com experiência e serviço personalizado",
+      title: "Nossas áreas de especialização",
+      subtitle: "Consultoria jurídica completa em todas as áreas do direito internacional e comercial com expertise e serviço personalizado",
       international: {
         title: "Direito Internacional",
-        description: "Consultoria abrangente sobre questões jurídicas transfronteiriças e contratos internacionais."
+        description: "Consultoria completa em questões jurídicas transfronteiriças e contratos internacionais."
       },
       commercial: {
         title: "Direito Comercial",
         description: "Suporte jurídico para empresas em transações comerciais e direito societário."
       },
       european: {
-        title: "Direito Empresarial Europeu",
-        description: "Expertise em direito empresarial europeu e atividades comerciais em toda a UE."
+        title: "Direito Econômico Europeu",
+        description: "Especialização em direito econômico europeu e atividades comerciais em nível da UE."
       },
       contracts: {
         title: "Direito Contratual Transfronteiriço",
@@ -414,9 +1068,9 @@ export const translations: Record<string, Translations> = {
       },
       arbitration: {
         title: "Arbitragem Internacional",
-        description: "Representação em procedimentos de arbitragem internacional e resolução alternativa de disputas."
+        description: "Representação em procedimentos de arbitragem internacional e métodos alternativos de resolução de conflitos."
       },
-      whyUs: "Por que Escritório Pister?",
+      whyUs: "Por que o Escritório Pister?",
       benefits: {
         expertise: {
           title: "Expertise Internacional",
@@ -424,10 +1078,10 @@ export const translations: Record<string, Translations> = {
         },
         multilingual: {
           title: "Consultoria Multilíngue",
-          description: "Comunicação fluida em 4 idiomas"
+          description: "Comunicação fluente em 4 idiomas"
         },
         experience: {
-          title: "25+ Anos de Experiência",
+          title: "Mais de 25 Anos de Experiência",
           description: "Expertise comprovada em direito internacional"
         },
         personal: {
@@ -437,48 +1091,266 @@ export const translations: Record<string, Translations> = {
       },
       consultation: {
         title: "Primeira consulta gratuita",
-        subtitle: "Sem compromisso e profissional",
-        description: "Aproveite nossa consulta gratuita para uma primeira avaliação de sua questão jurídica.",
+        subtitle: "Sem compromisso & profissional",
+        description: "Aproveite nossa consulta gratuita para uma primeira avaliação da sua questão jurídica.",
         duration: "30min",
         response: "24h",
-        cta: "Agendar consulta agora",
+        cta: "Agendar agora",
         hours: "Seg-Sex 9:00-18:00 • Sáb 10:00-14:00"
       }
     },
-    contact: {
-      title: "Entre em contato",
-      subtitle: "Estou disponível para consulta pessoal",
-      form: {
-        name: "Nome completo",
-        email: "Endereço de email",
-        subject: "Assunto",
-        message: "Sua mensagem",
-        messagePlaceholder: "Por favor, descreva sua questão jurídica...",
-        submit: "Enviar mensagem",
-        privacy: "Concordo com o processamento dos meus dados de acordo com a política de privacidade",
-        sending: "Enviando..."
-      },
-      info: {
-        address: "Endereço",
-        phone: "Telefone",
-        email: "Email",
-        hours: "Horário de funcionamento",
-        emergency: "Linha de emergência",
-        available: "Disponibilidade 24/7",
-        description: "Para questões jurídicas urgentes, você pode nos contatar fora do horário comercial."
-      }
-    },
     stats: {
-      experience: "25+ anos de experiência",
+      experience: "Mais de 25 anos de experiência",
       clients: "Clientes satisfeitos",
       domains: "Áreas de especialização",
-      awards: "Prêmios jurídicos"
+      awards: "Reconhecimentos jurídicos"
+    },
+    header: {
+      profession: "Advogado",
+      phone: "+55 (11) 1234-5678"
+    },
+    process: {
+      title: "Nosso processo de excelência",
+      subtitle: "Uma metodologia comprovada para resultados ótimos em cada etapa",
+      step1: {
+        title: "Consulta inicial",
+        description: "Análise gratuita da sua situação jurídica e definição da estratégia ideal.",
+        duration: "30 min",
+        features: ["Avaliação gratuita", "Confidencialidade absoluta", "Assessoria estratégica"]
+      },
+      step2: {
+        title: "Estudo aprofundado",
+        description: "Análise detalhada dos aspectos jurídicos com pesquisa documental completa.",
+        duration: "2-5 dias",
+        features: ["Pesquisa jurídica", "Análise de riscos", "Relatório detalhado"]
+      },
+      step3: {
+        title: "Ação jurídica",
+        description: "Implementação da estratégia com negociação e representação profissional.",
+        duration: "Variável",
+        features: ["Negociação especializada", "Representação", "Acompanhamento personalizado"]
+      },
+      step4: {
+        title: "Resolução",
+        description: "Finalização do caso com documentação completa e acompanhamento pós-resolução.",
+        duration: "Concluído",
+        features: ["Documentação", "Acompanhamento gratuito", "Garantias"]
+      },
+      cta: {
+        title: "Pronto para começar?",
+        subtitle: "Contate-nos hoje para sua consulta gratuita e descubra como podemos ajudar.",
+        button: "Consulta gratuita"
+      }
+    },
+    team: {
+      title: "Nossa equipe de excelência",
+      subtitle: "Expertise multilíngue e multicultural a serviço dos seus projetos internacionais",
+      lawyer: {
+        name: "Dr. Jozef Pister",
+        role: "Advogado principal",
+        description: "Mais de 25 anos de experiência em direito internacional. Especializado em transações transfronteiriças complexas.",
+        specialties: ["Direito Internacional", "Direito Comercial", "Arbitragem"],
+        languages: ["Português", "Francês", "Inglês", "Alemão"],
+        location: "São Paulo & Rio de Janeiro",
+        qualifications: ["Certificado DAV", "Mestre em Direito Internacional", "Árbitro ICC"]
+      },
+      labels: {
+        founder: "Fundador",
+        specializations: "Especializações",
+        qualifications: "Qualificações",
+        contact: "Contato",
+        call: "Ligar"
+      }
+    },
+    testimonials: {
+      title: "O que dizem nossos clientes",
+      subtitle: "A confiança dos nossos clientes é nossa maior recompensa",
+      testimonial1: {
+        name: "Dr. Marcos Silva",
+        role: "CEO",
+        company: "Silva Indústrias",
+        content: "O Dr. Pister gerenciou nossa expansão internacional com uma expertise notável. Sua abordagem estratégica nos economizou milhares de reais evitando armadilhas legais."
+      },
+      testimonial2: {
+        name: "Ana Costa",
+        role: "Diretora Jurídica",
+        company: "TechStart Ltda",
+        content: "A expertise em direito comercial internacional do Dr. Pister é excepcional. Ele negociou nossos contratos com precisão cirúrgica."
+      },
+      testimonial3: {
+        name: "João Pereira",
+        role: "Empresário",
+        company: "Export Solutions",
+        content: "Graças ao Dr. Pister, evitamos uma disputa custosa. Seu domínio do direito internacional nos permitiu encontrar uma solução elegante."
+      },
+      cta: "Mais de 500 clientes confiam em nós"
+    },
+    faq: {
+      title: "Perguntas frequentes",
+      subtitle: "Encontre rapidamente respostas para suas dúvidas mais comuns",
+      questions: {
+        q1: {
+          question: "Quais são suas áreas de especialização?",
+          answer: "Somos especializados em direito internacional, direito comercial, direito de contratos internacionais, arbitragem comercial e assessoria jurídica para empresas em expansão internacional. Nossa expertise cobre especialmente transações transfronteiriças e conformidade regulatória internacional."
+        },
+        q2: {
+          question: "Quanto custa uma consulta?",
+          answer: "A primeira consulta de 30 minutos é totalmente gratuita. Isso nos permite avaliar sua situação e propor uma estratégia adequada. Para serviços posteriores, oferecemos tarifas transparentes adaptadas à complexidade do caso, com possibilidade de pacotes para projetos de longo prazo."
+        },
+        q3: {
+          question: "Em quais países atuam?",
+          answer: "Graças à nossa rede internacional de associados, atuamos principalmente na Europa (França, Alemanha, Espanha, Itália, Portugal), mas também em outras jurisdições conforme necessário. Falamos 6 idiomas e temos a expertise necessária para navegar em diferentes sistemas jurídicos."
+        },
+        q4: {
+          question: "Quais são os prazos de atendimento?",
+          answer: "Comprometemo-nos a responder em 24h para qualquer solicitação urgente. Para consultas padrão, uma reunião pode ser agendada em 48-72h. Os prazos de processamento dependem da complexidade do caso, mas sempre fornecemos um cronograma preciso no momento do compromisso."
+        },
+        q5: {
+          question: "Como é feito o acompanhamento do meu caso?",
+          answer: "Oferecemos acompanhamento personalizado com atualizações regulares sobre o progresso. Utilizamos ferramentas modernas de comunicação para mantê-lo informado em tempo real. Cada etapa importante é acompanhada de um relatório detalhado."
+        },
+        q6: {
+          question: "Vocês oferecem serviços de emergência?",
+          answer: "Sim, temos um serviço de emergência para situações críticas que exigem intervenção rápida. Nossas equipes estão disponíveis para tratar casos urgentes com a reatividade necessária para sua situação."
+        }
+      },
+      contact: {
+        title: "Não encontrou a resposta?",
+        subtitle: "Nossa equipe está à disposição para responder todas as suas perguntas específicas.",
+        button: "Contate-nos diretamente"
+      }
+    },
+    contact: {
+      badge: "Contato & Consulta",
+      title: "Entre em contato",
+      subtitle: "Estou à sua disposição para um aconselhamento personalizado",
+      office: {
+        title: "Contato do escritório",
+        address: {
+          label: "Endereço",
+          value: "Rua das Flores 123\n01000-000 São Paulo\nBrasil"
+        },
+        phone: {
+          label: "Telefone"
+        },
+        email: {
+          label: "E-mail"
+        },
+        hours: {
+          label: "Horário de atendimento",
+          value: "Seg-Sex: 09:00 - 18:00\nSáb: 10:00 - 14:00\nDom: Sob agendamento"
+        }
+      },
+      emergency: {
+        title: "Linha de emergência",
+        subtitle: "Disponível 24h/24",
+        description: "Para questões jurídicas urgentes, estamos disponíveis fora do horário comercial.",
+        phone: "+55 (11) 1234-5670"
+      },
+      form: {
+        title: "Enviar uma mensagem",
+        security: "Formulário seguro e criptografado",
+        name: "Nome completo *",
+        email: "Endereço de e-mail *",
+        subject: "Assunto *",
+        message: "Sua mensagem *",
+        messagePlaceholder: "Descreva sua solicitação jurídica...",
+        privacy: "Aceito o tratamento dos meus dados conforme a",
+        privacyLink: "política de privacidade",
+        submit: "Enviar mensagem",
+        sending: "Enviando...",
+        success: {
+          title: "Mensagem enviada",
+          description: "Obrigado pela sua mensagem. Entraremos em contato em até 24 horas."
+        }
+      }
     },
     footer: {
-      copyright: "© 2024 Escritório Pister. Todos os direitos reservados.",
-      impressum: "Aviso legal",
-      privacy: "Privacidade",
-      disclaimer: "Isenção de responsabilidade"
+      description: "Seu especialista em direito internacional e comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça.",
+      badges: {
+        member: "Membro da Ordem",
+        top: "Top Advogado 2024"
+      },
+      navigation: {
+        title: "Navegação",
+        home: "Início",
+        about: "Sobre o escritório",
+        services: "Áreas jurídicas",
+        contact: "Contato"
+      },
+      services: {
+        title: "Áreas jurídicas",
+        list: [
+          "Direito Internacional",
+          "Direito Comercial", 
+          "Direito Europeu dos Negócios",
+          "Direito Contratual",
+          "Arbitragem"
+        ]
+      },
+      contact: {
+        title: "Contato",
+        address: "Rua das Flores 123, 01000-000 São Paulo, Brasil",
+        hours: {
+          title: "Horário de atendimento",
+          weekdays: "09:00 - 18:00",
+          saturday: "10:00 - 14:00",
+          sunday: "Sob agendamento"
+        }
+      },
+      legal: {
+        title: "Avisos legais importantes",
+        description: "Todos os conteúdos deste site são protegidos. A reprodução, cópia ou extração não autorizada de informações jurídicas ou dados profissionais é estritamente proibida conforme a legislação brasileira.",
+        features: ["Site protegido SSL", "Dados seguros", "Conformidade LGPD"],
+        bottom: {
+          rights: "© 2024 Escritório Pister. Todos os direitos reservados.",
+          security: "Monitoramento técnico ativo",
+          links: ["Avisos legais", "Privacidade", "Condições"],
+          securityStatus: "Última verificação de segurança: julho 2025",
+          compliance: "Este site está em conformidade com as obrigações legais brasileiras"
+        }
+      }
+    },
+    security: {
+      minimal: "Site protegido SSL",
+      compact: {
+        title: "Site seguro",
+        subtitle: "Dados protegidos LGPD",
+        ssl: "SSL 256-bit",
+        verified: "Verificado"
+      },
+      full: {
+        title: "Escritório monitorado & protegido",
+        subtitle: "Segurança jurídica reforçada",
+        features: {
+          ssl: { label: "Criptografia SSL 256-bit", status: "Ativo" },
+          monitoring: { label: "Monitoramento técnico", status: "24/7" },
+          gdpr: { label: "Conformidade LGPD", status: "Certificado" },
+          legal: { label: "Normas jurídicas", status: "Conforme" }
+        },
+        status: {
+          title: "Última verificação",
+          lastCheck: "Arquivos protegidos • Dados seguros • Acesso monitorado",
+          info: "Arquivos protegidos • Dados seguros • Acesso monitorado"
+        },
+        notice: {
+          title: "Aviso legal:",
+          description: "A reprodução, cópia ou extração não autorizada de informações é estritamente proibida conforme a legislação brasileira."
+        }
+      }
+    },
+    protectedContact: {
+      protected: "Conteúdo protegido",
+      emailProtected: "Endereço de e-mail protegido",
+      phoneProtected: "Número protegido",
+      show: "Mostrar",
+      hide: "Ocultar",
+      protectedTitle: "Contato protegido",
+      protectedDescription: "Dados protegidos contra scraping automatizado",
+      toast: {
+        title: "Conteúdo protegido",
+        description: "Os dados estão protegidos contra cópia automática. Use o botão mostrar."
+      }
     }
   }
 };
