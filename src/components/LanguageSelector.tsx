@@ -19,7 +19,7 @@ const LanguageSelector = () => {
         <Button 
           variant="ghost" 
           size="sm" 
-          className="text-primary-foreground hover:bg-primary-light/30 hover:text-accent-gold transition-all duration-300 border border-primary-light/20 backdrop-blur-sm"
+          className="text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 border border-border/50 backdrop-blur-sm bg-background/80"
         >
           <Globe className="h-4 w-4 mr-2" />
           <span className="mr-1">{currentLang?.flag}</span>
@@ -29,7 +29,7 @@ const LanguageSelector = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="end" 
-        className="w-48 bg-card/95 backdrop-blur-xl border border-border/50 shadow-elegant animate-scale-in"
+        className="w-48 bg-background/95 backdrop-blur-xl border border-border shadow-card animate-scale-in"
         sideOffset={8}
       >
         {availableLanguages.map((language) => (
