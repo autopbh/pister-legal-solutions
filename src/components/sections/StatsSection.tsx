@@ -1,8 +1,19 @@
 import { TrendingUp, Users, Globe, Award, Scale, Clock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import useEmblaCarousel from 'embla-carousel-react';
+import { useCallback, useEffect, useState } from 'react';
 
 const StatsSection = () => {
   const { t } = useLanguage();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'center',
+    skipSnaps: false,
+    dragFree: false,
+    containScroll: 'trimSnaps'
+  });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const stats = [
     {
@@ -49,6 +60,43 @@ const StatsSection = () => {
     }
   ];
 
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
+
+  const onInit = useCallback((emblaApi: any) => {
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, []);
+
+  const onSelect = useCallback((emblaApi: any) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onInit(emblaApi);
+    onSelect(emblaApi);
+    emblaApi.on('reInit', onInit);
+    emblaApi.on('select', onSelect);
+
+    // Auto-play
+    const autoplay = setInterval(() => {
+      if (emblaApi.canScrollNext()) {
+        emblaApi.scrollNext();
+      } else {
+        emblaApi.scrollTo(0);
+      }
+    }, 4000);
+
+    return () => {
+      clearInterval(autoplay);
+      emblaApi.off('reInit', onInit);
+      emblaApi.off('select', onSelect);
+    };
+  }, [emblaApi, onInit, onSelect]);
+
   return (
     <section className="section-padding bg-gradient-professional relative overflow-hidden">
       {/* Background Pattern */}
@@ -65,28 +113,48 @@ const StatsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center group animate-scale-in hover-lift"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className={`relative w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-elegant group-hover:shadow-glow transition-all duration-500 group-hover:scale-110`}>
-                <stat.icon className="h-10 w-10 text-white" />
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
-              </div>
-              
-              <div className="space-y-2">
-                <div className="font-bold text-3xl lg:text-4xl text-primary group-hover:text-accent transition-colors duration-300">
-                  {stat.number}
+        {/* Carrousel Statistiques */}
+        <div className="relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-8 lg:gap-12">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="flex-none w-full sm:w-1/2 lg:w-1/3 text-center group animate-scale-in hover-lift"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className={`relative w-24 h-24 lg:w-28 lg:h-28 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-elegant group-hover:shadow-glow transition-all duration-500 group-hover:scale-110`}>
+                    <stat.icon className="h-12 w-12 lg:h-14 lg:w-14 text-white" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl"></div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="font-bold text-4xl lg:text-5xl text-primary group-hover:text-accent transition-colors duration-300">
+                      {stat.number}
+                    </div>
+                    <div className="text-base lg:text-lg text-muted-foreground font-medium px-4">
+                      {stat.label}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-sm lg:text-base text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-3 mt-12">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === selectedIndex
+                    ? 'bg-accent shadow-glow scale-125'
+                    : 'bg-primary/30 hover:bg-primary/50'
+                }`}
+                onClick={() => scrollTo(index)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Trust Indicators */}
