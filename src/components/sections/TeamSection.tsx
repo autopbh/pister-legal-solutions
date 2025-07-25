@@ -16,29 +16,6 @@ const TeamSection = () => {
     }
   ];
 
-  const associates = [
-    {
-      name: "Dr. Elena Rodriguez",
-      role: "Avocate Associée",
-      specialties: ["Droit Européen", "Compliance"],
-      languages: ["Espagnol", "Français", "Anglais"],
-      location: "Madrid"
-    },
-    {
-      name: "Marco Bernini",
-      role: "Avocat Senior",
-      specialties: ["Droit Corporate", "M&A"],
-      languages: ["Italien", "Français", "Anglais"],
-      location: "Milan"
-    },
-    {
-      name: "Dr. Ana Silva",
-      role: "Consultante Juridique",
-      specialties: ["Droit Fiscal", "Structures Internationales"],
-      languages: ["Portugais", "Français", "Anglais"],
-      location: "Lisbonne"
-    }
-  ];
 
   return (
     <section className="section-padding bg-gradient-professional relative overflow-hidden">
@@ -151,54 +128,6 @@ const TeamSection = () => {
           ))}
         </div>
 
-        {/* Associates */}
-        <div>
-          <h3 className="font-playfair text-3xl font-bold text-primary text-center mb-12">
-            Réseau International d'Associés
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {associates.map((associate, index) => (
-              <Card
-                key={index}
-                className="card-premium p-6 text-center hover-lift animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="w-20 h-20 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-white text-xl shadow-elegant">
-                  {associate.name.split(' ').map(n => n[0]).join('')}
-                </div>
-                
-                <h4 className="font-playfair text-xl font-bold text-primary mb-2">
-                  {associate.name}
-                </h4>
-                <p className="text-accent font-semibold mb-4">{associate.role}</p>
-                
-                <div className="space-y-3">
-                  <div className="flex flex-wrap justify-center gap-1">
-                    {associate.specialties.map((specialty, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium"
-                      >
-                        {specialty}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                    <Languages className="h-4 w-4" />
-                    <span>{associate.languages.join(', ')}</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4" />
-                    <span>{associate.location}</span>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
