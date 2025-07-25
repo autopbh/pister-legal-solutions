@@ -92,7 +92,7 @@ export const translations: Record<string, Translations> = {
       awards: "Auszeichnungen"
     },
     header: {
-      profession: "Rechtsanwalt für Internationales Recht",
+      profession: "Rechtsanwalt",
       phone: "+49 89 123 456 78"
     },
     process: {
@@ -429,8 +429,8 @@ export const translations: Record<string, Translations> = {
       awards: "Récompenses juridiques"
     },
     header: {
-      profession: "Avocat",
-      phone: "+33 (0) 1 23 45 67 89"
+      profession: "Rechtsanwalt",
+      phone: "+49 89 123 456 78"
     },
     process: {
       title: "Notre Processus d'Excellence",
