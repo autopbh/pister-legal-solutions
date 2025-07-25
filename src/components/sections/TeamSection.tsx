@@ -1,8 +1,10 @@
 import { MapPin, Languages, Award, Mail, Phone } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const TeamSection = () => {
+  const { t } = useLanguage();
   const team = [
     {
       name: "Me Jozef Pister",

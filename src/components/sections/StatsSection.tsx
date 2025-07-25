@@ -8,42 +8,42 @@ const StatsSection = () => {
     {
       icon: Scale,
       number: "25+",
-      label: t.about.experience,
-      suffix: "ans",
+      label: t.stats.experience,
+      suffix: "",
       color: "from-primary to-primary-light"
     },
     {
       icon: Users,
       number: "500+",
-      label: "Clients satisfaits",
+      label: t.stats.clients,
       suffix: "",
       color: "from-accent to-accent-gold"
     },
     {
       icon: Globe,
       number: "6",
-      label: "Langues parlées",
+      label: t.stats.languages,
       suffix: "",
       color: "from-primary to-accent"
     },
     {
       icon: Award,
       number: "15+",
-      label: "Récompenses juridiques",
+      label: t.stats.awards,
       suffix: "",
       color: "from-accent-gold to-accent"
     },
     {
       icon: TrendingUp,
       number: "98%",
-      label: "Taux de réussite",
+      label: t.stats.successRate,
       suffix: "",
       color: "from-primary-light to-primary"
     },
     {
       icon: Clock,
       number: "24h",
-      label: "Réponse garantie",
+      label: t.stats.response,
       suffix: "",
       color: "from-accent to-primary"
     }
@@ -93,15 +93,15 @@ const StatsSection = () => {
         <div className="mt-20 flex flex-wrap justify-center items-center gap-12 opacity-60">
           <div className="flex items-center space-x-3">
             <Award className="h-8 w-8 text-accent" />
-            <span className="font-semibold text-primary">DAV Certifié</span>
+            <span className="font-semibold text-primary">{t.stats.certifications.dav}</span>
           </div>
           <div className="flex items-center space-x-3">
             <Scale className="h-8 w-8 text-accent" />
-            <span className="font-semibold text-primary">ISO 9001</span>
+            <span className="font-semibold text-primary">{t.stats.certifications.iso}</span>
           </div>
           <div className="flex items-center space-x-3">
             <Globe className="h-8 w-8 text-accent" />
-            <span className="font-semibold text-primary">International Bar</span>
+            <span className="font-semibold text-primary">{t.stats.certifications.international}</span>
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
 import { MessageCircle, FileText, Scale, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const ProcessSection = () => {
+  const { t } = useLanguage();
   const steps = [
     {
       icon: MessageCircle,
