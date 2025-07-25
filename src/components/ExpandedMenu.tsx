@@ -9,10 +9,6 @@ import {
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import { useLanguage } from '@/hooks/useLanguage';
-import ProcessSection from '@/components/sections/ProcessSection';
-import TeamSection from '@/components/sections/TeamSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import FAQSection from '@/components/sections/FAQSection';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const ExpandedMenu = () => {
@@ -24,25 +20,45 @@ const ExpandedMenu = () => {
       id: 'process',
       icon: Settings,
       label: 'Notre Processus',
-      component: ProcessSection
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-lg font-semibold">Notre Processus de Travail</h3>
+          <p>Découvrez comment nous traitons vos dossiers juridiques avec expertise et efficacité.</p>
+        </div>
+      )
     },
     {
       id: 'team',
       icon: Users,
       label: 'Notre Équipe',
-      component: TeamSection
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-lg font-semibold">Notre Équipe</h3>
+          <p>Une équipe d'experts en droit international à votre service.</p>
+        </div>
+      )
     },
     {
       id: 'testimonials',
       icon: MessageSquare,
       label: 'Témoignages',
-      component: TestimonialsSection
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-lg font-semibold">Témoignages Clients</h3>
+          <p>Découvrez ce que nos clients disent de nos services.</p>
+        </div>
+      )
     },
     {
       id: 'faq',
       icon: HelpCircle,
       label: 'FAQ',
-      component: FAQSection
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-lg font-semibold">Questions Fréquentes</h3>
+          <p>Trouvez les réponses aux questions les plus courantes.</p>
+        </div>
+      )
     }
   ];
 
@@ -91,28 +107,25 @@ const ExpandedMenu = () => {
       </DropdownMenu>
 
       {/* Dialogs pour chaque section */}
-      {menuItems.map((item) => {
-        const Component = item.component;
-        return (
-          <Dialog 
-            key={item.id} 
-            open={activeDialog === item.id} 
-            onOpenChange={(open) => !open && closeDialog()}
-          >
-            <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-              <DialogHeader>
-                <DialogTitle className="flex items-center gap-2">
-                  <item.icon className="h-5 w-5" />
-                  {item.label}
-                </DialogTitle>
-              </DialogHeader>
-              <div className="mt-4">
-                <Component />
-              </div>
-            </DialogContent>
-          </Dialog>
-        );
-      })}
+      {menuItems.map((item) => (
+        <Dialog 
+          key={item.id} 
+          open={activeDialog === item.id} 
+          onOpenChange={(open) => !open && closeDialog()}
+        >
+          <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <item.icon className="h-5 w-5" />
+                {item.label}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="mt-4">
+              {item.content}
+            </div>
+          </DialogContent>
+        </Dialog>
+      ))}
     </>
   );
 };
