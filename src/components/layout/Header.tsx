@@ -35,9 +35,12 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const scrollToSection = (sectionId: string) => {
+    console.log("Header scroll to section:", sectionId);
     const element = document.getElementById(sectionId);
+    console.log("Element found:", element);
     if (element) {
       const offsetTop = element.offsetTop - 100;
+      console.log("Scrolling to offsetTop:", offsetTop);
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'

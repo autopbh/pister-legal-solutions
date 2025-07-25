@@ -80,10 +80,12 @@ const HeroSection = () => {
                 size="lg" 
                 type="button"
                 className="relative bg-gradient-to-r from-primary to-primary-light hover:from-primary-light hover:to-primary text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 group overflow-hidden"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
+                  console.log("Hero contact button clicked");
                   const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
