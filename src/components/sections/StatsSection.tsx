@@ -16,41 +16,41 @@ const StatsSection = () => {
       icon: Scale,
       number: "25+",
       label: t.about.experience,
-      suffix: "",
+      suffix: "ans",
       color: "from-primary to-primary-light"
     },
     {
       icon: Users,
       number: "500+",
-      label: t.stats.clients,
+      label: "Clients satisfaits",
       suffix: "",
       color: "from-accent to-accent-gold"
     },
     {
       icon: Globe,
       number: "12+",
-      label: t.stats.expertise,
+      label: "Domaines d'expertise",
       suffix: "",
       color: "from-primary to-accent"
     },
     {
       icon: Award,
       number: "15+",
-      label: t.stats.awards,
+      label: "Récompenses juridiques",
       suffix: "",
       color: "from-accent-gold to-accent"
     },
     {
       icon: TrendingUp,
       number: "98%",
-      label: t.stats.success,
+      label: "Taux de réussite",
       suffix: "",
       color: "from-primary-light to-primary"
     },
     {
       icon: Clock,
       number: "24h",
-      label: t.stats.response,
+      label: "Réponse garantie",
       suffix: "",
       color: "from-accent to-primary"
     }
@@ -65,10 +65,10 @@ const StatsSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            {t.stats.title}
+            Excellence Mesurée en Chiffres
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            {t.stats.subtitle}
+            Plus de deux décennies d'expertise juridique internationale avec des résultats exceptionnels
           </p>
         </div>
 

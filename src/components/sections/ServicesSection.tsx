@@ -111,7 +111,7 @@ const ServicesSection = () => {
                     }
                   }}
                 >
-                  {t.common.more}
+                  Mehr erfahren
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
