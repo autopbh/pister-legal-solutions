@@ -1,5 +1,12 @@
 import { TrendingUp, Users, Globe, Award, Scale, Clock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const StatsSection = () => {
   const { t } = useLanguage();
@@ -65,7 +72,8 @@ const StatsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid grid-cols-6 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -87,6 +95,35 @@ const StatsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="lg:hidden">
+          <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+            <CarouselContent>
+              {stats.map((stat, index) => (
+                <CarouselItem key={index} className="basis-full">
+                  <div className="text-center group animate-scale-in hover-lift p-4">
+                    <div className={`relative w-24 h-24 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-elegant group-hover:shadow-glow transition-all duration-500 group-hover:scale-110`}>
+                      <stat.icon className="h-12 w-12 text-white" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="font-bold text-4xl text-primary group-hover:text-accent transition-colors duration-300">
+                        {stat.number}
+                      </div>
+                      <div className="text-base text-muted-foreground font-medium">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* Trust Indicators */}
