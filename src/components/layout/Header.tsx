@@ -3,6 +3,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
 import LanguageSelector from '../LanguageSelector';
+import ExpandedMenu from '../ExpandedMenu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,6 +104,7 @@ const Header = () => {
               <Phone className="h-4 w-4" />
               <span>+49 (0) 30 123 456 789</span>
             </div>
+            <ExpandedMenu />
             <LanguageSelector />
           </div>
 
