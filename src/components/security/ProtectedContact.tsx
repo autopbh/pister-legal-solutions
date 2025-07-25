@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Mail, Phone, Copy, Eye, EyeOff, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface ProtectedContactProps {
   email?: string;
@@ -20,11 +21,12 @@ const ProtectedContact = ({
 }: ProtectedContactProps) => {
   const [isRevealed, setIsRevealed] = useState(false);
   const { toast } = useToast();
+  const { t } = useTranslations();
 
   const handleCopyAttempt = () => {
     toast({
-      title: "Contenu protégé",
-      description: "Les coordonnées sont protégées contre la copie automatisée. Veuillez utiliser le bouton d'affichage.",
+      title: t.protectedContact.toast.title,
+      description: t.protectedContact.toast.description,
       variant: "destructive"
     });
   };
@@ -57,7 +59,7 @@ const ProtectedContact = ({
           {type === 'email' ? <Mail className="h-5 w-5 text-accent" /> : <Phone className="h-5 w-5 text-accent" />}
           {!isRevealed ? (
             <span className="text-muted-foreground font-medium">
-              {type === 'email' ? 'Adresse e-mail protégée' : 'Numéro protégé'}
+              {type === 'email' ? t.protectedContact.emailProtected : t.protectedContact.phoneProtected}
             </span>
           ) : (
             <span className="font-medium">
@@ -72,7 +74,7 @@ const ProtectedContact = ({
           className="border-accent/20 text-accent hover:bg-accent/10"
         >
           {isRevealed ? <EyeOff className="h-4 w-4 mr-1" /> : <Eye className="h-4 w-4 mr-1" />}
-          {isRevealed ? 'Masquer' : 'Afficher'}
+          {isRevealed ? t.protectedContact.hide : t.protectedContact.show}
         </Button>
       </div>
     );
@@ -83,7 +85,7 @@ const ProtectedContact = ({
       <div className={`bg-accent/5 border border-accent/20 rounded-xl p-4 ${className}`}>
         <div className="flex items-center space-x-3 mb-3">
           <Shield className="h-5 w-5 text-accent" />
-          <span className="font-medium text-foreground">Contact protégé</span>
+          <span className="font-medium text-foreground">{t.protectedContact.protectedTitle}</span>
         </div>
         <div 
           className="select-none cursor-pointer"
@@ -95,7 +97,7 @@ const ProtectedContact = ({
           </div>
         </div>
         <p className="text-xs text-muted-foreground mt-2">
-          Coordonnées protégées contre le scraping automatisé
+          {t.protectedContact.protectedDescription}
         </p>
       </div>
     );

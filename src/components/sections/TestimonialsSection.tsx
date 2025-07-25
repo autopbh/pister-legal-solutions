@@ -1,29 +1,32 @@
 import { Star, Quote } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const TestimonialsSection = () => {
+  const { t } = useTranslations();
+  
   const testimonials = [
     {
-      name: "Dr. Michael Weber",
-      role: "CEO, Weber Industries",
-      company: "Entreprise multinationale",
-      content: "Me Pister a géré notre expansion internationale avec une expertise remarquable. Son approche stratégique nous a fait économiser des milliers d'euros en évitant les pièges juridiques.",
+      name: t.testimonials.testimonial1.name,
+      role: t.testimonials.testimonial1.role,
+      company: t.testimonials.testimonial1.company,
+      content: t.testimonials.testimonial1.content,
       rating: 5,
       image: "/lovable-uploads/382f4fa4-b492-445d-9c63-5c526b3ac0a3.png"
     },
     {
-      name: "Sarah Chen",
-      role: "Directrice Juridique",
-      company: "TechStart GmbH",
-      content: "L'expertise en droit commercial international de Me Pister est exceptionnelle. Il a négocié nos contrats avec une précision chirurgicale.",
+      name: t.testimonials.testimonial2.name,
+      role: t.testimonials.testimonial2.role,
+      company: t.testimonials.testimonial2.company,
+      content: t.testimonials.testimonial2.content,
       rating: 5,
       image: "/lovable-uploads/667e956a-56e7-495e-b04b-38be6b06087b.png"
     },
     {
-      name: "Jean-Pierre Dubois",
-      role: "Entrepreneur",
-      company: "Export Solutions",
-      content: "Grâce à Me Pister, nous avons évité un litige coûteux. Sa maîtrise du droit international nous a permis de trouver une solution élégante.",
+      name: t.testimonials.testimonial3.name,
+      role: t.testimonials.testimonial3.role,
+      company: t.testimonials.testimonial3.company,
+      content: t.testimonials.testimonial3.content,
       rating: 5,
       image: "/lovable-uploads/d0ad3fdc-8334-4160-86ff-0b52de0a7bac.png"
     }
@@ -38,10 +41,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            Ce Que Disent Nos Clients
+            {t.testimonials.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            La confiance de nos clients est notre plus grande récompense
+            {t.testimonials.subtitle}
           </p>
         </div>
 
@@ -91,7 +94,7 @@ const TestimonialsSection = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center space-x-3 bg-accent/10 backdrop-blur-sm border border-accent/20 rounded-full px-8 py-4 shadow-card">
             <Star className="h-5 w-5 text-accent" />
-            <span className="font-semibold text-primary">Plus de 500 clients nous font confiance</span>
+            <span className="font-semibold text-primary">{t.testimonials.cta}</span>
             <Star className="h-5 w-5 text-accent" />
           </div>
         </div>

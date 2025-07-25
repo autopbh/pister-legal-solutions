@@ -1,39 +1,41 @@
 import { useState } from 'react';
 import { Plus, Minus, MessageCircle, Clock, Globe, Scale } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const FAQSection = () => {
+  const { t } = useTranslations();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "Quels sont vos domaines de spécialisation ?",
-      answer: "Nous nous spécialisons en droit international, droit commercial, droit des contrats internationaux, arbitrage commercial, et accompagnement juridique pour les entreprises en expansion internationale. Notre expertise couvre particulièrement les transactions transfrontalières et la conformité réglementaire internationale.",
+      question: t.faq.questions.q1.question,
+      answer: t.faq.questions.q1.answer,
       icon: Scale
     },
     {
-      question: "Combien coûte une consultation ?",
-      answer: "La première consultation de 30 minutes est entièrement gratuite. Cela nous permet d'évaluer votre situation et de vous proposer une stratégie adaptée. Pour les services suivants, nous proposons des tarifs transparents adaptés à la complexité de votre dossier, avec possibilité de forfaits pour les projets long terme.",
+      question: t.faq.questions.q2.question,
+      answer: t.faq.questions.q2.answer,
       icon: MessageCircle
     },
     {
-      question: "Dans quels pays intervenez-vous ?",
-      answer: "Grâce à notre réseau international d'associés, nous intervenons principalement en Europe (France, Allemagne, Espagne, Italie, Portugal), mais également dans d'autres juridictions selon les besoins. Nous parlons 6 langues et avons l'expertise nécessaire pour naviguer dans différents systèmes juridiques.",
+      question: t.faq.questions.q3.question,
+      answer: t.faq.questions.q3.answer,
       icon: Globe
     },
     {
-      question: "Quels sont vos délais d'intervention ?",
-      answer: "Nous nous engagons à répondre dans les 24h pour toute demande urgente. Pour les consultations standard, un rendez-vous peut être fixé sous 48-72h. Les délais de traitement dépendent de la complexité du dossier, mais nous fournissons toujours un calendrier précis dès l'engagement.",
+      question: t.faq.questions.q4.question,
+      answer: t.faq.questions.q4.answer,
       icon: Clock
     },
     {
-      question: "Comment se déroule le suivi de mon dossier ?",
-      answer: "Vous bénéficiez d'un suivi personnalisé avec des points réguliers sur l'avancement. Nous utilisons des outils de communication modernes pour vous tenir informé en temps réel. Chaque étape importante fait l'objet d'un compte-rendu détaillé.",
+      question: t.faq.questions.q5.question,
+      answer: t.faq.questions.q5.answer,
       icon: MessageCircle
     },
     {
-      question: "Proposez-vous des services en urgence ?",
-      answer: "Oui, nous avons un service d'urgence pour les situations critiques nécessitant une intervention rapide. Nos équipes sont disponibles pour traiter les dossiers urgents, avec une réactivité adaptée aux enjeux de votre situation.",
+      question: t.faq.questions.q6.question,
+      answer: t.faq.questions.q6.answer,
       icon: Clock
     }
   ];
@@ -48,10 +50,10 @@ const FAQSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            Questions Fréquentes
+            {t.faq.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            Trouvez rapidement les réponses à vos questions les plus courantes
+            {t.faq.subtitle}
           </p>
         </div>
 
@@ -107,14 +109,14 @@ const FAQSection = () => {
           {/* Contact CTA */}
           <Card className="card-luxury mt-12 p-8 text-center">
             <h3 className="font-playfair text-2xl font-bold text-primary-foreground mb-4">
-              Vous ne trouvez pas la réponse ?
+              {t.faq.contact.title}
             </h3>
             <p className="text-primary-foreground/80 mb-6">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions spécifiques.
+              {t.faq.contact.subtitle}
             </p>
             <button className="btn-premium">
               <MessageCircle className="h-5 w-5 mr-2" />
-              Contactez-nous directement
+              {t.faq.contact.button}
             </button>
           </Card>
         </div>

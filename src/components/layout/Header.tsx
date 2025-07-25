@@ -69,7 +69,7 @@ const Header = () => {
                 Me Jozef Pister
               </h1>
               <p className="text-xs text-muted-foreground">
-                Rechtsanwalt
+                {t.header.profession}
               </p>
             </div>
           </div>
@@ -101,7 +101,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="h-4 w-4" />
-              <span>+49 (0) 30 123 456 789</span>
+              <span>{t.header.phone}</span>
             </div>
             <LanguageSelector />
           </div>
@@ -142,7 +142,7 @@ const Header = () => {
               <div className="pt-4 flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4" />
-                  <span>+49 (0) 30 123 456 789</span>
+                  <span>{t.header.phone}</span>
                 </div>
                 <LanguageSelector />
               </div>

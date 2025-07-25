@@ -1,18 +1,21 @@
 import { MapPin, Languages, Award, Mail, Phone } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const TeamSection = () => {
+  const { t } = useTranslations();
+  
   const team = [
     {
-      name: "Me Jozef Pister",
-      role: "Avocat Principal",
-      specialties: ["Droit International", "Droit Commercial", "Arbitrage"],
-      languages: ["Français", "Allemand", "Anglais", "Italien"],
-      location: "Paris & Berlin",
+      name: t.team.lawyer.name,
+      role: t.team.lawyer.role,
+      specialties: t.team.lawyer.specialties,
+      languages: t.team.lawyer.languages,
+      location: t.team.lawyer.location,
       image: "/lovable-uploads/446f15db-e216-43d2-a71b-ceb15c99eee9.png",
-      description: "Plus de 25 ans d'expérience en droit international. Spécialisé dans les transactions transfrontalières complexes.",
-      qualifications: ["DAV Certifié", "Maître en Droit International", "Arbitre ICC"]
+      description: t.team.lawyer.description,
+      qualifications: t.team.lawyer.qualifications
     }
   ];
 
@@ -25,10 +28,10 @@ const TeamSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            Notre Équipe d'Excellence
+            {t.team.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            Une expertise multilingue et multiculturelle au service de vos projets internationaux
+            {t.team.subtitle}
           </p>
         </div>
 
@@ -52,7 +55,7 @@ const TeamSection = () => {
                   <div className="absolute top-6 right-6 bg-accent text-accent-foreground rounded-xl px-4 py-2 shadow-card backdrop-blur-sm">
                     <div className="flex items-center space-x-2">
                       <Award className="h-4 w-4" />
-                      <span className="font-bold text-sm">Fondateur</span>
+                      <span className="font-bold text-sm">{t.team.labels.founder}</span>
                     </div>
                   </div>
                 </div>
@@ -71,7 +74,7 @@ const TeamSection = () => {
 
                   {/* Specialties */}
                   <div>
-                    <h4 className="font-semibold text-primary-foreground mb-3">Spécialisations</h4>
+                    <h4 className="font-semibold text-primary-foreground mb-3">{t.team.labels.specializations}</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.specialties.map((specialty, i) => (
                         <span
@@ -100,7 +103,7 @@ const TeamSection = () => {
 
                   {/* Qualifications */}
                   <div>
-                    <h4 className="font-semibold text-primary-foreground mb-3">Qualifications</h4>
+                    <h4 className="font-semibold text-primary-foreground mb-3">{t.team.labels.qualifications}</h4>
                     <div className="space-y-2">
                       {member.qualifications.map((qual, i) => (
                         <div key={i} className="flex items-center space-x-2">
@@ -115,11 +118,11 @@ const TeamSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <Button className="btn-premium">
                       <Mail className="h-4 w-4 mr-2" />
-                      Contacter
+                      {t.team.labels.contact}
                     </Button>
                     <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                       <Phone className="h-4 w-4 mr-2" />
-                      Appeler
+                      {t.team.labels.call}
                     </Button>
                   </div>
                 </div>

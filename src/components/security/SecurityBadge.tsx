@@ -1,5 +1,6 @@
 import { Shield, Lock, CheckCircle, Eye, Clock, Award, Globe, Zap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface SecurityBadgeProps {
   variant?: 'full' | 'compact' | 'minimal';
@@ -7,6 +8,7 @@ interface SecurityBadgeProps {
 }
 
 const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps) => {
+  const { t } = useTranslations();
   const currentDate = new Date().toLocaleDateString('de-DE', { 
     month: 'long', 
     year: 'numeric' 
@@ -17,7 +19,7 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
       <div className={`flex items-center space-x-2 ${className}`}>
         <Shield className="h-4 w-4 text-accent animate-pulse" />
         <span className="text-xs font-medium text-muted-foreground">
-          Site protégé SSL
+          {t.security.minimal}
         </span>
       </div>
     );
@@ -31,16 +33,16 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
             <Shield className="h-5 w-5 text-accent" />
           </div>
           <div className="flex-1">
-            <h4 className="font-bold text-sm text-foreground">Site sécurisé</h4>
-            <p className="text-xs text-muted-foreground">Données protégées RGPD</p>
+            <h4 className="font-bold text-sm text-foreground">{t.security.compact.title}</h4>
+            <p className="text-xs text-muted-foreground">{t.security.compact.subtitle}</p>
           </div>
         </div>
         <div className="flex items-center justify-between text-xs">
           <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
             <CheckCircle className="h-3 w-3 mr-1" />
-            SSL 256-bit
+            {t.security.compact.ssl}
           </Badge>
-          <span className="text-muted-foreground">Vérifié {currentDate}</span>
+          <span className="text-muted-foreground">{t.security.compact.verified} {currentDate}</span>
         </div>
       </div>
     );
@@ -54,18 +56,18 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
           <Shield className="h-6 w-6 text-accent-foreground animate-pulse" />
         </div>
         <div>
-          <h3 className="font-playfair font-bold text-xl text-primary">Cabinet Surveillé & Protégé</h3>
-          <p className="text-sm text-muted-foreground">Sécurité juridique renforcée</p>
+          <h3 className="font-playfair font-bold text-xl text-primary">{t.security.full.title}</h3>
+          <p className="text-sm text-muted-foreground">{t.security.full.subtitle}</p>
         </div>
       </div>
 
       {/* Security features */}
       <div className="grid grid-cols-2 gap-4 mb-6">
         {[
-          { icon: Lock, label: "Chiffrement SSL 256-bit", status: "Actif" },
-          { icon: Eye, label: "Surveillance technique", status: "24/7" },
-          { icon: CheckCircle, label: "Conformité RGPD", status: "Certifié" },
-          { icon: Award, label: "Normes juridiques", status: "TMG & DSGVO" }
+          { icon: Lock, label: t.security.full.features.ssl.label, status: t.security.full.features.ssl.status },
+          { icon: Eye, label: t.security.full.features.monitoring.label, status: t.security.full.features.monitoring.status },
+          { icon: CheckCircle, label: t.security.full.features.gdpr.label, status: t.security.full.features.gdpr.status },
+          { icon: Award, label: t.security.full.features.legal.label, status: t.security.full.features.legal.status }
         ].map((item, index) => (
           <div key={index} className="flex items-center space-x-2">
             <item.icon className="h-4 w-4 text-accent flex-shrink-0" />
@@ -82,19 +84,19 @@ const SecurityBadge = ({ variant = 'full', className = '' }: SecurityBadgeProps)
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-foreground">Dernière vérification</span>
+            <span className="text-sm font-medium text-foreground">{t.security.full.status.title}</span>
           </div>
           <span className="text-sm text-accent font-bold">{currentDate}</span>
         </div>
         <div className="mt-2 text-xs text-muted-foreground">
-          Fichiers protégés • Données sécurisées • Accès surveillé
+          {t.security.full.status.info}
         </div>
       </div>
 
       {/* Legal notice */}
       <div className="mt-4 p-3 bg-destructive/5 border border-destructive/20 rounded-xl">
         <p className="text-xs text-destructive-foreground leading-relaxed">
-          <strong>Notice légale :</strong> La reproduction, copie ou extraction non autorisée d'informations est strictement interdite selon le droit allemand.
+          <strong>{t.security.full.notice.title}</strong> {t.security.full.notice.description}
         </p>
       </div>
     </div>
