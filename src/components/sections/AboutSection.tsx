@@ -7,20 +7,20 @@ const AboutSection = () => {
   const achievements = [
     {
       icon: Globe,
-      title: "Internationales Recht",
-      description: "Spezialisiert auf grenzüberschreitende Rechtsfragen",
+      title: t.services.international.title,
+      description: t.services.international.description,
       color: "primary"
     },
     {
       icon: Briefcase,
-      title: "Handelsrecht", 
-      description: "Umfassende Expertise im Unternehmens- und Handelsrecht",
+      title: t.services.commercial.title,
+      description: t.services.commercial.description,
       color: "accent"
     },
     {
       icon: Users,
-      title: "Persönliche Betreuung",
-      description: "Individuelle Lösungen für jeden Mandanten",
+      title: t.common.personalService,
+      description: t.common.individualSolutions,
       color: "primary"
     }
   ];
@@ -55,7 +55,7 @@ const AboutSection = () => {
             </p>
 
             <div className="space-y-6">
-              <h4 className="text-xl font-playfair font-semibold text-primary">Meine Philosophie</h4>
+              <h4 className="text-xl font-playfair font-semibold text-primary">{t.common.philosophy}</h4>
               <div className="relative bg-background/70 backdrop-blur-sm p-6 rounded-lg border border-border/50 hover:bg-background/90 transition-all duration-300">
                 <Quote className="h-6 w-6 text-accent mb-4" />
                 <p className="text-muted-foreground leading-relaxed italic">
@@ -66,7 +66,7 @@ const AboutSection = () => {
 
             {/* Simple achievements */}
             <div className="space-y-6">
-              <h4 className="text-xl font-playfair font-semibold text-primary">Schwerpunkte</h4>
+              <h4 className="text-xl font-playfair font-semibold text-primary">{t.common.strengths}</h4>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
                   <div 
@@ -93,10 +93,10 @@ const AboutSection = () => {
 
             {/* Simple credentials */}
             <div className="bg-primary text-primary-foreground p-6 rounded-lg">
-              <h4 className="text-lg font-playfair font-bold mb-4 flex items-center">
-                <CheckCircle className="h-5 w-5 mr-3 text-accent" />
-                Qualifikationen & Zertifizierungen
-              </h4>
+            <h4 className="text-lg font-playfair font-bold mb-4 flex items-center">
+              <CheckCircle className="h-5 w-5 mr-3 text-accent" />
+              {t.common.certifications}
+            </h4>
               <div className="grid grid-cols-1 gap-3">
                 {[
                   "Rechtsanwalt bei der Rechtsanwaltskammer Deutschland",

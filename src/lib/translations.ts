@@ -78,6 +78,33 @@ export interface Translation {
     privacy: string;
     disclaimer: string;
   };
+  
+  // Stats
+  stats: {
+    clients: string;
+    expertise: string;
+    awards: string;
+    success: string;
+    response: string;
+    title: string;
+    subtitle: string;
+  };
+  
+  // Common
+  common: {
+    consultation: string;
+    contact: string;
+    more: string;
+    readMore: string;
+    personalService: string;
+    individualSolutions: string;
+    certifications: string;
+    philosophy: string;
+    strengths: string;
+    ready: string;
+    startToday: string;
+    freeConsultation: string;
+  };
 }
 
 export const translations: Record<string, Translation> = {
@@ -149,6 +176,29 @@ export const translations: Record<string, Translation> = {
       impressum: "Impressum",
       privacy: "Datenschutz",
       disclaimer: "Haftungsausschluss"
+    },
+    stats: {
+      clients: "Zufriedene Mandanten",
+      expertise: "Fachbereiche",
+      awards: "Auszeichnungen",
+      success: "Erfolgsquote",
+      response: "Antwortzeit",
+      title: "Exzellenz in Zahlen",
+      subtitle: "Über zwei Jahrzehnte internationale Rechtserfahrung mit außergewöhnlichen Ergebnissen"
+    },
+    common: {
+      consultation: "Beratung",
+      contact: "Kontaktieren",
+      more: "Mehr erfahren",
+      readMore: "Weiterlesen",
+      personalService: "Persönliche Betreuung",
+      individualSolutions: "Individuelle Lösungen für jeden Mandanten",
+      certifications: "Qualifikationen & Zertifizierungen",
+      philosophy: "Meine Philosophie",
+      strengths: "Schwerpunkte",
+      ready: "Bereit anzufangen?",
+      startToday: "Kontaktieren Sie uns noch heute für Ihre kostenlose Erstberatung",
+      freeConsultation: "Kostenlose Erstberatung"
     }
   },
   
@@ -220,6 +270,29 @@ export const translations: Record<string, Translation> = {
       impressum: "Mentions légales",
       privacy: "Confidentialité",
       disclaimer: "Avertissement"
+    },
+    stats: {
+      clients: "Clients satisfaits",
+      expertise: "Domaines d'expertise", 
+      awards: "Récompenses juridiques",
+      success: "Taux de réussite",
+      response: "Réponse garantie",
+      title: "Excellence mesurée en chiffres",
+      subtitle: "Plus de deux décennies d'expertise juridique internationale avec des résultats exceptionnels"
+    },
+    common: {
+      consultation: "Consultation",
+      contact: "Contacter",
+      more: "En savoir plus",
+      readMore: "Lire la suite",
+      personalService: "Service personnalisé",
+      individualSolutions: "Solutions individuelles pour chaque client",
+      certifications: "Qualifications & Certifications",
+      philosophy: "Ma philosophie",
+      strengths: "Points forts",
+      ready: "Prêt à commencer?",
+      startToday: "Contactez-nous dès aujourd'hui pour votre consultation gratuite",
+      freeConsultation: "Consultation gratuite"
     }
   },
   
@@ -291,6 +364,29 @@ export const translations: Record<string, Translation> = {
       impressum: "Legal Notice",
       privacy: "Privacy",
       disclaimer: "Disclaimer"
+    },
+    stats: {
+      clients: "Satisfied clients",
+      expertise: "Areas of expertise",
+      awards: "Legal awards",
+      success: "Success rate", 
+      response: "Response guarantee",
+      title: "Excellence measured in numbers",
+      subtitle: "Over two decades of international legal expertise with exceptional results"
+    },
+    common: {
+      consultation: "Consultation",
+      contact: "Contact",
+      more: "Learn more",
+      readMore: "Read more",
+      personalService: "Personal service",
+      individualSolutions: "Individual solutions for each client",
+      certifications: "Qualifications & Certifications",
+      philosophy: "My philosophy",
+      strengths: "Strengths",
+      ready: "Ready to start?",
+      startToday: "Contact us today for your free consultation",
+      freeConsultation: "Free consultation"
     }
   },
   
@@ -362,6 +458,29 @@ export const translations: Record<string, Translation> = {
       impressum: "Aviso legal",
       privacy: "Privacidad",
       disclaimer: "Descargo de responsabilidad"
+    },
+    stats: {
+      clients: "Clientes satisfechos",
+      expertise: "Áreas de especialización",
+      awards: "Premios legales",
+      success: "Tasa de éxito",
+      response: "Garantía de respuesta", 
+      title: "Excelencia medida en números",
+      subtitle: "Más de dos décadas de experiencia jurídica internacional con resultados excepcionales"
+    },
+    common: {
+      consultation: "Consulta",
+      contact: "Contactar",
+      more: "Saber más",
+      readMore: "Leer más",
+      personalService: "Servicio personal",
+      individualSolutions: "Soluciones individuales para cada cliente",
+      certifications: "Cualificaciones y Certificaciones",
+      philosophy: "Mi filosofía",
+      strengths: "Fortalezas",
+      ready: "¿Listo para empezar?",
+      startToday: "Contáctenos hoy para su consulta gratuita",
+      freeConsultation: "Consulta gratuita"
     }
   },
   
@@ -433,6 +552,29 @@ export const translations: Record<string, Translation> = {
       impressum: "Note legali",
       privacy: "Privacy",
       disclaimer: "Disclaimer"
+    },
+    stats: {
+      clients: "Clienti soddisfatti",
+      expertise: "Aree di competenza",
+      awards: "Premi legali",
+      success: "Tasso di successo",
+      response: "Garanzia di risposta",
+      title: "Eccellenza misurata in numeri", 
+      subtitle: "Oltre due decenni di esperienza legale internazionale con risultati eccezionali"
+    },
+    common: {
+      consultation: "Consulenza",
+      contact: "Contattare",
+      more: "Per saperne di più",
+      readMore: "Leggi di più",
+      personalService: "Servizio personale",
+      individualSolutions: "Soluzioni individuali per ogni cliente",
+      certifications: "Qualifiche e Certificazioni", 
+      philosophy: "La mia filosofia",
+      strengths: "Punti di forza",
+      ready: "Pronto per iniziare?",
+      startToday: "Contattaci oggi per la tua consulenza gratuita",
+      freeConsultation: "Consulenza gratuita"
     }
   },
   
@@ -504,6 +646,29 @@ export const translations: Record<string, Translation> = {
       impressum: "Aviso legal",
       privacy: "Privacidade",
       disclaimer: "Isenção de responsabilidade"
+    },
+    stats: {
+      clients: "Clientes satisfeitos",
+      expertise: "Áreas de especialização",
+      awards: "Prémios legais",
+      success: "Taxa de sucesso",
+      response: "Garantia de resposta",
+      title: "Excelência medida em números",
+      subtitle: "Mais de duas décadas de experiência jurídica internacional com resultados excepcionais"
+    },
+    common: {
+      consultation: "Consulta",
+      contact: "Contactar",
+      more: "Saber mais",
+      readMore: "Ler mais",
+      personalService: "Serviço pessoal",
+      individualSolutions: "Soluções individuais para cada cliente",
+      certifications: "Qualificações e Certificações",
+      philosophy: "A minha filosofia",
+      strengths: "Pontos fortes",
+      ready: "Pronto para começar?",
+      startToday: "Contacte-nos hoje para a sua consulta gratuita",
+      freeConsultation: "Consulta gratuita"
     }
   }
 };
