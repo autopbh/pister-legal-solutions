@@ -8,8 +8,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import SecurityBadge from '@/components/security/SecurityBadge';
 import ProtectedContact from '@/components/security/ProtectedContact';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const ContactSection = () => {
+  const { t } = useTranslations();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '', email: '', subject: '', message: '', privacy: false
@@ -21,8 +23,8 @@ const ContactSection = () => {
     setIsSubmitting(true);
     setTimeout(() => {
       toast({
-        title: "Nachricht gesendet",
-        description: "Vielen Dank für Ihre Nachricht. Wir melden uns binnen 24 Stunden bei Ihnen.",
+        title: t.contact.form.success.title,
+        description: t.contact.form.success.description,
       });
       setFormData({ name: '', email: '', subject: '', message: '', privacy: false });
       setIsSubmitting(false);
@@ -44,13 +46,13 @@ const ContactSection = () => {
         <div className="text-center space-y-6 mb-16">
           <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3">
             <Star className="h-5 w-5 text-accent" />
-            <span className="font-medium text-primary">Kontakt & Beratung</span>
+            <span className="font-medium text-primary">{t.contact.badge}</span>
           </div>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary leading-tight">
-            Kontakt aufnehmen
+            {t.contact.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Ich stehe Ihnen gerne für eine persönliche Beratung zur Verfügung
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -61,7 +63,7 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-primary flex items-center">
                   <MapPin className="h-6 w-6 mr-3 text-accent" />
-                  Kanzlei Kontakt
+                  {t.contact.office.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -69,10 +71,10 @@ const ContactSection = () => {
                    <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
                      <MapPin className="h-6 w-6 text-primary-foreground" />
                    </div>
-                   <div>
-                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">Anschrift</p>
-                     <p className="text-muted-foreground whitespace-pre-line">Musterstraße 123<br/>10115 Berlin<br/>Deutschland</p>
-                   </div>
+                    <div>
+                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{t.contact.office.address.label}</p>
+                      <p className="text-muted-foreground whitespace-pre-line">{t.contact.office.address.value}</p>
+                    </div>
                  </div>
 
                  <div className="flex items-start space-x-4 group">
@@ -80,7 +82,7 @@ const ContactSection = () => {
                      <Phone className="h-6 w-6 text-primary-foreground" />
                    </div>
                    <div className="flex-1">
-                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">Telefon</p>
+                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{t.contact.office.phone.label}</p>
                      <ProtectedContact type="phone" variant="protected" className="mt-2" />
                    </div>
                  </div>
@@ -90,7 +92,7 @@ const ContactSection = () => {
                      <Mail className="h-6 w-6 text-primary-foreground" />
                    </div>
                     <div className="flex-1">
-                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">E-Mail</p>
+                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{t.contact.office.email.label}</p>
                       <a href="mailto:contact@pister-law.com" className="text-accent hover:text-accent-gold transition-colors font-medium">
                         contact@pister-law.com
                       </a>
@@ -101,10 +103,10 @@ const ContactSection = () => {
                    <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
                      <Clock className="h-6 w-6 text-primary-foreground" />
                    </div>
-                   <div>
-                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">Bürozeiten</p>
-                     <p className="text-muted-foreground whitespace-pre-line">Mo-Fr: 09:00 - 18:00<br/>Sa: 10:00 - 14:00<br/>So: Nach Vereinbarung</p>
-                   </div>
+                    <div>
+                      <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{t.contact.office.hours.label}</p>
+                      <p className="text-muted-foreground whitespace-pre-line">{t.contact.office.hours.value}</p>
+                    </div>
                  </div>
               </CardContent>
             </Card>
@@ -116,21 +118,21 @@ const ContactSection = () => {
                   <div className="flex items-center space-x-4 mb-4">
                     <Zap className="h-8 w-8 text-accent-gold" />
                     <div>
-                      <h3 className="text-xl font-playfair font-bold">Notfall-Hotline</h3>
-                      <p className="text-accent-gold">24/7 Erreichbarkeit</p>
+                      <h3 className="text-xl font-playfair font-bold">{t.contact.emergency.title}</h3>
+                      <p className="text-accent-gold">{t.contact.emergency.subtitle}</p>
                     </div>
                   </div>
                   <p className="text-sm opacity-90 mb-6">
-                    Bei dringenden rechtlichen Angelegenheiten erreichen Sie uns auch außerhalb der Geschäftszeiten.
+                    {t.contact.emergency.description}
                   </p>
                    <Button 
                      type="button"
                      className="w-full bg-accent-gold text-accent-foreground hover:bg-accent-gold/90 font-bold"
                      onClick={(e) => e.preventDefault()}
                    >
-                     <Phone className="h-4 w-4 mr-2" />
-                     +49 (0) 30 123 456 700
-                   </Button>
+                      <Phone className="h-4 w-4 mr-2" />
+                      {t.contact.emergency.phone}
+                    </Button>
                 </CardContent>
                </Card>
 
@@ -142,13 +144,13 @@ const ContactSection = () => {
            {/* Enhanced Contact Form */}
           <Card className="card-premium shadow-elegant border-0 animate-slide-in-right">
              <CardHeader>
-               <CardTitle className="text-2xl font-playfair text-primary flex items-center">
-                 <Send className="h-6 w-6 mr-3 text-accent" />
-                 Nachricht senden
-               </CardTitle>
+                <CardTitle className="text-2xl font-playfair text-primary flex items-center">
+                  <Send className="h-6 w-6 mr-3 text-accent" />
+                  {t.contact.form.title}
+                </CardTitle>
                <div className="flex items-center space-x-2 mt-2">
                  <Lock className="h-4 w-4 text-accent animate-pulse" />
-                 <span className="text-sm text-muted-foreground">Formulaire sécurisé et chiffré</span>
+                 <span className="text-sm text-muted-foreground">{t.contact.form.security}</span>
                </div>
              </CardHeader>
             <CardContent>
@@ -156,7 +158,7 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-foreground mb-3">
-                      Vollständiger Name *
+                      {t.contact.form.name} *
                     </label>
                     <Input
                       type="text"
@@ -168,7 +170,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-foreground mb-3">
-                      E-Mail-Adresse *
+                      {t.contact.form.email} *
                     </label>
                     <Input
                       type="email"
@@ -182,7 +184,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-3">
-                    Betreff *
+                    {t.contact.form.subject} *
                   </label>
                   <Input
                     type="text"
@@ -195,7 +197,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-3">
-                    Ihre Nachricht *
+                    {t.contact.form.message} *
                   </label>
                   <Textarea
                     value={formData.message}
@@ -203,7 +205,7 @@ const ContactSection = () => {
                     required
                     rows={6}
                     className="border-2 border-border/50 focus:border-primary transition-all duration-300 rounded-xl resize-none"
-                    placeholder="Beschreiben Sie bitte Ihr rechtliches Anliegen..."
+                    placeholder={t.contact.form.messagePlaceholder}
                   />
                 </div>
 
@@ -216,7 +218,7 @@ const ContactSection = () => {
                     className="mt-1"
                   />
                   <label htmlFor="privacy" className="text-sm text-muted-foreground leading-6">
-                    Ich stimme der Verarbeitung meiner Daten gemäß <a href="#" className="text-primary hover:underline font-medium">Datenschutzerklärung</a> zu
+                    {t.contact.form.privacy} <a href="#" className="text-primary hover:underline font-medium">{t.contact.form.privacyLink}</a>
                   </label>
                 </div>
 
@@ -225,10 +227,10 @@ const ContactSection = () => {
                   disabled={isSubmitting || !formData.privacy}
                   className="w-full btn-premium py-4 text-lg font-bold"
                 >
-                  {isSubmitting ? "Wird gesendet..." : (
+                  {isSubmitting ? t.contact.form.sending : (
                     <>
                       <Send className="h-5 w-5 mr-2" />
-                      Nachricht senden
+                      {t.contact.form.submit}
                     </>
                   )}
                 </Button>
