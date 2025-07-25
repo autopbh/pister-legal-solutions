@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
 import LanguageSelector from '../LanguageSelector';
@@ -35,12 +35,9 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const scrollToSection = (sectionId: string) => {
-    console.log("Header scroll to section:", sectionId);
     const element = document.getElementById(sectionId);
-    console.log("Element found:", element);
     if (element) {
       const offsetTop = element.offsetTop - 100;
-      console.log("Scrolling to offsetTop:", offsetTop);
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
@@ -62,10 +59,7 @@ const Header = () => {
           {/* Logo épuré */}
           <div 
             className="flex items-center space-x-3 cursor-pointer"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('home');
-            }}
+            onClick={() => scrollToSection('home')}
           >
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">JP</span>
@@ -90,10 +84,8 @@ const Header = () => {
             ].map((item) => (
               <button
                 key={item.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.id);
-                }}
+                type="button"
+                onClick={() => scrollToSection(item.id)}
                 className={`font-medium py-2 transition-colors ${
                   activeSection === item.id 
                     ? 'text-primary border-b-2 border-primary' 
@@ -116,8 +108,9 @@ const Header = () => {
 
           {/* Menu mobile */}
           <button
+            type="button"
             onClick={toggleMenu}
-            className="md:hidden p-2 text-blue-600 hover:text-blue-700 transition-colors"
+            className="md:hidden p-2 text-primary hover:text-primary/70 transition-colors"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -135,14 +128,12 @@ const Header = () => {
               ].map((item) => (
                 <button
                   key={item.id}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.id);
-                  }}
-                  className={`text-left py-2 px-4 rounded ${
+                  type="button"
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-left py-2 px-4 rounded transition-colors ${
                     activeSection === item.id 
                       ? 'text-primary bg-primary/10' 
-                      : 'text-muted-foreground'
+                      : 'text-muted-foreground hover:text-primary'
                   }`}
                 >
                   {item.label}
