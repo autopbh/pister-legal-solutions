@@ -1,41 +1,44 @@
 import { Globe, Building, Scale, FileText, Gavel, ArrowRight, Star, Shield, Zap } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const ServicesSection = () => {
+  const { t } = useTranslations();
+
   const services = [
     {
       icon: Globe,
-      title: "Internationales Recht",
-      description: "Umfassende Beratung bei grenzüberschreitenden Rechtsfragen und internationalen Verträgen.",
+      title: t.services.international.title,
+      description: t.services.international.description,
       features: ["Grenzüberschreitende Verträge", "Internationale Streitigkeiten", "Rechtssystem-Beratung"],
       color: "primary"
     },
     {
       icon: Building,
-      title: "Handelsrecht",
-      description: "Rechtliche Unterstützung für Unternehmen bei Handelsgeschäften und Unternehmensrecht.",
+      title: t.services.commercial.title,
+      description: t.services.commercial.description,
       features: ["Unternehmensrecht", "Handelsverträge", "Commercial Due Diligence"],
       color: "accent"
     },
     {
       icon: Scale,
-      title: "EU-Wirtschaftsrecht",
-      description: "Expertise im europäischen Wirtschaftsrecht und EU-weiten Geschäftstätigkeiten.",
+      title: t.services.european.title,
+      description: t.services.european.description,
       features: ["EU-Compliance", "Binnenmarkt-Recht", "Kartellrecht"],
       color: "primary"
     },
     {
       icon: FileText,
-      title: "Grenzüberschreitendes Vertragsrecht",
-      description: "Gestaltung und Prüfung internationaler Verträge mit verschiedenen Rechtssystemen.",
+      title: t.services.contracts.title,
+      description: t.services.contracts.description,
       features: ["Vertragsentwurf", "Legal Review", "Risikobewertung"],
       color: "accent"
     },
     {
       icon: Gavel,
-      title: "Internationale Schiedsgerichtsbarkeit",
-      description: "Vertretung in internationalen Schiedsverfahren und alternativen Streitbeilegungsverfahren.",
+      title: t.services.arbitration.title,
+      description: t.services.arbitration.description,
       features: ["Schiedsverfahren", "Mediation", "Enforcement"],
       color: "primary"
     }
@@ -56,10 +59,10 @@ const ServicesSection = () => {
           </div>
 
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary leading-tight">
-            Unsere Rechtsgebiete
+            {t.services.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Umfassende juristische Beratung in allen Bereichen des internationalen und kommerziellen Rechts mit höchster Expertise und persönlicher Betreuung
+            {t.services.subtitle}
           </p>
         </div>
 
@@ -121,7 +124,7 @@ const ServicesSection = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="font-playfair text-3xl font-bold text-primary">
-                Warum Kanzlei Pister?
+                {t.services.whyUs}
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Als spezialisierte Kanzlei für internationales Recht bieten wir Ihnen einzigartige Vorteile und erstklassige Beratung.
@@ -132,23 +135,23 @@ const ServicesSection = () => {
               {[
                 {
                   icon: Globe,
-                  title: "Internationale Expertise",
-                  description: "Lokale Kompetenz mit globalem Verständnis"
+                  title: t.services.benefits.expertise.title,
+                  description: t.services.benefits.expertise.description
                 },
                 {
                   icon: Zap,
-                  title: "Mehrsprachige Beratung",
-                  description: "Fließende Kommunikation in 6 Sprachen"
+                  title: t.services.benefits.multilingual.title,
+                  description: t.services.benefits.multilingual.description
                 },
                 {
                   icon: Star,
-                  title: "25+ Jahre Erfahrung",
-                  description: "Bewährte Expertise im internationalen Recht"
+                  title: t.services.benefits.experience.title,
+                  description: t.services.benefits.experience.description
                 },
                 {
                   icon: Shield,
-                  title: "Persönliche Betreuung",
-                  description: "Diskrete und maßgeschneiderte Lösungen"
+                  title: t.services.benefits.personal.title,
+                  description: t.services.benefits.personal.description
                 }
               ].map((benefit, index) => (
                 <div 
@@ -180,22 +183,22 @@ const ServicesSection = () => {
                     <Star className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-playfair font-bold">Erste Beratung kostenfrei</h4>
-                    <p className="text-accent font-medium">Unverbindlich & professionell</p>
+                    <h4 className="text-xl font-playfair font-bold">{t.services.consultation.title}</h4>
+                    <p className="text-accent font-medium">{t.services.consultation.subtitle}</p>
                   </div>
                 </div>
                 
                 <p className="leading-relaxed opacity-90">
-                  Nutzen Sie unsere kostenlose Erstberatung für eine erste Einschätzung Ihres rechtlichen Anliegens.
+                  {t.services.consultation.description}
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 py-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-accent">30min</div>
+                    <div className="text-lg font-bold text-accent">{t.services.consultation.duration}</div>
                     <div className="text-xs opacity-80">Kostenfrei</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-accent">24h</div>
+                    <div className="text-lg font-bold text-accent">{t.services.consultation.response}</div>
                     <div className="text-xs opacity-80">Antwortzeit</div>
                   </div>
                 </div>
@@ -211,12 +214,12 @@ const ServicesSection = () => {
                     }
                   }}
                 >
-                  Jetzt Termin vereinbaren
+                  {t.services.consultation.cta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
 
                 <div className="text-center text-xs opacity-75 pt-2">
-                  Mo-Fr 9:00-18:00 • Sa 10:00-14:00
+                  {t.services.consultation.hours}
                 </div>
               </div>
             </div>

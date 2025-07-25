@@ -1,4 +1,5 @@
 import { TrendingUp, Users, Globe, Award, Scale, Clock } from 'lucide-react';
+import { useTranslations } from '@/hooks/useTranslations';
 import {
   Carousel,
   CarouselContent,
@@ -8,33 +9,34 @@ import {
 } from "@/components/ui/carousel";
 
 const StatsSection = () => {
+  const { t } = useTranslations();
 
   const stats = [
     {
       icon: Scale,
       number: "25+",
-      label: "25+ Jahre Erfahrung",
+      label: t.stats.experience,
       suffix: "ans",
       color: "from-primary to-primary-light"
     },
     {
       icon: Users,
       number: "500+",
-      label: "Clients satisfaits",
+      label: t.stats.clients,
       suffix: "",
       color: "from-accent to-accent-gold"
     },
     {
       icon: Globe,
       number: "12+",
-      label: "Domaines d'expertise",
+      label: t.stats.domains,
       suffix: "",
       color: "from-primary to-accent"
     },
     {
       icon: Award,
       number: "15+",
-      label: "Récompenses juridiques",
+      label: t.stats.awards,
       suffix: "",
       color: "from-accent-gold to-accent"
     },
