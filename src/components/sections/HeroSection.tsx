@@ -1,9 +1,7 @@
 import { ArrowRight, Scale, Users, Award, Sparkles, Globe2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/hooks/useLanguage';
 
 const HeroSection = () => {
-  const { t } = useLanguage();
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
@@ -27,21 +25,21 @@ const HeroSection = () => {
             {/* Premium Badge */}
             <div className="inline-flex items-center space-x-3 bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-full px-6 py-3 shadow-card animate-scale-in">
               <Sparkles className="h-5 w-5 text-accent animate-pulse" />
-              <span className="text-sm font-semibold text-primary-foreground tracking-wide">{t.heroElements.establishedBadge}</span>
+              <span className="text-sm font-semibold text-primary-foreground tracking-wide">Seit 1999 • Internationale Rechtspraxis</span>
               <Star className="h-4 w-4 text-accent" />
             </div>
 
             <div className="space-y-6">
               <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight animate-fade-in">
-                {t.hero.title}
+                Grenzüberschreitende Lösungen.
               </h1>
               <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-accent font-medium leading-relaxed animate-fade-in" style={{animationDelay: '0.2s'}}>
-                {t.hero.subtitle}
+                Juristische Exzellenz.
               </h2>
             </div>
             
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl animate-fade-in" style={{animationDelay: '0.4s'}}>
-              {t.hero.description}
+              Spezialisiert auf Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung.
             </p>
 
 
@@ -58,7 +56,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                <span>{t.hero.cta}</span>
+                <span>Kostenlose Erstberatung anfragen</span>
                 <ArrowRight className="h-5 w-5" />
               </Button>
               
@@ -74,7 +72,7 @@ const HeroSection = () => {
                   }
                 }}
               >
-                {t.hero.secondaryCta}
+                Kanzlei entdecken
               </Button>
             </div>
 
@@ -84,13 +82,13 @@ const HeroSection = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Award className="h-5 w-5 text-accent" />
                 </div>
-                <span className="font-medium">{t.heroElements.davMember}</span>
+                <span className="font-medium">DAV Mitglied</span>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Scale className="h-5 w-5 text-primary" />
                 </div>
-                <span className="font-medium">{t.heroElements.certified}</span>
+                <span className="font-medium">Zertifiziert</span>
               </div>
             </div>
           </div>
@@ -121,13 +119,13 @@ const HeroSection = () => {
               <div className="absolute top-8 right-8 bg-gradient-accent text-accent-foreground rounded-xl px-6 py-3 shadow-card backdrop-blur-sm border border-accent/20">
                 <div className="flex items-center space-x-2">
                   <Star className="h-5 w-5" />
-                  <span className="font-bold">{t.heroElements.topLawyer}</span>
+                  <span className="font-bold">Top Anwalt 2024</span>
                 </div>
               </div>
               
               {/* Floating quote */}
               <div className="absolute bottom-8 left-8 right-8 bg-primary-foreground/10 backdrop-blur-md rounded-xl p-6 border border-primary-foreground/20 shadow-card">
-                <p className="text-primary-foreground text-sm italic mb-2">"{t.heroElements.excellenceQuote}"</p>
+                <p className="text-primary-foreground text-sm italic mb-2">"Excellence en droit, service personnalisé"</p>
                 <p className="text-primary-foreground/80 text-xs font-medium">- Me Jozef Pister</p>
               </div>
             </div>

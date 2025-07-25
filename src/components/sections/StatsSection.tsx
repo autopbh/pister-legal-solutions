@@ -1,5 +1,4 @@
 import { TrendingUp, Users, Globe, Award, Scale, Clock } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
 import {
   Carousel,
   CarouselContent,
@@ -9,13 +8,12 @@ import {
 } from "@/components/ui/carousel";
 
 const StatsSection = () => {
-  const { t } = useLanguage();
 
   const stats = [
     {
       icon: Scale,
       number: "25+",
-      label: t.about.experience,
+      label: "25+ Jahre Erfahrung",
       suffix: "ans",
       color: "from-primary to-primary-light"
     },

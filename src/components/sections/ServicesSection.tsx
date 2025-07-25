@@ -1,45 +1,42 @@
 import { Globe, Building, Scale, FileText, Gavel, ArrowRight, Star, Shield, Zap } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/hooks/useLanguage';
 
 const ServicesSection = () => {
-  const { t } = useLanguage();
-
   const services = [
     {
       icon: Globe,
-      title: t.services.international.title,
-      description: t.services.international.description,
+      title: "Internationales Recht",
+      description: "Umfassende Beratung bei grenzüberschreitenden Rechtsfragen und internationalen Verträgen.",
       features: ["Grenzüberschreitende Verträge", "Internationale Streitigkeiten", "Rechtssystem-Beratung"],
       color: "primary"
     },
     {
       icon: Building,
-      title: t.services.commercial.title,
-      description: t.services.commercial.description,
-      features: ["Unternehmensrecht", "M&A Transaktionen", "Compliance"],
+      title: "Handelsrecht",
+      description: "Rechtliche Unterstützung für Unternehmen bei Handelsgeschäften und Unternehmensrecht.",
+      features: ["Unternehmensrecht", "Handelsverträge", "Commercial Due Diligence"],
       color: "accent"
     },
     {
       icon: Scale,
-      title: t.services.european.title,
-      description: t.services.european.description,
-      features: ["EU-Regulierung", "Binnenmarktrecht", "Wettbewerbsrecht"],
+      title: "EU-Wirtschaftsrecht",
+      description: "Expertise im europäischen Wirtschaftsrecht und EU-weiten Geschäftstätigkeiten.",
+      features: ["EU-Compliance", "Binnenmarkt-Recht", "Kartellrecht"],
       color: "primary"
     },
     {
       icon: FileText,
-      title: t.services.contracts.title,
-      description: t.services.contracts.description,
-      features: ["Vertragsgestaltung", "Rechtswahl", "Streitklauseln"],
+      title: "Grenzüberschreitendes Vertragsrecht",
+      description: "Gestaltung und Prüfung internationaler Verträge mit verschiedenen Rechtssystemen.",
+      features: ["Vertragsentwurf", "Legal Review", "Risikobewertung"],
       color: "accent"
     },
     {
       icon: Gavel,
-      title: t.services.arbitration.title,
-      description: t.services.arbitration.description,
-      features: ["ICC Schiedsverfahren", "UNCITRAL", "Mediation"],
+      title: "Internationale Schiedsgerichtsbarkeit",
+      description: "Vertretung in internationalen Schiedsverfahren und alternativen Streitbeilegungsverfahren.",
+      features: ["Schiedsverfahren", "Mediation", "Enforcement"],
       color: "primary"
     }
   ];
@@ -59,7 +56,7 @@ const ServicesSection = () => {
           </div>
 
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary leading-tight">
-            {t.services.title}
+            Unsere Rechtsgebiete
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Umfassende juristische Beratung in allen Bereichen des internationalen und kommerziellen Rechts mit höchster Expertise und persönlicher Betreuung

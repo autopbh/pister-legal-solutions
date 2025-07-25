@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/hooks/useLanguage';
-import LanguageSelector from '../LanguageSelector';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,10 +74,10 @@ const Header = () => {
           {/* Navigation épurée */}
           <nav className="hidden md:flex items-center space-x-8">
             {[
-              { id: 'home', label: t.nav.home },
-              { id: 'about', label: t.nav.about },
-              { id: 'services', label: t.nav.services },
-              { id: 'contact', label: t.nav.contact }
+              { id: 'home', label: 'Startseite' },
+              { id: 'about', label: 'Über die Kanzlei' },
+              { id: 'services', label: 'Rechtsgebiete' },
+              { id: 'contact', label: 'Kontakt' }
             ].map((item) => (
               <button
                 key={item.id}
@@ -97,13 +94,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Contact rapide et langue */}
+          {/* Contact rapide */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="h-4 w-4" />
               <span>+49 (0) 30 123 456 789</span>
             </div>
-            <LanguageSelector />
           </div>
 
           {/* Menu mobile */}
@@ -121,10 +117,10 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-2">
               {[
-                { id: 'home', label: t.nav.home },
-                { id: 'about', label: t.nav.about },
-                { id: 'services', label: t.nav.services },
-                { id: 'contact', label: t.nav.contact }
+                { id: 'home', label: 'Startseite' },
+                { id: 'about', label: 'Über die Kanzlei' },
+                { id: 'services', label: 'Rechtsgebiete' },
+                { id: 'contact', label: 'Kontakt' }
               ].map((item) => (
                 <button
                   key={item.id}
@@ -144,7 +140,6 @@ const Header = () => {
                   <Phone className="h-4 w-4" />
                   <span>+49 (0) 30 123 456 789</span>
                 </div>
-                <LanguageSelector />
               </div>
             </nav>
           </div>

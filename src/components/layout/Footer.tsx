@@ -1,10 +1,8 @@
 import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award, Clock, Shield, AlertTriangle } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
 import SecurityBadge from '@/components/security/SecurityBadge';
 import ProtectedContact from '@/components/security/ProtectedContact';
 
 const Footer = () => {
-  const { t } = useLanguage();
 
   return (
     <footer className="bg-gradient-hero text-primary-foreground relative overflow-hidden">
@@ -171,7 +169,7 @@ const Footer = () => {
             <div className="text-sm opacity-90 flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Star className="h-4 w-4 text-accent-gold" />
-                <span>{t.footer.copyright}</span>
+                <span>© 2024 Kanzlei Pister. Alle Rechte vorbehalten.</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Shield className="h-4 w-4 text-accent animate-pulse" />
@@ -180,9 +178,9 @@ const Footer = () => {
             </div>
             <div className="flex space-x-8 text-sm">
               {[
-                { label: t.footer.impressum, href: "#" },
-                { label: t.footer.privacy, href: "#" },
-                { label: t.footer.disclaimer, href: "#" }
+                { label: "Impressum", href: "#" },
+                { label: "Datenschutz", href: "#" },
+                { label: "Haftungsausschluss", href: "#" }
               ].map((item, index) => (
                 <a 
                   key={index}

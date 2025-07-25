@@ -1,8 +1,6 @@
 import { CheckCircle, Globe, Briefcase, Users, Quote, Star } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
 
 const AboutSection = () => {
-  const { t } = useLanguage();
 
   const achievements = [
     {
@@ -19,7 +17,7 @@ const AboutSection = () => {
     },
     {
       icon: Users,
-      title: t.aboutElements.personalService,
+      title: "Persönliche Betreuung",
       description: "Individuelle Lösungen für jeden Mandanten",
       color: "primary"
     }
@@ -39,34 +37,34 @@ const AboutSection = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2">
                 <Star className="h-4 w-4 text-accent" />
-                <span className="text-sm font-medium text-primary">{t.aboutElements.aboutLawyer}</span>
+                <span className="text-sm font-medium text-primary">Über den Anwalt</span>
               </div>
 
               <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary leading-tight">
-                {t.about.title}
+                Me Jozef Pister
               </h2>
               <h3 className="text-xl text-accent font-medium">
-                {t.about.subtitle}
+                Ihr Spezialist für Internationales Recht
               </h3>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t.about.description}
+              Mit über 25 Jahren Erfahrung im internationalen Recht biete ich maßgeschneiderte juristische Lösungen für komplexe grenzüberschreitende Rechtsfragen.
             </p>
 
             <div className="space-y-6">
-              <h4 className="text-xl font-playfair font-semibold text-primary">{t.aboutElements.philosophy}</h4>
+              <h4 className="text-xl font-playfair font-semibold text-primary">Meine Philosophie</h4>
               <div className="relative bg-background/70 backdrop-blur-sm p-6 rounded-lg border border-border/50 hover:bg-background/90 transition-all duration-300">
                 <Quote className="h-6 w-6 text-accent mb-4" />
                 <p className="text-muted-foreground leading-relaxed italic">
-                  {t.about.philosophy}
+                  Vertrauen, Kompetenz und diskrete Beratung stehen im Mittelpunkt meiner Mandantenbetreuung.
                 </p>
               </div>
             </div>
 
             {/* Simple achievements */}
             <div className="space-y-6">
-              <h4 className="text-xl font-playfair font-semibold text-primary">{t.aboutElements.specialties}</h4>
+              <h4 className="text-xl font-playfair font-semibold text-primary">Schwerpunkte</h4>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
                   <div 
@@ -95,7 +93,7 @@ const AboutSection = () => {
             <div className="bg-primary text-primary-foreground p-6 rounded-lg">
               <h4 className="text-lg font-playfair font-bold mb-4 flex items-center">
                 <CheckCircle className="h-5 w-5 mr-3 text-accent" />
-                {t.aboutElements.qualifications}
+                Qualifikationen & Zertifizierungen
               </h4>
               <div className="grid grid-cols-1 gap-3">
                 {[
@@ -147,7 +145,7 @@ const AboutSection = () => {
             <div className="bg-primary text-primary-foreground p-6 rounded-lg">
               <Quote className="h-8 w-8 text-accent mb-4" />
               <blockquote className="text-lg font-medium italic leading-relaxed mb-4">
-                "{t.aboutElements.bridgeQuote}"
+                "Das Recht verbindet Nationen. Meine Aufgabe ist es, Brücken zu bauen, wo andere Hindernisse sehen."
               </blockquote>
               <cite className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center">
@@ -155,7 +153,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <span className="font-bold text-accent">Me Jozef Pister</span>
-                  <p className="text-sm opacity-80">{t.aboutElements.founderTitle}</p>
+                  <p className="text-sm opacity-80">Gründer & Hauptanwalt</p>
                 </div>
               </cite>
             </div>

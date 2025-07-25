@@ -6,12 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import { useLanguage } from '@/hooks/useLanguage';
 import SecurityBadge from '@/components/security/SecurityBadge';
 import ProtectedContact from '@/components/security/ProtectedContact';
 
 const ContactSection = () => {
-  const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '', email: '', subject: '', message: '', privacy: false
@@ -49,10 +47,10 @@ const ContactSection = () => {
             <span className="font-medium text-primary">Kontakt & Beratung</span>
           </div>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary leading-tight">
-            {t.contact.title}
+            Kontakt aufnehmen
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {t.contact.subtitle}
+            Ich stehe Ihnen gerne für eine persönliche Beratung zur Verfügung
           </p>
         </div>
 
@@ -158,7 +156,7 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-foreground mb-3">
-                      {t.contact.form.name} *
+                      Vollständiger Name *
                     </label>
                     <Input
                       type="text"
@@ -170,7 +168,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-foreground mb-3">
-                      {t.contact.form.email} *
+                      E-Mail-Adresse *
                     </label>
                     <Input
                       type="email"
@@ -184,7 +182,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-3">
-                    {t.contact.form.subject} *
+                    Betreff *
                   </label>
                   <Input
                     type="text"
@@ -197,7 +195,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-bold text-foreground mb-3">
-                    {t.contact.form.message} *
+                    Ihre Nachricht *
                   </label>
                   <Textarea
                     value={formData.message}
@@ -218,7 +216,7 @@ const ContactSection = () => {
                     className="mt-1"
                   />
                   <label htmlFor="privacy" className="text-sm text-muted-foreground leading-6">
-                    {t.contact.form.privacy} <a href="#" className="text-primary hover:underline font-medium">Datenschutzerklärung</a>
+                    Ich stimme der Verarbeitung meiner Daten gemäß <a href="#" className="text-primary hover:underline font-medium">Datenschutzerklärung</a> zu
                   </label>
                 </div>
 
@@ -230,7 +228,7 @@ const ContactSection = () => {
                   {isSubmitting ? "Wird gesendet..." : (
                     <>
                       <Send className="h-5 w-5 mr-2" />
-                      {t.contact.form.submit}
+                      Nachricht senden
                     </>
                   )}
                 </Button>
