@@ -6,6 +6,8 @@ const StatsSection = () => {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   const stats = [
     {
@@ -68,6 +70,20 @@ const StatsSection = () => {
     setCurrentIndex(index);
   };
 
+  // Handle responsive design safely
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setIsTablet(window.innerWidth < 1024 && window.innerWidth >= 768);
+    };
+
+    // Initial check
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -80,10 +96,7 @@ const StatsSection = () => {
   }, [currentIndex, isAutoPlaying]);
 
   // Get visible stats for responsive design
-  const getVisibleStats = () => {
-    const isMobile = window.innerWidth < 768;
-    const isTablet = window.innerWidth < 1024;
-    
+  const getVisibleStats = () => {    
     if (isMobile) {
       return [stats[currentIndex]];
     } else if (isTablet) {
