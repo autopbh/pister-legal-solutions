@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Plus, Minus, MessageCircle, Clock, Globe, Scale } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const FAQSection = () => {
+  const { t } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
@@ -48,16 +50,16 @@ const FAQSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            Questions Fréquentes
+            {t.faq.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            Trouvez rapidement les réponses à vos questions les plus courantes
+            {t.faq.subtitle}
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6">
-            {faqs.map((faq, index) => (
+            {t.faq.items.map((faq, index) => (
               <Card
                 key={index}
                 className="card-premium overflow-hidden transition-all duration-300 hover:shadow-float animate-fade-in"
@@ -101,20 +103,21 @@ const FAQSection = () => {
                   </div>
                 </div>
               </Card>
-            ))}
+            );
+            })}
           </div>
 
           {/* Contact CTA */}
           <Card className="card-luxury mt-12 p-8 text-center">
             <h3 className="font-playfair text-2xl font-bold text-primary-foreground mb-4">
-              Vous ne trouvez pas la réponse ?
+              {t.faq.contact.title}
             </h3>
             <p className="text-primary-foreground/80 mb-6">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions spécifiques.
+              {t.faq.contact.description}
             </p>
             <button className="btn-premium">
               <MessageCircle className="h-5 w-5 mr-2" />
-              Contactez-nous directement
+              {t.faq.contact.button}
             </button>
           </Card>
         </div>
