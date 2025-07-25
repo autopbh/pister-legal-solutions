@@ -1,19 +1,11 @@
-import { TrendingUp, Users, Globe, Award, Scale, Clock } from 'lucide-react';
+import { TrendingUp, Users, Globe, Award, Scale, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
-import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const StatsSection = () => {
   const { t } = useLanguage();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true, 
-    align: 'center',
-    skipSnaps: false,
-    dragFree: false,
-    containScroll: 'trimSnaps'
-  });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const stats = [
     {
@@ -60,42 +52,53 @@ const StatsSection = () => {
     }
   ];
 
-  const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi]
-  );
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === stats.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-  const onInit = useCallback((emblaApi: any) => {
-    setScrollSnaps(emblaApi.scrollSnapList());
-  }, []);
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? stats.length - 1 : prevIndex - 1
+    );
+  };
 
-  const onSelect = useCallback((emblaApi: any) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, []);
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
 
+  // Auto-play functionality
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!isAutoPlaying) return;
 
-    onInit(emblaApi);
-    onSelect(emblaApi);
-    emblaApi.on('reInit', onInit);
-    emblaApi.on('select', onSelect);
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
 
-    // Auto-play
-    const autoplay = setInterval(() => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollTo(0);
-      }
-    }, 4000);
+    return () => clearInterval(interval);
+  }, [currentIndex, isAutoPlaying]);
 
-    return () => {
-      clearInterval(autoplay);
-      emblaApi.off('reInit', onInit);
-      emblaApi.off('select', onSelect);
-    };
-  }, [emblaApi, onInit, onSelect]);
+  // Get visible stats for responsive design
+  const getVisibleStats = () => {
+    const isMobile = window.innerWidth < 768;
+    const isTablet = window.innerWidth < 1024;
+    
+    if (isMobile) {
+      return [stats[currentIndex]];
+    } else if (isTablet) {
+      return [
+        stats[currentIndex],
+        stats[(currentIndex + 1) % stats.length]
+      ];
+    } else {
+      return [
+        stats[currentIndex],
+        stats[(currentIndex + 1) % stats.length],
+        stats[(currentIndex + 2) % stats.length]
+      ];
+    }
+  };
 
   return (
     <section className="section-padding bg-gradient-professional relative overflow-hidden">
@@ -114,25 +117,44 @@ const StatsSection = () => {
         </div>
 
         {/* Carrousel Statistiques */}
-        <div className="relative">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-8 lg:gap-12">
-              {stats.map((stat, index) => (
+        <div 
+          className="relative max-w-6xl mx-auto"
+          onMouseEnter={() => setIsAutoPlaying(false)}
+          onMouseLeave={() => setIsAutoPlaying(true)}
+        >
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110 shadow-elegant"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110 shadow-elegant"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+
+          {/* Carousel Content */}
+          <div className="overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-12">
+            <div className="flex justify-center items-center gap-8 lg:gap-16 transition-all duration-500 ease-in-out">
+              {getVisibleStats().map((stat, index) => (
                 <div
-                  key={index}
-                  className="flex-none w-full sm:w-1/2 lg:w-1/3 text-center group animate-scale-in hover-lift"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  key={`${currentIndex}-${index}`}
+                  className="text-center group animate-scale-in hover-lift flex-1 max-w-xs"
                 >
-                  <div className={`relative w-24 h-24 lg:w-28 lg:h-28 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-elegant group-hover:shadow-glow transition-all duration-500 group-hover:scale-110`}>
-                    <stat.icon className="h-12 w-12 lg:h-14 lg:w-14 text-white" />
+                  <div className={`relative w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-elegant group-hover:shadow-glow transition-all duration-500 group-hover:scale-110`}>
+                    <stat.icon className="h-12 w-12 lg:h-16 lg:w-16 text-white" />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl"></div>
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="font-bold text-4xl lg:text-5xl text-primary group-hover:text-accent transition-colors duration-300">
+                    <div className="font-bold text-4xl lg:text-6xl text-primary group-hover:text-accent transition-colors duration-300">
                       {stat.number}
                     </div>
-                    <div className="text-base lg:text-lg text-muted-foreground font-medium px-4">
+                    <div className="text-base lg:text-xl text-muted-foreground font-medium">
                       {stat.label}
                     </div>
                   </div>
@@ -142,16 +164,16 @@ const StatsSection = () => {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center space-x-3 mt-12">
-            {scrollSnaps.map((_, index) => (
+          <div className="flex justify-center space-x-3 mt-8">
+            {stats.map((_, index) => (
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === selectedIndex
+                  index === currentIndex
                     ? 'bg-accent shadow-glow scale-125'
                     : 'bg-primary/30 hover:bg-primary/50'
                 }`}
-                onClick={() => scrollTo(index)}
+                onClick={() => goToSlide(index)}
               />
             ))}
           </div>
