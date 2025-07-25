@@ -7,31 +7,31 @@ const ProcessSection = () => {
   const steps = [
     {
       icon: MessageCircle,
-      title: "Consultation Initiale",
-      description: "Analyse gratuite de votre situation juridique et définition de la stratégie optimale.",
-      duration: "30 min",
-      features: ["Évaluation gratuite", "Confidentialité absolue", "Conseil stratégique"]
+      title: t.process.consultation.title,
+      description: t.process.consultation.description,
+      duration: t.process.consultation.duration,
+      features: t.process.consultation.features
     },
     {
       icon: FileText,
-      title: "Étude Approfondie",
-      description: "Analyse détaillée des aspects juridiques avec recherche documentaire complète.",
-      duration: "2-5 jours",
-      features: ["Recherche juridique", "Analyse des risques", "Rapport détaillé"]
+      title: t.process.study.title,
+      description: t.process.study.description,
+      duration: t.process.study.duration,
+      features: t.process.study.features
     },
     {
       icon: Scale,
-      title: "Action Juridique",
-      description: "Mise en œuvre de la stratégie avec négociation et représentation professionnelle.",
-      duration: "Variable",
-      features: ["Négociation experte", "Représentation", "Suivi personnalisé"]
+      title: t.process.action.title,
+      description: t.process.action.description,
+      duration: t.process.action.duration,
+      features: t.process.action.features
     },
     {
       icon: CheckCircle,
-      title: "Résolution",
-      description: "Finalisation du dossier avec documentation complète et suivi post-résolution.",
-      duration: "Finalisé",
-      features: ["Documentation", "Suivi gratuit", "Garanties"]
+      title: t.process.resolution.title,
+      description: t.process.resolution.description,
+      duration: t.process.resolution.duration,
+      features: t.process.resolution.features
     }
   ];
 
@@ -43,10 +43,10 @@ const ProcessSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            Notre Processus d'Excellence
+            {t.process.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            Une méthodologie éprouvée pour des résultats optimaux à chaque étape
+            {t.process.subtitle}
           </p>
         </div>
 
@@ -116,14 +116,14 @@ const ProcessSection = () => {
         <div className="text-center mt-16">
           <div className="max-w-2xl mx-auto">
             <h3 className="font-playfair text-3xl font-bold text-primary mb-6">
-              Prêt à Commencer ?
+              {t.process.cta.title}
             </h3>
             <p className="text-muted-foreground mb-8">
-              Contactez-nous dès aujourd'hui pour votre consultation gratuite et découvrez comment nous pouvons vous aider.
+              {t.process.cta.description}
             </p>
             <button className="btn-luxury inline-flex items-center space-x-3">
               <MessageCircle className="h-5 w-5" />
-              <span>Consultation Gratuite</span>
+              <span>{t.process.cta.button}</span>
               <ArrowRight className="h-5 w-5" />
             </button>
           </div>
