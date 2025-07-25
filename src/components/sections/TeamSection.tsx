@@ -21,7 +21,7 @@ const TeamSection = () => {
 
 
   return (
-    <section className="section-padding bg-gradient-professional relative overflow-hidden">
+    <section className="section-padding bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-pattern opacity-20"></div>
       
@@ -30,7 +30,7 @@ const TeamSection = () => {
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
             {t.team.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto animate-fade-in delay-200">
             {t.team.subtitle}
           </p>
         </div>
@@ -63,18 +63,18 @@ const TeamSection = () => {
                 {/* Info */}
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-playfair text-3xl font-bold text-primary-foreground mb-2">
+                    <h3 className="font-playfair text-3xl font-bold text-foreground mb-2">
                       {member.name}
                     </h3>
                     <p className="text-xl text-accent font-semibold mb-4">{member.role}</p>
-                    <p className="text-primary-foreground/80 leading-relaxed">
+                    <p className="text-foreground/85 leading-relaxed">
                       {member.description}
                     </p>
                   </div>
 
                   {/* Specialties */}
                   <div>
-                    <h4 className="font-semibold text-primary-foreground mb-3">{t.team.labels.specializations}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">{t.team.labels.specializations}</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.specialties.map((specialty, i) => (
                         <span
@@ -90,7 +90,7 @@ const TeamSection = () => {
                   {/* Languages */}
                   <div className="flex items-center space-x-3">
                     <Languages className="h-5 w-5 text-accent" />
-                    <span className="text-primary-foreground/80">
+                    <span className="text-foreground/85">
                       {member.languages.join(', ')}
                     </span>
                   </div>
@@ -98,17 +98,17 @@ const TeamSection = () => {
                   {/* Location */}
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-accent" />
-                    <span className="text-primary-foreground/80">{member.location}</span>
+                    <span className="text-foreground/85">{member.location}</span>
                   </div>
 
                   {/* Qualifications */}
                   <div>
-                    <h4 className="font-semibold text-primary-foreground mb-3">{t.team.labels.qualifications}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">{t.team.labels.qualifications}</h4>
                     <div className="space-y-2">
                       {member.qualifications.map((qual, i) => (
                         <div key={i} className="flex items-center space-x-2">
                           <Award className="h-4 w-4 text-accent" />
-                          <span className="text-primary-foreground/80 text-sm">{qual}</span>
+                          <span className="text-foreground/85 text-sm">{qual}</span>
                         </div>
                       ))}
                     </div>

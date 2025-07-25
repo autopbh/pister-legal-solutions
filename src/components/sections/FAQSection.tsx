@@ -41,7 +41,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-professional relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-pattern opacity-20"></div>
       <div className="absolute top-20 right-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
@@ -52,7 +52,7 @@ const FAQSection = () => {
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
             {t.faq.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto animate-fade-in delay-200">
             {t.faq.subtitle}
           </p>
         </div>
@@ -107,14 +107,14 @@ const FAQSection = () => {
           </div>
 
           {/* Contact CTA */}
-          <Card className="card-luxury mt-12 p-8 text-center">
+          <Card className="card-premium mt-12 p-8 text-center bg-gradient-primary">
             <h3 className="font-playfair text-2xl font-bold text-primary-foreground mb-4">
               {t.faq.contact.title}
             </h3>
-            <p className="text-primary-foreground/80 mb-6">
+            <p className="text-primary-foreground/90 mb-6">
               {t.faq.contact.subtitle}
             </p>
-            <button className="btn-premium">
+            <button className="btn-premium bg-accent text-accent-foreground hover:bg-accent/90">
               <MessageCircle className="h-5 w-5 mr-2" />
               {t.faq.contact.button}
             </button>
