@@ -9,13 +9,13 @@ export interface Translation {
   };
   
   // Hero Section
-    hero: {
-      title: string;
-      subtitle: string;
-      cta: string;
-      secondaryCta: string;
-      description: string;
-    };
+  hero: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    secondaryCta: string;
+    description: string;
+  };
   
   // Services
   services: {
