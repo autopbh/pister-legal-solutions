@@ -86,10 +86,67 @@ export const translations: Record<string, Translations> = {
       }
     },
     stats: {
+      title: "Excellence Mesurée en Chiffres",
+      subtitle: "Plus de deux décennies d'expertise juridique internationale avec des résultats exceptionnels",
       experience: "Jahre Erfahrung",
       clients: "Zufriedene Mandanten",
       domains: "Rechtsbereiche",
       awards: "Auszeichnungen"
+    },
+    compliance: {
+      title: "Ce site est conforme aux obligations légales allemandes (TMG & DSGVO)"
+    },
+    expertiseAreas: {
+      international: {
+        title: "Internationales Recht",
+        description: "Spezialisiert auf grenzüberschreitende Rechtsfragen",
+        details: [
+          "Grenzüberschreitende Verträge",
+          "Internationale Streitigkeiten", 
+          "Rechtssystem-Beratung"
+        ]
+      },
+      commercial: {
+        title: "Handelsrecht",
+        description: "Umfassende Expertise im Unternehmens- und Handelsrecht",
+        details: [
+          "Unternehmensrecht",
+          "Handelsverträge",
+          "Commercial Due Diligence"
+        ]
+      },
+      personalizedService: {
+        title: "Servizio personalizzato",
+        description: "Individuelle Lösungen für jeden Mandanten",
+        details: [
+          "EU-Compliance",
+          "Binnenmarkt-Recht",
+          "Kartellrecht"
+        ]
+      },
+      additional: {
+        title: "Weitere Bereiche",
+        details: [
+          "Vertragsentwurf",
+          "Legal Review",
+          "Risikobewertung",
+          "Schiedsverfahren",
+          "Mediation",
+          "Enforcement"
+        ]
+      }
+    },
+    uniqueAdvantages: {
+      title: "Als spezialisierte Kanzlei für internationales Recht bieten wir Ihnen einzigartige Vorteile und erstklassige Beratung."
+    },
+    qualificationsAndCertifications: {
+      title: "Qualifiche & Certificazioni",
+      items: [
+        "Rechtsanwalt bei der Rechtsanwaltskammer Deutschland",
+        "Mitglied des Deutschen Anwaltvereins (DAV)",
+        "Spezialisierung Internationales Handelsrecht",
+        "Zertifiziert für EU-Rechtsfragen"
+      ]
     },
     header: {
       profession: "Rechtsanwalt",
@@ -423,10 +480,67 @@ export const translations: Record<string, Translations> = {
       }
     },
     stats: {
+      title: "Excellence Mesurée en Chiffres",
+      subtitle: "Plus de deux décennies d'expertise juridique internationale avec des résultats exceptionnels",
       experience: "25+ ans d'expérience",
       clients: "Clients satisfaits",
       domains: "Domaines d'expertise",
       awards: "Récompenses juridiques"
+    },
+    compliance: {
+      title: "Ce site est conforme aux obligations légales françaises (RGPD & Code de la consommation)"
+    },
+    expertiseAreas: {
+      international: {
+        title: "Droit International",
+        description: "Spécialisé dans les questions juridiques transfrontalières",
+        details: [
+          "Contrats transfrontaliers",
+          "Litiges internationaux", 
+          "Conseil en systèmes juridiques"
+        ]
+      },
+      commercial: {
+        title: "Droit Commercial",
+        description: "Expertise complète en droit des affaires et commercial",
+        details: [
+          "Droit des sociétés",
+          "Contrats commerciaux",
+          "Audit juridique commercial"
+        ]
+      },
+      personalizedService: {
+        title: "Service personnalisé",
+        description: "Solutions individuelles pour chaque client",
+        details: [
+          "Conformité UE",
+          "Droit du marché intérieur",
+          "Droit de la concurrence"
+        ]
+      },
+      additional: {
+        title: "Domaines supplémentaires",
+        details: [
+          "Rédaction de contrats",
+          "Révision juridique",
+          "Évaluation des risques",
+          "Procédures d'arbitrage",
+          "Médiation",
+          "Exécution"
+        ]
+      }
+    },
+    uniqueAdvantages: {
+      title: "En tant que cabinet spécialisé en droit international, nous vous offrons des avantages uniques et des conseils de premier plan."
+    },
+    qualificationsAndCertifications: {
+      title: "Qualifications & Certifications",
+      items: [
+        "Avocat inscrit au Barreau de France",
+        "Membre de l'Association des Avocats Français",
+        "Spécialisation en droit commercial international",
+        "Certifié pour les questions de droit européen"
+      ]
     },
     header: {
       profession: "Avocat",
@@ -761,10 +875,67 @@ export const translations: Record<string, Translations> = {
       }
     },
     stats: {
+      title: "Eccellenza Misurata in Cifre",
+      subtitle: "Oltre due decenni di esperienza giuridica internazionale con risultati eccezionali",
       experience: "Oltre 25 anni di esperienza",
       clients: "Clienti soddisfatti",
       domains: "Aree di competenza",
       awards: "Riconoscimenti legali"
+    },
+    compliance: {
+      title: "Questo sito è conforme agli obblighi legali italiani (GDPR & Codice del Consumo)"
+    },
+    expertiseAreas: {
+      international: {
+        title: "Diritto Internazionale",
+        description: "Specializzato in questioni giuridiche transfrontaliere",
+        details: [
+          "Contratti transfrontalieri",
+          "Controversie internazionali", 
+          "Consulenza sui sistemi giuridici"
+        ]
+      },
+      commercial: {
+        title: "Diritto Commerciale",
+        description: "Competenza completa nel diritto commerciale e aziendale",
+        details: [
+          "Diritto societario",
+          "Contratti commerciali",
+          "Due diligence commerciale"
+        ]
+      },
+      personalizedService: {
+        title: "Servizio personalizzato",
+        description: "Soluzioni individuali per ogni cliente",
+        details: [
+          "Conformità UE",
+          "Diritto del mercato interno",
+          "Diritto della concorrenza"
+        ]
+      },
+      additional: {
+        title: "Aree aggiuntive",
+        details: [
+          "Redazione contratti",
+          "Revisione legale",
+          "Valutazione rischi",
+          "Procedure arbitrali",
+          "Mediazione",
+          "Enforcement"
+        ]
+      }
+    },
+    uniqueAdvantages: {
+      title: "Come studio specializzato in diritto internazionale, vi offriamo vantaggi unici e consulenza di prima classe."
+    },
+    qualificationsAndCertifications: {
+      title: "Qualifiche & Certificazioni",
+      items: [
+        "Avvocato iscritto all'Ordine degli Avvocati d'Italia",
+        "Membro dell'Associazione Italiana Avvocati",
+        "Specializzazione in diritto commerciale internazionale",
+        "Certificato per questioni di diritto europeo"
+      ]
     },
     header: {
       profession: "Avvocato",
@@ -1099,10 +1270,67 @@ export const translations: Record<string, Translations> = {
       }
     },
     stats: {
+      title: "Excelencia Medida en Cifras",
+      subtitle: "Más de dos décadas de experiencia jurídica internacional con resultados excepcionales",
       experience: "Más de 25 años de experiencia",
       clients: "Clientes satisfechos",
       domains: "Áreas de especialización",
       awards: "Reconocimientos legales"
+    },
+    compliance: {
+      title: "Este sitio cumple con las obligaciones legales españolas (RGPD & Ley de Consumidores)"
+    },
+    expertiseAreas: {
+      international: {
+        title: "Derecho Internacional",
+        description: "Especializado en cuestiones jurídicas transfronterizas",
+        details: [
+          "Contratos transfronterizos",
+          "Litigios internacionales", 
+          "Asesoría en sistemas jurídicos"
+        ]
+      },
+      commercial: {
+        title: "Derecho Comercial",
+        description: "Experiencia integral en derecho empresarial y comercial",
+        details: [
+          "Derecho societario",
+          "Contratos comerciales",
+          "Due diligence comercial"
+        ]
+      },
+      personalizedService: {
+        title: "Servicio personalizado",
+        description: "Soluciones individuales para cada cliente",
+        details: [
+          "Cumplimiento UE",
+          "Derecho del mercado interior",
+          "Derecho de la competencia"
+        ]
+      },
+      additional: {
+        title: "Áreas adicionales",
+        details: [
+          "Redacción de contratos",
+          "Revisión legal",
+          "Evaluación de riesgos",
+          "Procedimientos de arbitraje",
+          "Mediación",
+          "Ejecución"
+        ]
+      }
+    },
+    uniqueAdvantages: {
+      title: "Como despacho especializado en derecho internacional, le ofrecemos ventajas únicas y asesoramiento de primera clase."
+    },
+    qualificationsAndCertifications: {
+      title: "Cualificaciones y Certificaciones",
+      items: [
+        "Abogado colegiado en el Colegio de Abogados de España",
+        "Miembro de la Asociación Española de Abogados",
+        "Especialización en derecho comercial internacional",
+        "Certificado para cuestiones de derecho europeo"
+      ]
     },
     header: {
       profession: "Abogado",
@@ -1437,10 +1665,67 @@ export const translations: Record<string, Translations> = {
       }
     },
     stats: {
+      title: "Excelência Medida em Números",
+      subtitle: "Mais de duas décadas de experiência jurídica internacional com resultados excepcionais",
       experience: "Mais de 25 anos de experiência",
       clients: "Clientes satisfeitos",
       domains: "Áreas de especialização",
       awards: "Reconhecimentos jurídicos"
+    },
+    compliance: {
+      title: "Este site está em conformidade com as obrigações legais portuguesas (RGPD & Código do Consumidor)"
+    },
+    expertiseAreas: {
+      international: {
+        title: "Direito Internacional",
+        description: "Especializado em questões jurídicas transfronteiriças",
+        details: [
+          "Contratos transfronteiriços",
+          "Litígios internacionais", 
+          "Consultoria em sistemas jurídicos"
+        ]
+      },
+      commercial: {
+        title: "Direito Comercial",
+        description: "Expertise abrangente em direito empresarial e comercial",
+        details: [
+          "Direito societário",
+          "Contratos comerciais",
+          "Due diligence comercial"
+        ]
+      },
+      personalizedService: {
+        title: "Serviço personalizado",
+        description: "Soluções individuais para cada cliente",
+        details: [
+          "Conformidade UE",
+          "Direito do mercado interno",
+          "Direito da concorrência"
+        ]
+      },
+      additional: {
+        title: "Áreas adicionais",
+        details: [
+          "Redação de contratos",
+          "Revisão jurídica",
+          "Avaliação de riscos",
+          "Procedimentos de arbitragem",
+          "Mediação",
+          "Execução"
+        ]
+      }
+    },
+    uniqueAdvantages: {
+      title: "Como escritório especializado em direito internacional, oferecemos-lhe vantagens únicas e consultoria de primeira classe."
+    },
+    qualificationsAndCertifications: {
+      title: "Qualificações e Certificações",
+      items: [
+        "Advogado inscrito na Ordem dos Advogados de Portugal",
+        "Membro da Associação Portuguesa de Advogados",
+        "Especialização em direito comercial internacional",
+        "Certificado para questões de direito europeu"
+      ]
     },
     header: {
       profession: "Advogado",

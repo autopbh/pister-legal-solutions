@@ -56,10 +56,43 @@ export interface Translations {
     };
   };
   stats: {
+    title: string;
+    subtitle: string;
     experience: string;
     clients: string;
     domains: string;
     awards: string;
+  };
+  compliance: {
+    title: string;
+  };
+  expertiseAreas: {
+    international: {
+      title: string;
+      description: string;
+      details: string[];
+    };
+    commercial: {
+      title: string;
+      description: string;
+      details: string[];
+    };
+    personalizedService: {
+      title: string;
+      description: string;
+      details: string[];
+    };
+    additional: {
+      title: string;
+      details: string[];
+    };
+  };
+  uniqueAdvantages: {
+    title: string;
+  };
+  qualificationsAndCertifications: {
+    title: string;
+    items: string[];
   };
   header: {
     profession: string;

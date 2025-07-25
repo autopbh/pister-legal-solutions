@@ -65,10 +65,10 @@ const StatsSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            Excellence Mesurée en Chiffres
+            {t.stats.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            Plus de deux décennies d'expertise juridique internationale avec des résultats exceptionnels
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto animate-fade-in delay-200">
+            {t.stats.subtitle}
           </p>
         </div>
 
