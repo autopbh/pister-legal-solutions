@@ -44,35 +44,6 @@ const HeroSection = () => {
               {t.hero.description}
             </p>
 
-            {/* Enhanced Stats */}
-            <div className="grid grid-cols-3 gap-8 py-8 animate-fade-in" style={{animationDelay: '0.6s'}}>
-              <div className="text-center group">
-                <div className="relative w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-110">
-                  <Scale className="h-8 w-8 text-white" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
-                </div>
-                <div className="font-bold text-3xl text-primary-foreground">25+</div>
-                <div className="text-sm text-primary-foreground/70 mt-1">{t.about.experience}</div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="relative w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
-                  <Users className="h-8 w-8 text-white" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
-                </div>
-                <div className="font-bold text-3xl text-primary-foreground">150+</div>
-                <div className="text-sm text-primary-foreground/70 mt-1">Erfolgreiche Fälle</div>
-              </div>
-
-              <div className="text-center group">
-                <div className="relative w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-110">
-                  <Globe2 className="h-8 w-8 text-white" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
-                </div>
-                <div className="font-bold text-3xl text-primary-foreground">6</div>
-                <div className="text-sm text-primary-foreground/70 mt-1">Sprachen</div>
-              </div>
-            </div>
 
             {/* BOUTONS CORRIGÉS AVEC CONTENU VISIBLE */}
             <div className="flex flex-col sm:flex-row gap-6 pt-6 animate-fade-in" style={{animationDelay: '0.8s'}}>
