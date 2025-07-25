@@ -3,7 +3,6 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
 import LanguageSelector from '../LanguageSelector';
-import ExpandedMenu from '../ExpandedMenu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,10 +77,10 @@ const Header = () => {
           {/* Navigation épurée */}
           <nav className="hidden md:flex items-center space-x-8">
             {[
-              { id: 'home', label: t.menu.home },
-              { id: 'about', label: t.menu.about },
-              { id: 'services', label: t.menu.services },
-              { id: 'contact', label: t.menu.contact }
+              { id: 'home', label: t.nav.home },
+              { id: 'about', label: t.nav.about },
+              { id: 'services', label: t.nav.services },
+              { id: 'contact', label: t.nav.contact }
             ].map((item) => (
               <button
                 key={item.id}
@@ -104,7 +103,6 @@ const Header = () => {
               <Phone className="h-4 w-4" />
               <span>+49 (0) 30 123 456 789</span>
             </div>
-            <ExpandedMenu />
             <LanguageSelector />
           </div>
 
@@ -122,11 +120,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-2">
-            {[
-              { id: 'home', label: t.menu.home },
-              { id: 'about', label: t.menu.about },
-              { id: 'services', label: t.menu.services },
-              { id: 'contact', label: t.menu.contact }
+              {[
+                { id: 'home', label: t.nav.home },
+                { id: 'about', label: t.nav.about },
+                { id: 'services', label: t.nav.services },
+                { id: 'contact', label: t.nav.contact }
               ].map((item) => (
                 <button
                   key={item.id}

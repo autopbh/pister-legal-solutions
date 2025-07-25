@@ -171,7 +171,7 @@ const Footer = () => {
             <div className="text-sm opacity-90 flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Star className="h-4 w-4 text-accent-gold" />
-                <span>{t.footer.rights}</span>
+                <span>{t.footer.copyright}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Shield className="h-4 w-4 text-accent animate-pulse" />
@@ -180,9 +180,9 @@ const Footer = () => {
             </div>
             <div className="flex space-x-8 text-sm">
               {[
-                { label: t.legal.impressum, href: "#" },
-                { label: t.legal.privacy, href: "#" },
-                { label: t.legal.terms, href: "#" }
+                { label: t.footer.impressum, href: "#" },
+                { label: t.footer.privacy, href: "#" },
+                { label: t.footer.disclaimer, href: "#" }
               ].map((item, index) => (
                 <a 
                   key={index}

@@ -9,22 +9,22 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Globe,
-      title: t.services.internationalLaw.title,
-      description: t.services.internationalLaw.description,
+      title: t.services.international.title,
+      description: t.services.international.description,
       features: ["Grenzüberschreitende Verträge", "Internationale Streitigkeiten", "Rechtssystem-Beratung"],
       color: "primary"
     },
     {
       icon: Building,
-      title: t.services.commercialLaw.title,
-      description: t.services.commercialLaw.description,
+      title: t.services.commercial.title,
+      description: t.services.commercial.description,
       features: ["Unternehmensrecht", "M&A Transaktionen", "Compliance"],
       color: "accent"
     },
     {
       icon: Scale,
-      title: t.services.euLaw.title,
-      description: t.services.euLaw.description,
+      title: t.services.european.title,
+      description: t.services.european.description,
       features: ["EU-Regulierung", "Binnenmarktrecht", "Wettbewerbsrecht"],
       color: "primary"
     },
