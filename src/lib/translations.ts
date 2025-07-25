@@ -9,19 +9,13 @@ export interface Translation {
   };
   
   // Hero Section
-  hero: {
-    badge: string;
-    title: string;
-    subtitle: string;
-    cta: string;
-    secondaryCta: string;
-    description: string;
-    qualifications: {
-      dav: string;
-      certified: string;
-      topLawyer: string;
+    hero: {
+      title: string;
+      subtitle: string;
+      cta: string;
+      secondaryCta: string;
+      description: string;
     };
-  };
   
   // Services
   services: {
@@ -55,37 +49,6 @@ export interface Translation {
     description: string;
     experience: string;
     philosophy: string;
-    quote: string;
-    founder: string;
-    personalService: string;
-    personalServiceDesc: string;
-    qualifications: {
-      title: string;
-      lawyer: string;
-      davMember: string;
-      specialization: string;
-      euCertified: string;
-    };
-    whyChooseUs: string;
-    whyChooseUsDesc: string;
-    benefits: {
-      international: {
-        title: string;
-        description: string;
-      };
-      multilingual: {
-        title: string;
-        description: string;
-      };
-      experience: {
-        title: string;
-        description: string;
-      };
-      personal: {
-        title: string;
-        description: string;
-      };
-    };
   };
   
   // Contact
@@ -154,39 +117,33 @@ export const translations: Record<string, Translation> = {
       contact: "Kontakt"
     },
     hero: {
-      badge: "Seit 1999 • Internationale Rechtspraxis",
-      title: "Cross-border Solutions.",
-      subtitle: "Legal Excellence.",
-      cta: "Request Free Consultation",
-      secondaryCta: "Discover Firm",
-      description: "Specialized in International and Commercial Law with over 25 years of experience in cross-border legal advice.",
-      qualifications: {
-        dav: "DAV Mitglied",
-        certified: "Zertifiziert",
-        topLawyer: "Top Anwalt 2024"
-      }
+      title: "Grenzüberschreitende Lösungen.",
+      subtitle: "Juristische Exzellenz.",
+      cta: "Kostenlose Erstberatung anfragen",
+      secondaryCta: "Kanzlei entdecken",
+      description: "Spezialisiert auf Internationales Recht und Handelsrecht mit über 25 Jahren Erfahrung in grenzüberschreitender juristischer Beratung."
     },
     services: {
-      title: "Our Practice Areas",
+      title: "Unsere Rechtsgebiete",
       international: {
-        title: "International Law",
-        description: "Comprehensive advice on cross-border legal issues and international contracts."
+        title: "Internationales Recht",
+        description: "Umfassende Beratung bei grenzüberschreitenden Rechtsfragen und internationalen Verträgen."
       },
       commercial: {
-        title: "Commercial Law",
-        description: "Legal support for businesses in commercial transactions and corporate law."
+        title: "Handelsrecht",
+        description: "Rechtliche Unterstützung für Unternehmen bei Handelsgeschäften und Unternehmensrecht."
       },
       european: {
-        title: "European Business Law",
-        description: "Expertise in European business law and EU-wide business activities."
+        title: "EU-Wirtschaftsrecht",
+        description: "Expertise im europäischen Wirtschaftsrecht und EU-weiten Geschäftstätigkeiten."
       },
       contracts: {
-        title: "Cross-border Contract Law",
+        title: "Grenzüberschreitendes Vertragsrecht",
         description: "Gestaltung und Prüfung internationaler Verträge mit verschiedenen Rechtssystemen."
       },
       arbitration: {
-        title: "International Arbitration",
-        description: "Representation in international arbitration proceedings and alternative dispute resolution."
+        title: "Internationale Schiedsgerichtsbarkeit",
+        description: "Vertretung in internationalen Schiedsverfahren und alternativen Streitbeilegungsverfahren."
       }
     },
     about: {
@@ -194,38 +151,7 @@ export const translations: Record<string, Translation> = {
       subtitle: "Ihr Spezialist für Internationales Recht",
       description: "Mit über 25 Jahren Erfahrung im internationalen Recht biete ich maßgeschneiderte juristische Lösungen für komplexe grenzüberschreitende Rechtsfragen.",
       experience: "25+ Jahre Erfahrung",
-      philosophy: "Vertrauen, Kompetenz und diskrete Beratung stehen im Mittelpunkt meiner Mandantenbetreuung.",
-      quote: "Das Recht verbindet Nationen. Meine Aufgabe ist es, Brücken zu bauen, wo andere Hindernisse sehen.",
-      founder: "Gründer & Hauptanwalt",
-      personalService: "Persönliche Betreuung",
-      personalServiceDesc: "Individuelle Lösungen für jeden Mandanten",
-      qualifications: {
-        title: "Qualifikationen & Zertifizierungen",
-        lawyer: "Rechtsanwalt bei der Rechtsanwaltskammer Deutschland",
-        davMember: "Mitglied des Deutschen Anwaltvereins (DAV)",
-        specialization: "Spezialisierung Internationales Handelsrecht",
-        euCertified: "Zertifiziert für EU-Rechtsfragen"
-      },
-      whyChooseUs: "Warum Kanzlei Pister?",
-      whyChooseUsDesc: "Als spezialisierte Kanzlei für internationales Recht bieten wir Ihnen einzigartige Vorteile und erstklassige Beratung.",
-      benefits: {
-        international: {
-          title: "Internationale Expertise",
-          description: "Lokale Kompetenz mit globalem Verständnis"
-        },
-        multilingual: {
-          title: "Mehrsprachige Beratung",
-          description: "Fließende Kommunikation in 6 Sprachen"
-        },
-        experience: {
-          title: "25+ Jahre Erfahrung",
-          description: "Bewährte Expertise im internationalen Recht"
-        },
-        personal: {
-          title: "Persönliche Betreuung",
-          description: "Diskrete und maßgeschneiderte Lösungen"
-        }
-      }
+      philosophy: "Vertrauen, Kompetenz und diskrete Beratung stehen im Mittelpunkt meiner Mandantenbetreuung."
     },
     contact: {
       title: "Kontakt aufnehmen",
@@ -285,17 +211,11 @@ export const translations: Record<string, Translation> = {
       contact: "Contact"
     },
     hero: {
-      badge: "Depuis 1999 • Pratique juridique internationale",
       title: "Solutions transfrontalières.",
       subtitle: "Excellence juridique.",
       cta: "Demander une consultation gratuite",
       secondaryCta: "Découvrir le cabinet",
-      description: "Spécialisé en droit international et commercial avec plus de 25 ans d'expérience en conseil juridique transfrontalier.",
-      qualifications: {
-        dav: "Membre DAV",
-        certified: "Certifié",
-        topLawyer: "Top Avocat 2024"
-      }
+      description: "Spécialisé en droit international et commercial avec plus de 25 ans d'expérience en conseil juridique transfrontalier."
     },
     services: {
       title: "Nos domaines d'expertise",
@@ -325,38 +245,7 @@ export const translations: Record<string, Translation> = {
       subtitle: "Votre spécialiste en droit international",
       description: "Avec plus de 25 ans d'expérience en droit international, j'offre des solutions juridiques sur mesure pour les questions juridiques transfrontalières complexes.",
       experience: "25+ ans d'expérience",
-      philosophy: "La confiance, la compétence et le conseil discret sont au cœur de ma relation client.",
-      quote: "Excellence en droit, service personnalisé",
-      founder: "Fondateur & Avocat principal",
-      personalService: "Service personnalisé",
-      personalServiceDesc: "Solutions individuelles pour chaque client",
-      qualifications: {
-        title: "Qualifications & Certifications",
-        lawyer: "Avocat au Barreau d'Allemagne",
-        davMember: "Membre de l'Association des Avocats Allemands (DAV)",
-        specialization: "Spécialisation en droit commercial international",
-        euCertified: "Certifié pour les questions de droit européen"
-      },
-      whyChooseUs: "Pourquoi le Cabinet Pister?",
-      whyChooseUsDesc: "En tant que cabinet spécialisé en droit international, nous vous offrons des avantages uniques et un conseil de première classe.",
-      benefits: {
-        international: {
-          title: "Expertise internationale",
-          description: "Compétence locale avec une compréhension globale"
-        },
-        multilingual: {
-          title: "Conseil multilingue",
-          description: "Communication fluide en 6 langues"
-        },
-        experience: {
-          title: "25+ ans d'expérience",
-          description: "Expertise éprouvée en droit international"
-        },
-        personal: {
-          title: "Service personnalisé",
-          description: "Solutions discrètes et sur mesure"
-        }
-      }
+      philosophy: "La confiance, la compétence et le conseil discret sont au cœur de ma relation client."
     },
     contact: {
       title: "Nous contacter",
@@ -416,17 +305,11 @@ export const translations: Record<string, Translation> = {
       contact: "Contact"
     },
     hero: {
-      badge: "Since 1999 • International Legal Practice",
       title: "Cross-border Solutions.",
       subtitle: "Legal Excellence.",
       cta: "Request Free Consultation",
       secondaryCta: "Discover Firm",
-      description: "Specialized in International and Commercial Law with over 25 years of experience in cross-border legal advice.",
-      qualifications: {
-        dav: "DAV Member",
-        certified: "Certified",
-        topLawyer: "Top Lawyer 2024"
-      }
+      description: "Specialized in International and Commercial Law with over 25 years of experience in cross-border legal advice."
     },
     services: {
       title: "Our Practice Areas",
@@ -456,38 +339,7 @@ export const translations: Record<string, Translation> = {
       subtitle: "Your International Law Specialist",
       description: "With over 25 years of experience in international law, I provide tailored legal solutions for complex cross-border legal issues.",
       experience: "25+ years experience",
-      philosophy: "Trust, competence, and discrete counsel are at the heart of my client relationship.",
-      quote: "Excellence in law, personalized service",
-      founder: "Founder & Principal Attorney",
-      personalService: "Personal Service",
-      personalServiceDesc: "Individual solutions for each client",
-      qualifications: {
-        title: "Qualifications & Certifications",
-        lawyer: "Attorney at the German Bar Association",
-        davMember: "Member of the German Bar Association (DAV)",
-        specialization: "Specialization in International Commercial Law",
-        euCertified: "Certified for EU Legal Matters"
-      },
-      whyChooseUs: "Why Pister Law Firm?",
-      whyChooseUsDesc: "As a specialized firm for international law, we offer you unique advantages and first-class counsel.",
-      benefits: {
-        international: {
-          title: "International Expertise",
-          description: "Local competence with global understanding"
-        },
-        multilingual: {
-          title: "Multilingual Counsel",
-          description: "Fluent communication in 6 languages"
-        },
-        experience: {
-          title: "25+ Years Experience",
-          description: "Proven expertise in international law"
-        },
-        personal: {
-          title: "Personal Service",
-          description: "Discrete and tailored solutions"
-        }
-      }
+      philosophy: "Trust, competence, and discrete counsel are at the heart of my client relationship."
     },
     contact: {
       title: "Get in Touch",
@@ -547,17 +399,11 @@ export const translations: Record<string, Translation> = {
       contact: "Contacto"
     },
     hero: {
-      badge: "Desde 1999 • Práctica Jurídica Internacional",
       title: "Soluciones transfronterizas.",
       subtitle: "Excelencia jurídica.",
       cta: "Solicitar consulta gratuita",
       secondaryCta: "Descubrir despacho",
-      description: "Especializado en Derecho Internacional y Comercial con más de 25 años de experiencia en asesoramiento jurídico transfronterizo.",
-      qualifications: {
-        dav: "Miembro DAV",
-        certified: "Certificado",
-        topLawyer: "Top Abogado 2024"
-      }
+      description: "Especializado en Derecho Internacional y Comercial con más de 25 años de experiencia en asesoramiento jurídico transfronterizo."
     },
     services: {
       title: "Nuestras áreas de práctica",
@@ -587,38 +433,7 @@ export const translations: Record<string, Translation> = {
       subtitle: "Su especialista en Derecho Internacional",
       description: "Con más de 25 años de experiencia en derecho internacional, proporciono soluciones jurídicas a medida para cuestiones jurídicas transfronterizas complejas.",
       experience: "25+ años de experiencia",
-      philosophy: "La confianza, la competencia y el asesoramiento discreto están en el corazón de mi relación con el cliente.",
-      quote: "Excelencia en derecho, servicio personalizado",
-      founder: "Fundador y Abogado Principal",
-      personalService: "Servicio Personal",
-      personalServiceDesc: "Soluciones individuales para cada cliente",
-      qualifications: {
-        title: "Cualificaciones y Certificaciones",
-        lawyer: "Abogado en el Colegio de Abogados de Alemania",
-        davMember: "Miembro de la Asociación de Abogados Alemanes (DAV)",
-        specialization: "Especialización en Derecho Comercial Internacional",
-        euCertified: "Certificado para Asuntos Legales de la UE"
-      },
-      whyChooseUs: "¿Por qué el Bufete Pister?",
-      whyChooseUsDesc: "Como despacho especializado en derecho internacional, le ofrecemos ventajas únicas y asesoramiento de primera clase.",
-      benefits: {
-        international: {
-          title: "Experiencia Internacional",
-          description: "Competencia local con comprensión global"
-        },
-        multilingual: {
-          title: "Asesoramiento Multilingüe",
-          description: "Comunicación fluida en 6 idiomas"
-        },
-        experience: {
-          title: "25+ Años de Experiencia",
-          description: "Experiencia probada en derecho internacional"
-        },
-        personal: {
-          title: "Servicio Personal",
-          description: "Soluciones discretas y a medida"
-        }
-      }
+      philosophy: "La confianza, la competencia y el asesoramiento discreto están en el corazón de mi relación con el cliente."
     },
     contact: {
       title: "Póngase en contacto",
@@ -678,17 +493,11 @@ export const translations: Record<string, Translation> = {
       contact: "Contatto"
     },
     hero: {
-      badge: "Dal 1999 • Pratica Legale Internazionale",
       title: "Soluzioni transfrontaliere.",
       subtitle: "Eccellenza legale.",
       cta: "Richiedi consultazione gratuita",
       secondaryCta: "Scopri studio",
-      description: "Specializzato in Diritto Internazionale e Commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera.",
-      qualifications: {
-        dav: "Membro DAV",
-        certified: "Certificato",
-        topLawyer: "Top Avvocato 2024"
-      }
+      description: "Specializzato in Diritto Internazionale e Commerciale con oltre 25 anni di esperienza nella consulenza legale transfrontaliera."
     },
     services: {
       title: "Le nostre aree di pratica",
@@ -718,38 +527,7 @@ export const translations: Record<string, Translation> = {
       subtitle: "Il vostro specialista in Diritto Internazionale",
       description: "Con oltre 25 anni di esperienza nel diritto internazionale, fornisco soluzioni legali su misura per questioni legali transfrontaliere complesse.",
       experience: "25+ anni di esperienza",
-      philosophy: "Fiducia, competenza e consulenza discreta sono al centro del mio rapporto con il cliente.",
-      quote: "Eccellenza nel diritto, servizio personalizzato",
-      founder: "Fondatore e Avvocato Principale",
-      personalService: "Servizio Personale",
-      personalServiceDesc: "Soluzioni individuali per ogni cliente",
-      qualifications: {
-        title: "Qualifiche e Certificazioni",
-        lawyer: "Avvocato presso l'Ordine degli Avvocati di Germania",
-        davMember: "Membro dell'Associazione Avvocati Tedeschi (DAV)",
-        specialization: "Specializzazione in Diritto Commerciale Internazionale",
-        euCertified: "Certificato per Questioni Legali UE"
-      },
-      whyChooseUs: "Perché lo Studio Pister?",
-      whyChooseUsDesc: "Come studio specializzato in diritto internazionale, vi offriamo vantaggi unici e consulenza di prima classe.",
-      benefits: {
-        international: {
-          title: "Competenza Internazionale",
-          description: "Competenza locale con comprensione globale"
-        },
-        multilingual: {
-          title: "Consulenza Multilingue",
-          description: "Comunicazione fluente in 6 lingue"
-        },
-        experience: {
-          title: "25+ Anni di Esperienza",
-          description: "Competenza comprovata nel diritto internazionale"
-        },
-        personal: {
-          title: "Servizio Personale",
-          description: "Soluzioni discrete e su misura"
-        }
-      }
+      philosophy: "Fiducia, competenza e consulenza discreta sono al centro del mio rapporto con il cliente."
     },
     contact: {
       title: "Mettersi in contatto",
@@ -809,17 +587,11 @@ export const translations: Record<string, Translation> = {
       contact: "Contato"
     },
     hero: {
-      badge: "Desde 1999 • Prática Jurídica Internacional",
       title: "Soluções transfronteiriças.",
       subtitle: "Excelência jurídica.",
       cta: "Solicitar consulta gratuita",
       secondaryCta: "Descobrir escritório",
-      description: "Especializado em Direito Internacional e Comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça.",
-      qualifications: {
-        dav: "Membro DAV",
-        certified: "Certificado",
-        topLawyer: "Top Advogado 2024"
-      }
+      description: "Especializado em Direito Internacional e Comercial com mais de 25 anos de experiência em consultoria jurídica transfronteiriça."
     },
     services: {
       title: "Nossas áreas de prática",
@@ -849,38 +621,7 @@ export const translations: Record<string, Translation> = {
       subtitle: "Seu especialista em Direito Internacional",
       description: "Com mais de 25 anos de experiência em direito internacional, forneço soluções jurídicas sob medida para questões jurídicas transfronteiriças complexas.",
       experience: "25+ anos de experiência",
-      philosophy: "Confiança, competência e aconselhamento discreto estão no centro do meu relacionamento com o cliente.",
-      quote: "Excelência no direito, serviço personalizado",
-      founder: "Fundador e Advogado Principal",
-      personalService: "Serviço Pessoal",
-      personalServiceDesc: "Soluções individuais para cada cliente",
-      qualifications: {
-        title: "Qualificações e Certificações",
-        lawyer: "Advogado na Ordem dos Advogados da Alemanha",
-        davMember: "Membro da Associação de Advogados Alemães (DAV)",
-        specialization: "Especialização em Direito Comercial Internacional",
-        euCertified: "Certificado para Questões Legais da UE"
-      },
-      whyChooseUs: "Por que o Escritório Pister?",
-      whyChooseUsDesc: "Como escritório especializado em direito internacional, oferecemos vantagens únicas e consultoria de primeira classe.",
-      benefits: {
-        international: {
-          title: "Expertise Internacional",
-          description: "Competência local com compreensão global"
-        },
-        multilingual: {
-          title: "Consultoria Multilíngue",
-          description: "Comunicação fluente em 6 idiomas"
-        },
-        experience: {
-          title: "25+ Anos de Experiência",
-          description: "Expertise comprovada em direito internacional"
-        },
-        personal: {
-          title: "Serviço Pessoal",
-          description: "Soluções discretas e sob medida"
-        }
-      }
+      philosophy: "Confiança, competência e aconselhamento discreto estão no centro do meu relacionamento com o cliente."
     },
     contact: {
       title: "Entre em contato",
