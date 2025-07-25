@@ -1,9 +1,7 @@
 import { Star, Quote } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { useLanguage } from '@/hooks/useLanguage';
 
 const TestimonialsSection = () => {
-  const { t } = useLanguage();
   const testimonials = [
     {
       name: "Dr. Michael Weber",
@@ -40,15 +38,15 @@ const TestimonialsSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
-            {t.testimonials.title}
+            Ce Que Disent Nos Clients
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
-            {t.testimonials.subtitle}
+            La confiance de nos clients est notre plus grande récompense
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {t.testimonials.clients.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <Card
               key={index}
               className="card-premium p-8 relative overflow-hidden animate-slide-up hover-lift"
@@ -61,7 +59,7 @@ const TestimonialsSection = () => {
 
               {/* Stars */}
               <div className="flex space-x-1 mb-6">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-accent fill-current" />
                 ))}
               </div>
@@ -93,7 +91,7 @@ const TestimonialsSection = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center space-x-3 bg-accent/10 backdrop-blur-sm border border-accent/20 rounded-full px-8 py-4 shadow-card">
             <Star className="h-5 w-5 text-accent" />
-            <span className="font-semibold text-primary">{t.testimonials.trustBadge}</span>
+            <span className="font-semibold text-primary">Plus de 500 clients nous font confiance</span>
             <Star className="h-5 w-5 text-accent" />
           </div>
         </div>
