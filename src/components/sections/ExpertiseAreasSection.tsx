@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const ExpertiseAreasSection = () => {
+  console.log('ExpertiseAreasSection rendering');
   const { t } = useTranslations();
+  console.log('ExpertiseAreasSection - translations loaded:', !!t);
 
   const handleLearnMore = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
