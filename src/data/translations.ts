@@ -86,12 +86,14 @@ export const translations: Record<string, Translations> = {
       }
     },
     stats: {
-      title: "Excellence Mesurée en Chiffres",
-      subtitle: "Plus de deux décennies d'expertise juridique internationale avec des résultats exceptionnels",
+      title: "Exzellenz in Zahlen gemessen",
+      subtitle: "Über zwei Jahrzehnte internationale Rechtserfahrung mit außergewöhnlichen Ergebnissen",
       experience: "Jahre Erfahrung",
       clients: "Zufriedene Mandanten",
       domains: "Rechtsbereiche",
-      awards: "Auszeichnungen"
+      awards: "Auszeichnungen",
+      successRate: "Erfolgsquote",
+      responseTime: "Garantierte Antwort"
     },
     compliance: {
       title: "Ce site est conforme aux obligations légales allemandes (TMG & DSGVO)"
@@ -485,7 +487,9 @@ export const translations: Record<string, Translations> = {
       experience: "25+ ans d'expérience",
       clients: "Clients satisfaits",
       domains: "Domaines d'expertise",
-      awards: "Récompenses juridiques"
+      awards: "Récompenses juridiques",
+      successRate: "Taux de réussite",
+      responseTime: "Réponse garantie"
     },
     compliance: {
       title: "Ce site est conforme aux obligations légales françaises (RGPD & Code de la consommation)"
@@ -880,7 +884,9 @@ export const translations: Record<string, Translations> = {
       experience: "Oltre 25 anni di esperienza",
       clients: "Clienti soddisfatti",
       domains: "Aree di competenza",
-      awards: "Riconoscimenti legali"
+      awards: "Riconoscimenti legali",
+      successRate: "Tasso di successo",
+      responseTime: "Risposta garantita"
     },
     compliance: {
       title: "Questo sito è conforme agli obblighi legali italiani (GDPR & Codice del Consumo)"
@@ -1275,7 +1281,9 @@ export const translations: Record<string, Translations> = {
       experience: "Más de 25 años de experiencia",
       clients: "Clientes satisfechos",
       domains: "Áreas de especialización",
-      awards: "Reconocimientos legales"
+      awards: "Reconocimientos legales",
+      successRate: "Tasa de éxito",
+      responseTime: "Respuesta garantizada"
     },
     compliance: {
       title: "Este sitio cumple con las obligaciones legales españolas (RGPD & Ley de Consumidores)"
@@ -1670,7 +1678,9 @@ export const translations: Record<string, Translations> = {
       experience: "Mais de 25 anos de experiência",
       clients: "Clientes satisfeitos",
       domains: "Áreas de especialização",
-      awards: "Reconhecimentos jurídicos"
+      awards: "Reconhecimentos jurídicos",
+      successRate: "Taxa de sucesso",
+      responseTime: "Resposta garantida"
     },
     compliance: {
       title: "Este site está em conformidade com as obrigações legais portuguesas (RGPD & Código do Consumidor)"

@@ -43,14 +43,14 @@ const StatsSection = () => {
     {
       icon: TrendingUp,
       number: "98%",
-      label: "Taux de réussite",
+      label: t.stats.successRate,
       suffix: "",
       color: "from-primary-light to-primary"
     },
     {
       icon: Clock,
       number: "24h",
-      label: "Réponse garantie",
+      label: t.stats.responseTime,
       suffix: "",
       color: "from-accent to-primary"
     }

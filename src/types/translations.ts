@@ -62,6 +62,8 @@ export interface Translations {
     clients: string;
     domains: string;
     awards: string;
+    successRate: string;
+    responseTime: string;
   };
   compliance: {
     title: string;
