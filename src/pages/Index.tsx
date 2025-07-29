@@ -10,13 +10,11 @@ import TeamSection from '@/components/sections/TeamSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactSection from '@/components/sections/ContactSection';
-import ComplianceNotice from '@/components/sections/ComplianceNotice';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ComplianceNotice />
       <main className="overflow-hidden">
         <HeroSection />
         <StatsSection />
