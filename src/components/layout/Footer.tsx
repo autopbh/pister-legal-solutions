@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Scale, Star, Globe, Award, Clock, Shield, AlertTriangle } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Scale, Star, Globe, Award, Clock, Shield, AlertTriangle } from 'lucide-react';
 import SecurityBadge from '@/components/security/SecurityBadge';
 import ProtectedContact from '@/components/security/ProtectedContact';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -102,10 +102,6 @@ const Footer = () => {
                 <div>
                   <p className="font-medium">{t.footer.contact.address}</p>
                 </div>
-              </div>
-              <div className="group hover:text-accent-gold transition-colors duration-300">
-                <Phone className="h-5 w-5 opacity-75 mb-2" />
-                <ProtectedContact type="phone" variant="split" />
               </div>
               <div className="group hover:text-accent-gold transition-colors duration-300">
                 <Mail className="h-5 w-5 opacity-75 mb-2" />

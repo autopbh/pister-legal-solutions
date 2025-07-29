@@ -13,8 +13,8 @@ interface ProtectedContactProps {
 }
 
 const ProtectedContact = ({ 
-  email = 'kontakt@pister-law.de', 
-  phone = '+49 (0) 30 123 456 789',
+  email = 'kontakt@jozefpister.com', 
+  phone = '',
   type,
   variant = 'split',
   className = ''
@@ -53,17 +53,20 @@ const ProtectedContact = ({
   };
 
   if (variant === 'reveal') {
+    // Ne pas afficher si c'est un téléphone
+    if (type === 'phone') return null;
+    
     return (
       <div className={`flex items-center space-x-3 ${className}`}>
         <div className="flex items-center space-x-2">
-          {type === 'email' ? <Mail className="h-5 w-5 text-accent" /> : <Phone className="h-5 w-5 text-accent" />}
+          <Mail className="h-5 w-5 text-accent" />
           {!isRevealed ? (
             <span className="text-muted-foreground font-medium">
-              {type === 'email' ? t.protectedContact.emailProtected : t.protectedContact.phoneProtected}
+              {t.protectedContact.emailProtected}
             </span>
           ) : (
             <span className="font-medium">
-              {type === 'email' ? email : phone}
+              {email}
             </span>
           )}
         </div>
@@ -81,6 +84,9 @@ const ProtectedContact = ({
   }
 
   if (variant === 'protected') {
+    // Ne pas afficher si c'est un téléphone
+    if (type === 'phone') return null;
+    
     return (
       <div className={`bg-accent/5 border border-accent/20 rounded-xl p-4 ${className}`}>
         <div className="flex items-center space-x-3 mb-3">
@@ -92,8 +98,8 @@ const ProtectedContact = ({
           onMouseDown={handleCopyAttempt}
         >
           <div className="flex items-center space-x-2">
-            {type === 'email' ? <Mail className="h-4 w-4 text-accent" /> : <Phone className="h-4 w-4 text-accent" />}
-            {type === 'email' ? formatSplitEmail(email) : formatSplitPhone(phone)}
+            <Mail className="h-4 w-4 text-accent" />
+            {formatSplitEmail(email)}
           </div>
         </div>
         <p className="text-xs text-muted-foreground mt-2">
@@ -104,13 +110,16 @@ const ProtectedContact = ({
   }
 
   // Default: split variant
+  // Ne pas afficher si c'est un téléphone
+  if (type === 'phone') return null;
+  
   return (
     <div className={`${className}`}>
       <div 
         className="select-none"
         onMouseDown={handleCopyAttempt}
       >
-        {type === 'email' ? formatSplitEmail(email) : formatSplitPhone(phone)}
+        {formatSplitEmail(email)}
       </div>
     </div>
   );

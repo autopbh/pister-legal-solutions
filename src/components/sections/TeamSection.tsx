@@ -1,4 +1,4 @@
-import { MapPin, Languages, Award, Mail, Phone } from 'lucide-react';
+import { MapPin, Languages, Award, Mail } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -119,10 +119,6 @@ const TeamSection = () => {
                     <Button className="btn-premium">
                       <Mail className="h-4 w-4 mr-2" />
                       {t.team.labels.contact}
-                    </Button>
-                    <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                      <Phone className="h-4 w-4 mr-2" />
-                      {t.team.labels.call}
                     </Button>
                   </div>
                 </div>

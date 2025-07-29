@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, Star, Shield, Zap, Lock } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, Star, Shield, Zap, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -77,15 +77,6 @@ const ContactSection = () => {
                     </div>
                  </div>
 
-                 <div className="flex items-start space-x-4 group">
-                   <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
-                     <Phone className="h-6 w-6 text-primary-foreground" />
-                   </div>
-                   <div className="flex-1">
-                     <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{t.contact.office.phone.label}</p>
-                     <ProtectedContact type="phone" variant="protected" className="mt-2" />
-                   </div>
-                 </div>
 
                  <div className="flex items-start space-x-4 group">
                    <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-card">
@@ -93,9 +84,9 @@ const ContactSection = () => {
                    </div>
                     <div className="flex-1">
                       <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{t.contact.office.email.label}</p>
-                      <a href="mailto:contact@pister-law.com" className="text-accent hover:text-accent-gold transition-colors font-medium">
-                        contact@pister-law.com
-                      </a>
+                       <a href="mailto:kontakt@jozefpister.com" className="text-accent hover:text-accent-gold transition-colors font-medium">
+                        kontakt@jozefpister.com
+                       </a>
                     </div>
                  </div>
 
@@ -125,13 +116,13 @@ const ContactSection = () => {
                   <p className="text-sm opacity-90 mb-6">
                     {t.contact.emergency.description}
                   </p>
-                   <Button 
+                    <Button 
                      type="button"
                      className="w-full bg-accent-gold text-accent-foreground hover:bg-accent-gold/90 font-bold"
                      onClick={(e) => e.preventDefault()}
                    >
-                      <Phone className="h-4 w-4 mr-2" />
-                      {t.contact.emergency.phone}
+                      <Mail className="h-4 w-4 mr-2" />
+                      kontakt@jozefpister.com
                     </Button>
                 </CardContent>
                </Card>

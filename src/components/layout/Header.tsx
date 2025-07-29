@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
 import LanguageSelector from '../LanguageSelector';
@@ -100,8 +100,6 @@ const Header = () => {
           {/* Contact rapide et langue */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Phone className="h-4 w-4" />
-              <span>{t.header.phone}</span>
             </div>
             <LanguageSelector />
           </div>
@@ -141,8 +139,6 @@ const Header = () => {
               ))}
               <div className="pt-4 flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Phone className="h-4 w-4" />
-                  <span>{t.header.phone}</span>
                 </div>
                 <LanguageSelector />
               </div>
